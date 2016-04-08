@@ -17,6 +17,8 @@
 		B24311491CB2A59E000697B2 /* BeautifulDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24311481CB2A59E000697B2 /* BeautifulDayUITests.swift */; };
 		B297A52B1CB3F2EC005DCB1D /* BDMusicDayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B297A52A1CB3F2EC005DCB1D /* BDMusicDayController.swift */; };
 		B2CAD21D1CB75E9E00A1030E /* BDMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CAD21C1CB75E9E00A1030E /* BDMainViewController.swift */; };
+		B2CAD21F1CB79B8400A1030E /* BDTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CAD21E1CB79B8400A1030E /* BDTrack.swift */; };
+		B2CAD2251CB79F8900A1030E /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CAD2241CB79F8900A1030E /* Track.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		B243114A1CB2A59E000697B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B297A52A1CB3F2EC005DCB1D /* BDMusicDayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDMusicDayController.swift; sourceTree = "<group>"; };
 		B2CAD21C1CB75E9E00A1030E /* BDMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDMainViewController.swift; sourceTree = "<group>"; };
+		B2CAD21E1CB79B8400A1030E /* BDTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDTrack.swift; sourceTree = "<group>"; };
+		B2CAD2231CB79F8900A1030E /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
+		B2CAD2241CB79F8900A1030E /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
+		B2CAD2261CB79FA600A1030E /* BeautifulDay-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BeautifulDay-Bridging-Header.h"; sourceTree = "<group>"; };
 		E77A58C18A95A953FC1F20FF /* Pods_BeautifulDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeautifulDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -131,6 +137,7 @@
 				B243112F1CB2A59E000697B2 /* Assets.xcassets */,
 				B24311311CB2A59E000697B2 /* LaunchScreen.storyboard */,
 				B24311341CB2A59E000697B2 /* Info.plist */,
+				B2CAD2261CB79FA600A1030E /* BeautifulDay-Bridging-Header.h */,
 				B243112C1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld */,
 			);
 			path = BeautifulDay;
@@ -159,6 +166,9 @@
 			children = (
 				B2CAD21C1CB75E9E00A1030E /* BDMainViewController.swift */,
 				B297A52A1CB3F2EC005DCB1D /* BDMusicDayController.swift */,
+				B2CAD21E1CB79B8400A1030E /* BDTrack.swift */,
+				B2CAD2231CB79F8900A1030E /* Track.h */,
+				B2CAD2241CB79F8900A1030E /* Track.m */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -348,7 +358,9 @@
 				B243112E1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld in Sources */,
 				B297A52B1CB3F2EC005DCB1D /* BDMusicDayController.swift in Sources */,
 				B24311261CB2A59E000697B2 /* AppDelegate.swift in Sources */,
+				B2CAD2251CB79F8900A1030E /* Track.m in Sources */,
 				B2CAD21D1CB75E9E00A1030E /* BDMainViewController.swift in Sources */,
+				B2CAD21F1CB79B8400A1030E /* BDTrack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,10 +505,13 @@
 			baseConfigurationReference = 11C0F77255B8EB2D78C25D8C /* Pods-BeautifulDay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BeautifulDay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PairOfNewbie.github.BeautifulDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeautifulDay/BeautifulDay-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -506,10 +521,12 @@
 			baseConfigurationReference = 2C37A92269C2EEF4692CB37A /* Pods-BeautifulDay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BeautifulDay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PairOfNewbie.github.BeautifulDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeautifulDay/BeautifulDay-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
