@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2367D401CB64220003F97B2 /* BDMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2367D3F1CB64220003F97B2 /* BDMainViewController.swift */; };
 		B24311261CB2A59E000697B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24311251CB2A59E000697B2 /* AppDelegate.swift */; };
-		B24311281CB2A59E000697B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24311271CB2A59E000697B2 /* ViewController.swift */; };
 		B243112B1CB2A59E000697B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24311291CB2A59E000697B2 /* Main.storyboard */; };
 		B243112E1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B243112C1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld */; };
 		B24311301CB2A59E000697B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B243112F1CB2A59E000697B2 /* Assets.xcassets */; };
 		B24311331CB2A59E000697B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24311311CB2A59E000697B2 /* LaunchScreen.storyboard */; };
 		B243113E1CB2A59E000697B2 /* BeautifulDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B243113D1CB2A59E000697B2 /* BeautifulDayTests.swift */; };
 		B24311491CB2A59E000697B2 /* BeautifulDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24311481CB2A59E000697B2 /* BeautifulDayUITests.swift */; };
+		B297A52B1CB3F2EC005DCB1D /* BDMusicDayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B297A52A1CB3F2EC005DCB1D /* BDMusicDayController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B2367D3F1CB64220003F97B2 /* BDMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDMainViewController.swift; sourceTree = "<group>"; };
 		B24311221CB2A59E000697B2 /* BeautifulDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautifulDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24311251CB2A59E000697B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B24311271CB2A59E000697B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B243112A1CB2A59E000697B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B243112D1CB2A59E000697B2 /* BeautifulDay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeautifulDay.xcdatamodel; sourceTree = "<group>"; };
 		B243112F1CB2A59E000697B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		B24311441CB2A59E000697B2 /* BeautifulDayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeautifulDayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24311481CB2A59E000697B2 /* BeautifulDayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautifulDayUITests.swift; sourceTree = "<group>"; };
 		B243114A1CB2A59E000697B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B297A52A1CB3F2EC005DCB1D /* BDMusicDayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDMusicDayController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +101,8 @@
 		B24311241CB2A59E000697B2 /* BeautifulDay */ = {
 			isa = PBXGroup;
 			children = (
+				B297A5241CB3EF35005DCB1D /* Module */,
 				B24311251CB2A59E000697B2 /* AppDelegate.swift */,
-				B24311271CB2A59E000697B2 /* ViewController.swift */,
 				B24311291CB2A59E000697B2 /* Main.storyboard */,
 				B243112F1CB2A59E000697B2 /* Assets.xcassets */,
 				B24311311CB2A59E000697B2 /* LaunchScreen.storyboard */,
@@ -126,6 +128,23 @@
 				B243114A1CB2A59E000697B2 /* Info.plist */,
 			);
 			path = BeautifulDayUITests;
+			sourceTree = "<group>";
+		};
+		B297A5241CB3EF35005DCB1D /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				B297A5251CB3EF8C005DCB1D /* MainFrame */,
+				B297A52A1CB3F2EC005DCB1D /* BDMusicDayController.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		B297A5251CB3EF8C005DCB1D /* MainFrame */ = {
+			isa = PBXGroup;
+			children = (
+				B2367D3F1CB64220003F97B2 /* BDMainViewController.swift */,
+			);
+			path = MainFrame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +278,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B24311281CB2A59E000697B2 /* ViewController.swift in Sources */,
 				B243112E1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld in Sources */,
+				B297A52B1CB3F2EC005DCB1D /* BDMusicDayController.swift in Sources */,
+				B2367D401CB64220003F97B2 /* BDMainViewController.swift in Sources */,
 				B24311261CB2A59E000697B2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +429,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PairOfNewbie.github.BeautifulDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -420,6 +441,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PairOfNewbie.github.BeautifulDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -488,6 +510,7 @@
 				B243114F1CB2A59E000697B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B24311501CB2A59E000697B2 /* Build configuration list for PBXNativeTarget "BeautifulDayTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +519,7 @@
 				B24311521CB2A59E000697B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B24311531CB2A59E000697B2 /* Build configuration list for PBXNativeTarget "BeautifulDayUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +528,7 @@
 				B24311551CB2A59E000697B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
