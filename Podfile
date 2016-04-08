@@ -4,7 +4,7 @@
 # use_frameworks!
 
 target 'BeautifulDay' do
-
+pod 'DOUAudioStreamer'
 end
 
 target 'BeautifulDayTests' do
