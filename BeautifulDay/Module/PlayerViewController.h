@@ -14,8 +14,10 @@
  *
  */
 
-#import "Track.h"
+#import <UIKit/UIKit.h>
 
-@implementation Track
+@interface PlayerViewController : UIViewController
+
+@property (nonatomic, copy) NSArray *tracks;
 
 @end

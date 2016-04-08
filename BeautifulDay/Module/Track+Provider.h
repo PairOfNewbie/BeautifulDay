@@ -16,6 +16,9 @@
 
 #import "Track.h"
 
-@implementation Track
+@interface Track (Provider)
+
++ (NSArray *)remoteTracks;
++ (NSArray *)musicLibraryTracks;
 
 @end

@@ -19,6 +19,8 @@
 		B2CAD21D1CB75E9E00A1030E /* BDMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CAD21C1CB75E9E00A1030E /* BDMainViewController.swift */; };
 		B2CAD21F1CB79B8400A1030E /* BDTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CAD21E1CB79B8400A1030E /* BDTrack.swift */; };
 		B2CAD2251CB79F8900A1030E /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CAD2241CB79F8900A1030E /* Track.m */; };
+		B2CAD22B1CB7A14E00A1030E /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CAD2281CB7A14E00A1030E /* PlayerViewController.m */; };
+		B2CAD22C1CB7A14E00A1030E /* Track+Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CAD22A1CB7A14E00A1030E /* Track+Provider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,10 @@
 		B2CAD2231CB79F8900A1030E /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
 		B2CAD2241CB79F8900A1030E /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
 		B2CAD2261CB79FA600A1030E /* BeautifulDay-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BeautifulDay-Bridging-Header.h"; sourceTree = "<group>"; };
+		B2CAD2271CB7A14E00A1030E /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		B2CAD2281CB7A14E00A1030E /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		B2CAD2291CB7A14E00A1030E /* Track+Provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Track+Provider.h"; sourceTree = "<group>"; };
+		B2CAD22A1CB7A14E00A1030E /* Track+Provider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Track+Provider.m"; sourceTree = "<group>"; };
 		E77A58C18A95A953FC1F20FF /* Pods_BeautifulDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeautifulDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -169,6 +175,10 @@
 				B2CAD21E1CB79B8400A1030E /* BDTrack.swift */,
 				B2CAD2231CB79F8900A1030E /* Track.h */,
 				B2CAD2241CB79F8900A1030E /* Track.m */,
+				B2CAD2271CB7A14E00A1030E /* PlayerViewController.h */,
+				B2CAD2281CB7A14E00A1030E /* PlayerViewController.m */,
+				B2CAD2291CB7A14E00A1030E /* Track+Provider.h */,
+				B2CAD22A1CB7A14E00A1030E /* Track+Provider.m */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -355,11 +365,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2CAD22B1CB7A14E00A1030E /* PlayerViewController.m in Sources */,
 				B243112E1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld in Sources */,
 				B297A52B1CB3F2EC005DCB1D /* BDMusicDayController.swift in Sources */,
 				B24311261CB2A59E000697B2 /* AppDelegate.swift in Sources */,
 				B2CAD2251CB79F8900A1030E /* Track.m in Sources */,
 				B2CAD21D1CB75E9E00A1030E /* BDMainViewController.swift in Sources */,
+				B2CAD22C1CB7A14E00A1030E /* Track+Provider.m in Sources */,
 				B2CAD21F1CB79B8400A1030E /* BDTrack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
