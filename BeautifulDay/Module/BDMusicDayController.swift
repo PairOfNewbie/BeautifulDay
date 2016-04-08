@@ -9,8 +9,9 @@
 import UIKit
 
 class BDMusicDayController: UIViewController {
+    var pageIndex : Int = 0
+    
     @IBOutlet weak var bgView: UIImageView!
-
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
