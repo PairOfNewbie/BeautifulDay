@@ -520,7 +520,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BeautifulDay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = PairOfNewbie.github.BeautifulDay;
+				PRODUCT_BUNDLE_IDENTIFIER = PairOfNewbie.BeautifulDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BeautifulDay/BeautifulDay-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -536,7 +536,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BeautifulDay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = PairOfNewbie.github.BeautifulDay;
+				PRODUCT_BUNDLE_IDENTIFIER = PairOfNewbie.BeautifulDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BeautifulDay/BeautifulDay-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
