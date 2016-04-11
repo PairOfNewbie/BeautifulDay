@@ -8,6 +8,7 @@
 
 import UIKit
 import DOUAudioStreamer
+let bottomHeight : CGFloat = 44 + 2
 class BDMusicDayController: UIViewController, UIScrollViewDelegate {
     var pageIndex : Int = 0
     
@@ -36,8 +37,10 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
     }
 
     //MARK: - DOUPlayer
-//    var streamer : DOUAudioStreamer
-//    var audioVisualizer : DOUAUdioVisualizer
+    var streamer = DOUAudioStreamer()
+//    var audioVisualizer = DOUAudioVisualizer(frame: CGRectZero)
+    
+    
     //MARK: - Gesture
     var origin : CGPoint = CGPointZero
     var final : CGPoint = CGPointZero
@@ -66,7 +69,7 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
             print(velocity)
             var finalOrigin = CGPointZero
             if velocity.y >= 0 {
-                finalOrigin.y = CGRectGetHeight(self.view.frame) - 44
+                finalOrigin.y = CGRectGetHeight(self.view.frame) - bottomHeight
             }
             var f = self.view.bounds
             f.origin = finalOrigin

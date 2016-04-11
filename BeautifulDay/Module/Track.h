@@ -15,7 +15,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "DOUAudioFile.h"
+#import <DOUAudioStreamer/DOUAudioFile.h>
 
 @interface Track : NSObject <DOUAudioFile>
 
