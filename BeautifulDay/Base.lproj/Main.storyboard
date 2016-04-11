@@ -64,7 +64,7 @@
                             <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="MyU-wk-nuE" customClass="BDMusicPlayView" customModule="BeautifulDay" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="554" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bOy-fV-1hD">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cd_0" translatesAutoresizingMaskIntoConstraints="NO" id="bOy-fV-1hD">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="PSM-zf-aTv"/>
@@ -144,4 +144,7 @@
             <point key="canvasLocation" x="883" y="-248"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cd_0" width="44" height="44"/>
+    </resources>
 </document>
