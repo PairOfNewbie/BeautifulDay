@@ -3,4 +3,6 @@
 //
 #import "Track.h"
 #import "Track+Provider.h"
-#import "PlayViewController.h"
+#import "PlayerViewController.h"
+#import "DOUAudioStreamer.h"
+#import "DOUAudioVisualizer.h"
