@@ -15,6 +15,7 @@
 		B24311331CB2A59E000697B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24311311CB2A59E000697B2 /* LaunchScreen.storyboard */; };
 		B243113E1CB2A59E000697B2 /* BeautifulDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B243113D1CB2A59E000697B2 /* BeautifulDayTests.swift */; };
 		B24311491CB2A59E000697B2 /* BeautifulDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24311481CB2A59E000697B2 /* BeautifulDayUITests.swift */; };
+		B26A87D11CBC97F10058F7B4 /* MusicResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26A87D01CBC97F10058F7B4 /* MusicResource.swift */; };
 		B297A52B1CB3F2EC005DCB1D /* BDMusicDayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B297A52A1CB3F2EC005DCB1D /* BDMusicDayController.swift */; };
 		B2CAD21D1CB75E9E00A1030E /* BDMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CAD21C1CB75E9E00A1030E /* BDMainViewController.swift */; };
 		B2CAD21F1CB79B8400A1030E /* BDTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CAD21E1CB79B8400A1030E /* BDTrack.swift */; };
@@ -57,6 +58,7 @@
 		B24311441CB2A59E000697B2 /* BeautifulDayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeautifulDayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24311481CB2A59E000697B2 /* BeautifulDayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautifulDayUITests.swift; sourceTree = "<group>"; };
 		B243114A1CB2A59E000697B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B26A87D01CBC97F10058F7B4 /* MusicResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicResource.swift; sourceTree = "<group>"; };
 		B297A52A1CB3F2EC005DCB1D /* BDMusicDayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDMusicDayController.swift; sourceTree = "<group>"; };
 		B2CAD21C1CB75E9E00A1030E /* BDMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDMainViewController.swift; sourceTree = "<group>"; };
 		B2CAD21E1CB79B8400A1030E /* BDTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDTrack.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				B2CAD2281CB7A14E00A1030E /* PlayerViewController.m */,
 				B2CAD2291CB7A14E00A1030E /* Track+Provider.h */,
 				B2CAD22A1CB7A14E00A1030E /* Track+Provider.m */,
+				B26A87D01CBC97F10058F7B4 /* MusicResource.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2CAD22B1CB7A14E00A1030E /* PlayerViewController.m in Sources */,
+				B26A87D11CBC97F10058F7B4 /* MusicResource.swift in Sources */,
 				B2F0A8121CBBA79D00686A1A /* BDMusicPlayView.swift in Sources */,
 				B243112E1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld in Sources */,
 				B297A52B1CB3F2EC005DCB1D /* BDMusicDayController.swift in Sources */,
