@@ -35,8 +35,8 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
         trk = Track()
         trk?.artist = "jason"
         trk?.title = "jason's song"
-//        trk?.audioFileURL = NSURL(string: "http://passagetellsproject.net/app/brixton/0000.mp3")
-//        resetStreamer()
+        trk?.audioFileURL = NSURL(string: "http://mr7.doubanio.com/2867d1b829cddffa78318cdb7a3b34ce/1/fm/song/p616953_128k.mp4")
+        resetStreamer()
     }
     //MARK: - Initial Setup
     func setupSubviews() {
@@ -47,13 +47,13 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
     }
     
     //MARK: - DOUPlayer
-    var streamer : DOUAudioStreamer? = DOUAudioStreamer()
-    //    var audioVisualizer = DOUAudioVisualizer(frame: CGRectZero)
+    var streamer : DOUAudioStreamer? = nil
     func canncelStreamer() {
-        if let s = streamer {
-//            s.removeObserver(self, forKeyPath: "status")
-//            s.removeObserver(self, forKeyPath: "duration")
-//            s.removeObserver(self, forKeyPath: "bufferingRatio")
+        if streamer != nil {
+            streamer?.pause()
+            streamer!.removeObserver(self, forKeyPath: "status")
+            streamer!.removeObserver(self, forKeyPath: "duration")
+            streamer!.removeObserver(self, forKeyPath: "bufferingRatio")
             streamer = nil
         }
     }
@@ -62,18 +62,43 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
         canncelStreamer()
         assert(trk?.audioFileURL != nil, "the audio url is nil")
         streamer = DOUAudioStreamer(audioFile: trk)
-//        streamer?.addObserver(self, forKeyPath: "status", options: .New, context: nil)
-//        streamer?.addObserver(self, forKeyPath: "duration", options: .New, context: nil)
-//        streamer?.addObserver(self, forKeyPath: "bufferingRatio", options: .New, context: nil)
+        streamer?.addObserver(self, forKeyPath: "status", options: .New, context: nil)
+        streamer?.addObserver(self, forKeyPath: "duration", options: .New, context: nil)
+        streamer?.addObserver(self, forKeyPath: "bufferingRatio", options: .New, context: nil)
         streamer?.play()
         
     }
     
     //MARK: - KVO
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        
+        if let kp = keyPath {
+            switch kp {
+            case "status":
+                self.performSelector(NSSelectorFromString("updateStatus"), onThread: NSThread.mainThread(), withObject: nil, waitUntilDone: false, modes: nil)
+                break
+            case "duration":
+                self.performSelector(NSSelectorFromString("updateProgress"), onThread: NSThread.mainThread(), withObject: nil, waitUntilDone: false, modes: nil)
+                break
+            case "bufferingRatio":
+                self.performSelector(NSSelectorFromString("updateBufferingStatus"), onThread: NSThread.mainThread(), withObject: nil, waitUntilDone: false, modes: nil)
+                break
+            default:
+                break
+            }
+        }
     }
     
+    //MARK: - Helper
+    func updateBufferingStatus() {
+        //todo
+    }
+    func updateStatus() {
+        //todo
+        //the swift does not recginize the NS_Enum, so ware
+    }
+    func updateProgress() {
+        //todo
+    }
     //MARK: - Gesture
     var origin : CGPoint = CGPointZero
     var final : CGPoint = CGPointZero
