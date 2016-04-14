@@ -26,7 +26,7 @@
 		<key>03BB50E389E9DA9FFC4C76B8267A4D33</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C52174EFFF77CF0A887BA26673CAC741</string>
+			<string>510CCFEA835C1E141920E01862CA9BF7</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -38,7 +38,7 @@
 		<key>0443F7F22B10ADBE3F928BDF9561D822</key>
 		<dict>
 			<key>fileRef</key>
-			<string>563905B09640B73E921C04F39CF99E6A</string>
+			<string>244C7F26A04811B46698916386BBF4C0</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -50,7 +50,7 @@
 		<key>046988FA815376EB64E05AF0507097D3</key>
 		<dict>
 			<key>fileRef</key>
-			<string>63C8A38AF9038818EF714DE4346A5A1B</string>
+			<string>C9F236301A5A4D7A084B789ABA15746F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -61,17 +61,105 @@
 				</array>
 			</dict>
 		</dict>
-		<key>073D5585DD2123FF0ADF0C794F3D61D3</key>
+		<key>04BF7F52272F7CFE4B8DA600D7185348</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>A39C8A222A24E2686B6781EAE85DA8A9</string>
+			<key>remoteInfo</key>
+			<string>DOUAudioStreamer</string>
+		</dict>
+		<key>054DC17A07BCA20B296D9A96EDDBB738</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>06CE8304128465CDE2CEC643E2DEF9B7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DOUAudioRenderer.h</string>
+			<key>path</key>
+			<string>src/DOUAudioRenderer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>071F5235A7AB942EA8A4C18A650C70A9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSData+DOUMappedFile.m</string>
+			<key>path</key>
+			<string>src/NSData+DOUMappedFile.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>095406039B4D371E48D08B38A2975AC8</key>
 		<dict>
 			<key>fileRef</key>
-			<string>0140D4B844A7CF068097BFCBC22DBFA5</string>
+			<string>D81D6C23FDE598C8F97C37E2EC5D8E4B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>09D94F09F3C7527C4F4452BFD9135603</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4A4F1312F84F63C78004BE095FF3C289</string>
+				<string>83D78887E9E73C838EE643CBF66FFF82</string>
+				<string>D81D6C23FDE598C8F97C37E2EC5D8E4B</string>
+				<string>CC5A47DACA883536F0CFD1BED3B6E22C</string>
+				<string>31E739E027841039207A02F43A641610</string>
+				<string>B2CF2150813C4FA121131F7B814BD443</string>
+				<string>FFC7D3E0FB350B8B5C332F9B136594A2</string>
+				<string>4A57AFD88C2BA6A6E5B0CE92F6FFA415</string>
+				<string>D2E18C186BB01A2606BC053ED3D1B28E</string>
+				<string>8448A15DEA7214DABC72295379712589</string>
+				<string>C77282961C13714214F684CE979AB286</string>
+				<string>3EB90B8733D209CBBB124AB97BA617F5</string>
+				<string>AA1A030B28B30E779DE0551BB8E168CE</string>
+				<string>202FAD3B301F71942E09F1EF29A223B2</string>
+				<string>60FD1F31CC5EBF0859A301231749E4A5</string>
+				<string>AE9A0F1152314C8C0316AC1F114CB4E8</string>
+				<string>DB69C3FE829EC9C1DE1DBB294CCD842F</string>
+				<string>F2349AA0089B53B61AB5934E57E61416</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Alamofire</string>
+			<key>path</key>
+			<string>Alamofire</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>0EA63AB596F75BCA7ECD0A26A7ACDF36</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9FDAA73165A22B91C8ECD8ED0D967967</string>
+			<string>EF69BFD54D3141BDCA85898A1E042F09</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -98,7 +186,7 @@
 		<key>1004D2F08CB846B6B3CF6BC48635492E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9EE35F51575F90E62E0304A9684C7D2E</string>
+			<string>504636741F0AC2120A1667E1AB027818</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -108,6 +196,13 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>100BBE1572C25DFE0E97AB6092347621</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0140D4B844A7CF068097BFCBC22DBFA5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>13EA05D5EA80EB12302C75557E1A98B3</key>
 		<dict>
@@ -116,23 +211,98 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>14F40CE1714068E956F83B73A8C3F953</key>
+		<key>147FE1349362CD814DFAF15DF4AE802C</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
+			<key>children</key>
 			<array>
-				<string>3A0B8736D2C0237A8D915A4C870E94EE</string>
+				<string>A82057E566318AEAA31F3CFFB67192E3</string>
+				<string>2C6D87870AABE14A5F7925784EDD3D19</string>
+				<string>ED824C424D22DDCBBCDE981A3FD7781B</string>
+				<string>B7CE49C41510DE5A6125FACDB1904C62</string>
+				<string>EFCFD00A39D91903EF287C867FD3F92D</string>
+				<string>CC04922C59308D14FB54CC82BFFFC20F</string>
+				<string>CC17C7FA3BF7D07FF7C8F46B33041646</string>
+				<string>244C7F26A04811B46698916386BBF4C0</string>
+				<string>504636741F0AC2120A1667E1AB027818</string>
+				<string>84F8897CAA72708BDA49AFB6AEA9784C</string>
+				<string>B8D87068FA9B3F0A12848A61E4695556</string>
+				<string>78B96783E2ADB84802820FD641AB0361</string>
+				<string>410F16EDE4603368EFFC195A52569808</string>
+				<string>7B0077A94A7937C47418FA447200A124</string>
+				<string>93ADF5647370B933D2AC45D7DDB55E9F</string>
+				<string>EF69BFD54D3141BDCA85898A1E042F09</string>
+				<string>42B241EEFE798DC131B78C0D7B938873</string>
+				<string>C68F72B2030A0256DCCF20DA12681842</string>
+				<string>E4232F4C49F55BB649ADA09A49CF7B3F</string>
+				<string>25CB574DA805919456BF22EAF2BD03F1</string>
+				<string>892CBFCD1C9D45C48DA7F10C2B97C59B</string>
+				<string>06CE8304128465CDE2CEC643E2DEF9B7</string>
+				<string>BE84BF8FD4853844D6D5A28641C7AB79</string>
+				<string>63F2D3AC67D0F3E286227A2323959581</string>
+				<string>55845D88EB676A4BE7BB4087DAB387FE</string>
+				<string>5F5DC851DB366CF21FEAECAE225438C1</string>
+				<string>BD0136A92E1195471F473A163C6D005F</string>
+				<string>FBB607F0680461004ED98563BF12B795</string>
+				<string>D8C9EC8619D55DA819BD5325A867C6E1</string>
+				<string>5F5B91BDA10C93DD150F50452C6F090E</string>
+				<string>AF84A6F831BB39ABD1E9F346EE3DA5BA</string>
+				<string>525496AF8D38A3357EA72F32AECCB070</string>
+				<string>D0B423BA5E9761AAA86DCDF516B591D2</string>
+				<string>510CCFEA835C1E141920E01862CA9BF7</string>
+				<string>A1BB76B9D0CAE3E295D6016D370FD3B2</string>
+				<string>A0CB94970E650E407DA501A4072BB850</string>
+				<string>1CB0330E152D4E28949E03441BF4AB4B</string>
+				<string>B3E412D47FD35AF767AC45544B1C78A7</string>
+				<string>C9F236301A5A4D7A084B789ABA15746F</string>
+				<string>071F5235A7AB942EA8A4C18A650C70A9</string>
+				<string>CB397D96BC2E20532818731BEE7D1997</string>
 			</array>
 			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>DOUAudioStreamer</string>
+			<key>path</key>
+			<string>DOUAudioStreamer</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1545213D18D1C0DDBF41EDDF6FCE1A8D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>859E486D4D748B345EC58B234111F189</string>
+				<string>EDC779652947049BEF08BCE7072FC4FD</string>
+				<string>AD0E186EFC5455A6FF8BF295F5745DE8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>16102E4E35FAA0FC4161282FECE56469</key>
+		<dict>
+			<key>fileRef</key>
+			<string>60FD1F31CC5EBF0859A301231749E4A5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>16C23AFB65D1A6A8D6108B7BCCF22FD7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>DOUAudioStreamer.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>198F7651CAC696315DF735C37095E6AC</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3B1746AE0DD973F84BE560928A61D98F</string>
+			<string>B3E412D47FD35AF767AC45544B1C78A7</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -141,6 +311,19 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
+		<key>1B1BBC5702C648DA92E086B3FD67D9ED</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>DOUAudioStreamer-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>1BF0B2D906D0D6A5FB55F486C673CCF4</key>
 		<dict>
 			<key>fileRef</key>
@@ -148,10 +331,66 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>1CB0330E152D4E28949E03441BF4AB4B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DOUSimpleHTTPRequest.h</string>
+			<key>path</key>
+			<string>src/DOUSimpleHTTPRequest.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1FC80BB5060A8831A8123C5EB7DC968E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Alamofire.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>202FAD3B301F71942E09F1EF29A223B2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Stream.swift</string>
+			<key>path</key>
+			<string>Source/Stream.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>244C7F26A04811B46698916386BBF4C0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DOUAudioDecoder.m</string>
+			<key>path</key>
+			<string>src/DOUAudioDecoder.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>25235AB20D77FE84B8613681AFF1486B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>56E0C37BE0297E37564CF91FF409CCF5</string>
+			<string>C68F72B2030A0256DCCF20DA12681842</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -161,6 +400,21 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>25CB574DA805919456BF22EAF2BD03F1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DOUAudioPlaybackItem.h</string>
+			<key>path</key>
+			<string>src/DOUAudioPlaybackItem.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>274CD6F140DC498E7B51830443B75558</key>
 		<dict>
@@ -175,39 +429,74 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>29FDA05F9C1547F3FDFFD2D73BFB79D6</key>
+		<key>2A545E11556581C07A2EB02DD734A105</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>baseConfigurationReference</key>
+			<string>5D37E8A1B0C9FDB0A204C67F9EA20242</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-BeautifulDay/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-BeautifulDay/Pods-BeautifulDay.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_BeautifulDay</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>XCBuildConfiguration</string>
 			<key>name</key>
-			<string>NSData+DOUMappedFile.m</string>
-			<key>path</key>
-			<string>src/NSData+DOUMappedFile.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2A8A74F11E6C1C22CE8326476B73A5A7</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B77F9B793E1015E5A8CEA7B08966397D</string>
-				<string>A8509D2A814CB2217063A4FACFB47ADB</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
+			<string>Debug</string>
 		</dict>
 		<key>2BA6ED5881878BB0A237D663B5104B6A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>FDD2FC2E1B4BCF00B0D212EEA10A2156</string>
+			<string>5F5DC851DB366CF21FEAECAE225438C1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -217,6 +506,28 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>2C6D87870AABE14A5F7925784EDD3D19</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DOUAudioAnalyzer.m</string>
+			<key>path</key>
+			<string>src/DOUAudioAnalyzer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D3405986FC586FA6C0A5E0B6BA7E64E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DB69C3FE829EC9C1DE1DBB294CCD842F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
 		<dict>
@@ -235,7 +546,7 @@
 		<key>2E953ADCFAC7D8749531E7D071A13A25</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B11784F9CF18414CB426B9FF554BD56A</string>
+			<string>BD0136A92E1195471F473A163C6D005F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -244,10 +555,25 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
+		<key>31E739E027841039207A02F43A641610</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>MultipartFormData.swift</string>
+			<key>path</key>
+			<string>Source/MultipartFormData.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>31F6B4B65DEABB00C8376B249707F301</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A8AE69F936E04ECA37E68116B8697AEE</string>
+			<string>1CB0330E152D4E28949E03441BF4AB4B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -258,25 +584,17 @@
 				</array>
 			</dict>
 		</dict>
-		<key>32B433365FE8405CB4774F9989B6E496</key>
+		<key>34CCDCA848A701466256BC2927DA8856</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>B2CF2150813C4FA121131F7B814BD443</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>DOUAudioAnalyzer+Default.m</string>
-			<key>path</key>
-			<string>src/DOUAudioAnalyzer+Default.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>3541F0FB4E53C02292CE7622FC5C9B5C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>F0DF0C36EA0E3C7F619425FB9D96E39A</string>
+			<string>7B0077A94A7937C47418FA447200A124</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -307,42 +625,33 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>3A0B8736D2C0237A8D915A4C870E94EE</key>
+		<key>39ECF8293DB10EE054415ADABC4A474F</key>
 		<dict>
-			<key>fileRef</key>
-			<string>AA581525CF8B9F3627C209A4F582730F</string>
+			<key>buildConfigurationList</key>
+			<string>8561C6F29DEE5E5058406AC313010B7E</string>
+			<key>buildPhases</key>
+			<array>
+				<string>3DC903AD08ED2CC26931033BA38700F1</string>
+				<string>D7DF87001B7ECCE7D89E4D0E1FA6D969</string>
+				<string>EA7C005F8DB5442C6AAC1AAFF229630B</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>CE954B452A69826092845CB7E01CF023</string>
+				<string>50E2307A0176B618A1B52BCB66781AE2</string>
+			</array>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3B1746AE0DD973F84BE560928A61D98F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>PBXNativeTarget</string>
 			<key>name</key>
-			<string>DOUSimpleHTTPRequest.m</string>
-			<key>path</key>
-			<string>src/DOUSimpleHTTPRequest.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3B30B6D39D1B57125F7CA789EDCDE0C7</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DOUAudioStreamer.framework</string>
-			<key>path</key>
-			<string>DOUAudioStreamer.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
+			<string>Pods-BeautifulDay</string>
+			<key>productName</key>
+			<string>Pods-BeautifulDay</string>
+			<key>productReference</key>
+			<string>AD0E186EFC5455A6FF8BF295F5745DE8</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
 		</dict>
 		<key>3CD91621453B688847140278DE65D723</key>
 		<dict>
@@ -357,22 +666,63 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>3DA2288830933271B6C75C2462DC5768</key>
+		<key>3CFB42910790CF0BDBCCEBAACD6B9367</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>C3746E36F91278C40D0DCBA78D124E88</string>
+				<string>74F7FAC78E5CB4D327B99F47BF099326</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>3DC903AD08ED2CC26931033BA38700F1</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>100BBE1572C25DFE0E97AB6092347621</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>3EA8F215C9C1432D74E5CCA4834AA8C0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C77282961C13714214F684CE979AB286</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3EB90B8733D209CBBB124AB97BA617F5</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>DOUAudioStreamer_Private.h</string>
+			<string>Result.swift</string>
 			<key>path</key>
-			<string>src/DOUAudioStreamer_Private.h</string>
+			<string>Source/Result.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>40F69A45FC63FC5E73B7CC5AAE812305</key>
+		<key>4081EA628AF0B73AC51FFB9D7AB3B89E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CC5A47DACA883536F0CFD1BED3B6E22C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>410F16EDE4603368EFFC195A52569808</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -381,16 +731,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>DOUAudioRenderer.m</string>
+			<string>DOUAudioFilePreprocessor.m</string>
 			<key>path</key>
-			<string>src/DOUAudioRenderer.m</string>
+			<string>src/DOUAudioFilePreprocessor.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>429A230E5009C6ABA37842B506E71C50</key>
 		<dict>
 			<key>fileRef</key>
-			<string>7F5A3A5C874A5997273742C842176D24</string>
+			<string>A1BB76B9D0CAE3E295D6016D370FD3B2</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -401,7 +751,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>4452DFA459DD5B95BFBE5D08441B28FC</key>
+		<key>42B241EEFE798DC131B78C0D7B938873</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -410,16 +760,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>DOUAudioFileProvider.m</string>
+			<string>DOUAudioFrequencyAnalyzer.m</string>
 			<key>path</key>
-			<string>src/DOUAudioFileProvider.m</string>
+			<string>src/DOUAudioFrequencyAnalyzer.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>46018D3925855973EDED8274B4E82466</key>
 		<dict>
 			<key>fileRef</key>
-			<string>DD1BE9AD63F1A7903810B98E84ACB2B4</string>
+			<string>2C6D87870AABE14A5F7925784EDD3D19</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -427,6 +777,36 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
+		</dict>
+		<key>4A4F1312F84F63C78004BE095FF3C289</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Alamofire.swift</string>
+			<key>path</key>
+			<string>Source/Alamofire.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4A57AFD88C2BA6A6E5B0CE92F6FFA415</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ParameterEncoding.swift</string>
+			<key>path</key>
+			<string>Source/ParameterEncoding.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>4ADAD1B8DB6BC73769AE1783B52BE0EB</key>
 		<dict>
@@ -444,7 +824,7 @@
 		<key>4B1D9982BA6AEDA45D9293A82376B7CC</key>
 		<dict>
 			<key>fileRef</key>
-			<string>4EE88850D18530814EEC5E55B96CFB4E</string>
+			<string>E4232F4C49F55BB649ADA09A49CF7B3F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -456,7 +836,7 @@
 		<key>4B315A340BBD552A3DE3582EBEDB9075</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9D0DC0F1325CE225981DF3E0B4B53B95</string>
+			<string>FBB607F0680461004ED98563BF12B795</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -470,7 +850,7 @@
 		<key>4D6FFFCBB9EF3DB24633A3E3E5B1BDC4</key>
 		<dict>
 			<key>fileRef</key>
-			<string>40F69A45FC63FC5E73B7CC5AAE812305</string>
+			<string>BE84BF8FD4853844D6D5A28641C7AB79</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -479,22 +859,7 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>4EE88850D18530814EEC5E55B96CFB4E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>DOUAudioLPCM.m</string>
-			<key>path</key>
-			<string>src/DOUAudioLPCM.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4FDC0E19CAF232C3BF1E066CE0F1473F</key>
+		<key>504636741F0AC2120A1667E1AB027818</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -503,16 +868,57 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>DOUAudioAnalyzer+Default.h</string>
+			<string>DOUAudioEventLoop.h</string>
 			<key>path</key>
-			<string>src/DOUAudioAnalyzer+Default.h</string>
+			<string>src/DOUAudioEventLoop.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>50E2307A0176B618A1B52BCB66781AE2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>DOUAudioStreamer</string>
+			<key>target</key>
+			<string>A39C8A222A24E2686B6781EAE85DA8A9</string>
+			<key>targetProxy</key>
+			<string>04BF7F52272F7CFE4B8DA600D7185348</string>
+		</dict>
+		<key>510CCFEA835C1E141920E01862CA9BF7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DOUEAGLView.m</string>
+			<key>path</key>
+			<string>src/DOUEAGLView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>525496AF8D38A3357EA72F32AECCB070</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DOUAudioVisualizer.m</string>
+			<key>path</key>
+			<string>src/DOUAudioVisualizer.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>5556D07EE02EEB82F149B0E46694FA58</key>
 		<dict>
 			<key>fileRef</key>
-			<string>32B433365FE8405CB4774F9989B6E496</string>
+			<string>B7CE49C41510DE5A6125FACDB1904C62</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -521,7 +927,7 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>563905B09640B73E921C04F39CF99E6A</key>
+		<key>55845D88EB676A4BE7BB4087DAB387FE</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -530,24 +936,9 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>DOUAudioDecoder.m</string>
+			<string>DOUAudioSpatialAnalyzer.m</string>
 			<key>path</key>
-			<string>src/DOUAudioDecoder.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>56E0C37BE0297E37564CF91FF409CCF5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DOUAudioLPCM.h</string>
-			<key>path</key>
-			<string>src/DOUAudioLPCM.h</string>
+			<string>src/DOUAudioSpatialAnalyzer.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -589,7 +980,7 @@
 		<key>594EA0935DBD2F7226BDB23E91934680</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9AB77AB7D803A7CCF57CB42E3317C10D</string>
+			<string>06CE8304128465CDE2CEC643E2DEF9B7</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -603,7 +994,7 @@
 		<key>59933CC00AA78FEA0B6F31E80D0AFFF1</key>
 		<dict>
 			<key>fileRef</key>
-			<string>613E193A2CF727294EF86D094145F667</string>
+			<string>D0B423BA5E9761AAA86DCDF516B591D2</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -613,6 +1004,20 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>5BC19E6E0F199276003F0AF96838BCE5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AE9A0F1152314C8C0316AC1F114CB4E8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5CB05FBCB32D21E194B5ECF680CB6AE0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>83D78887E9E73C838EE643CBF66FFF82</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>5D37E8A1B0C9FDB0A204C67F9EA20242</key>
 		<dict>
@@ -640,6 +1045,36 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>5F5B91BDA10C93DD150F50452C6F090E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DOUAudioStreamer_Private.h</string>
+			<key>path</key>
+			<string>src/DOUAudioStreamer_Private.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5F5DC851DB366CF21FEAECAE225438C1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DOUAudioStreamer.h</string>
+			<key>path</key>
+			<string>src/DOUAudioStreamer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>5F8F683E11D5953ED7CA93651FA203D2</key>
 		<dict>
 			<key>children</key>
@@ -664,31 +1099,18 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>6034B341633AA8ECF46E64066C5ED95E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>8678DCCB82CB06DE932349892363977E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>613E193A2CF727294EF86D094145F667</key>
+		<key>60FD1F31CC5EBF0859A301231749E4A5</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>DOUEAGLView.h</string>
+			<string>Timeline.swift</string>
 			<key>path</key>
-			<string>src/DOUEAGLView.h</string>
+			<string>Source/Timeline.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -718,6 +1140,13 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
+		<key>62E8346F03C03E7F4D631361F325689E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8448A15DEA7214DABC72295379712589</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>6303C02B3D23064855697B1DFF23C863</key>
 		<dict>
 			<key>isa</key>
@@ -731,7 +1160,7 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>63C8A38AF9038818EF714DE4346A5A1B</key>
+		<key>63F2D3AC67D0F3E286227A2323959581</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -740,9 +1169,9 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>NSData+DOUMappedFile.h</string>
+			<string>DOUAudioSpatialAnalyzer.h</string>
 			<key>path</key>
-			<string>src/NSData+DOUMappedFile.h</string>
+			<string>src/DOUAudioSpatialAnalyzer.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -753,37 +1182,10 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>6583C7C4ABC46E82E00B2C97890F99C4</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>2A8A74F11E6C1C22CE8326476B73A5A7</string>
-			<key>buildPhases</key>
-			<array>
-				<string>CA8C8F3384D90170D75B56553A96DD78</string>
-				<string>14F40CE1714068E956F83B73A8C3F953</string>
-				<string>6034B341633AA8ECF46E64066C5ED95E</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>6C2CCD81D86B14EEAF234EEBC9A23EBB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-BeautifulDay</string>
-			<key>productName</key>
-			<string>Pods-BeautifulDay</string>
-			<key>productReference</key>
-			<string>98314980AF901F4E141708CBF4AAA71A</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
 		<key>665572870DD7365D92C3CBAD1C3903E4</key>
 		<dict>
 			<key>fileRef</key>
-			<string>CB1E57594833C714EA893B6184E39518</string>
+			<string>A82057E566318AEAA31F3CFFB67192E3</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -797,7 +1199,7 @@
 		<key>6890A6420101414544F37C243554B732</key>
 		<dict>
 			<key>fileRef</key>
-			<string>29FDA05F9C1547F3FDFFD2D73BFB79D6</string>
+			<string>071F5235A7AB942EA8A4C18A650C70A9</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -805,20 +1207,6 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
-		</dict>
-		<key>6BEEDBBDBD6DDEC9C9E32973F361F41F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3B30B6D39D1B57125F7CA789EDCDE0C7</string>
-				<string>98314980AF901F4E141708CBF4AAA71A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>6C18D7B459DA2569B8A7CF794B7A3DBA</key>
 		<dict>
@@ -832,32 +1220,6 @@
 			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework</string>
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>6C2CCD81D86B14EEAF234EEBC9A23EBB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>DOUAudioStreamer</string>
-			<key>target</key>
-			<string>A39C8A222A24E2686B6781EAE85DA8A9</string>
-			<key>targetProxy</key>
-			<string>872264D9048F76CA1995FC289F5CF364</string>
-		</dict>
-		<key>6F76EF908A43FEC77F5051CDFA8DD1A6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>DOUAudioEventLoop.m</string>
-			<key>path</key>
-			<string>src/DOUAudioEventLoop.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>70E0259217F0FB528FE0A2F500244052</key>
 		<dict>
@@ -876,7 +1238,7 @@
 		<key>71A0E519B31756A46DA588151614A5FF</key>
 		<dict>
 			<key>fileRef</key>
-			<string>BE3045D866E5FBBBCC7E2A993E4BCA15</string>
+			<string>25CB574DA805919456BF22EAF2BD03F1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -894,25 +1256,36 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>73EBA72D1B3ABF40C09D1F51B92DE32F</key>
+		<key>735AB87A295BCCA46B5609168DB2320B</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>DOUAudioStreamer+Options.m</string>
+			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>src/DOUAudioStreamer+Options.m</string>
+			<string>Alamofire.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>73AF5A560699AC72E9598D07D79601BA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>DOUAudioStreamer-umbrella.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>74928B5901E8D2B8FD87342254F10FB5</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9187424322D8D7A6AC1CF13B007950C9</string>
+			<string>55845D88EB676A4BE7BB4087DAB387FE</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -921,12 +1294,121 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
+		<key>74F7FAC78E5CB4D327B99F47BF099326</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>735AB87A295BCCA46B5609168DB2320B</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Alamofire/Alamofire-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Alamofire/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Alamofire/Alamofire.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_NAME</key>
+				<string>Alamofire</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
 		<key>76EFF7C9D88038BC4F10777A5FD8B7DD</key>
 		<dict>
 			<key>fileRef</key>
 			<string>F9964AB5751BBD13B76F3D40E0ACDF53</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>77DA596AFA1D44F5606B82BA3C3D7E74</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Alamofire-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>78B96783E2ADB84802820FD641AB0361</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DOUAudioFilePreprocessor.h</string>
+			<key>path</key>
+			<string>src/DOUAudioFilePreprocessor.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>3CFB42910790CF0BDBCCEBAACD6B9367</string>
+			<key>buildPhases</key>
+			<array>
+				<string>95CC2C7E06DC188A05DAAEE9CAA555A3</string>
+				<string>B1729F851F648EC60EE93CDB3C8BAEAD</string>
+				<string>EFDF3B631BBB965A372347705CA14854</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Alamofire</string>
+			<key>productName</key>
+			<string>Alamofire</string>
+			<key>productReference</key>
+			<string>859E486D4D748B345EC58B234111F189</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
 		</dict>
 		<key>7A5CE03B79D727C9F96A765B714903BF</key>
 		<dict>
@@ -935,20 +1417,27 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>7B4FDAF0AF677C37121F278F8083B1F4</key>
+		<key>7B0077A94A7937C47418FA447200A124</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>DOUAudioFrequencyAnalyzer.m</string>
+			<string>DOUAudioFileProvider.h</string>
 			<key>path</key>
-			<string>src/DOUAudioFrequencyAnalyzer.m</string>
+			<string>src/DOUAudioFileProvider.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7B48852C4D848FA2DA416A98F6425869</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AA1A030B28B30E779DE0551BB8E168CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>7DB346D0F39D3F0E887471402A8071AB</key>
 		<dict>
@@ -956,8 +1445,8 @@
 			<array>
 				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
 				<string>876F80F8AFD1240ED0B7B9EA9C5BFAD8</string>
-				<string>FD01B7CCFF8C333DF7E3DF67F0C5EB4C</string>
-				<string>6BEEDBBDBD6DDEC9C9E32973F361F41F</string>
+				<string>A6998A0E3E3F57AC11DD9DE609723F8D</string>
+				<string>1545213D18D1C0DDBF41EDDF6FCE1A8D</string>
 				<string>EE4621153258585FF2CAA0672A646D3B</string>
 			</array>
 			<key>isa</key>
@@ -968,7 +1457,7 @@
 		<key>7F44D784282454ED1BCD3FC790CD7E2C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>ED58E031E382A7A179DDED6AC3FE400A</string>
+			<string>AF84A6F831BB39ABD1E9F346EE3DA5BA</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -979,25 +1468,10 @@
 				</array>
 			</dict>
 		</dict>
-		<key>7F5A3A5C874A5997273742C842176D24</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DOUMPMediaLibraryAssetLoader.h</string>
-			<key>path</key>
-			<string>src/DOUMPMediaLibraryAssetLoader.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>829BDE7E6EBF63273F22A0C58C5F2FAC</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>CF29339A52A96DA4BE36C0941BF45A19</string>
+			<string>FAA85CAB0DE479BB848BF67C845436A3</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -1050,45 +1524,79 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>8678DCCB82CB06DE932349892363977E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BF1B5B561E4343586626A0763EEE17FB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>872264D9048F76CA1995FC289F5CF364</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>A39C8A222A24E2686B6781EAE85DA8A9</string>
-			<key>remoteInfo</key>
-			<string>DOUAudioStreamer</string>
-		</dict>
-		<key>872C8CC52737975BE674A1E5B93F0C5C</key>
+		<key>83D78887E9E73C838EE643CBF66FFF82</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Download.swift</string>
 			<key>path</key>
-			<string>DOUAudioStreamer-umbrella.h</string>
+			<string>Source/Download.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8448A15DEA7214DABC72295379712589</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Response.swift</string>
+			<key>path</key>
+			<string>Source/Response.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>84F8897CAA72708BDA49AFB6AEA9784C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DOUAudioEventLoop.m</string>
+			<key>path</key>
+			<string>src/DOUAudioEventLoop.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8561C6F29DEE5E5058406AC313010B7E</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>2A545E11556581C07A2EB02DD734A105</string>
+				<string>BE6E8436FD375A508724DF3432686973</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>859E486D4D748B345EC58B234111F189</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Alamofire.framework</string>
+			<key>path</key>
+			<string>Alamofire.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>876F80F8AFD1240ED0B7B9EA9C5BFAD8</key>
 		<dict>
@@ -1103,7 +1611,20 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8EFE5F4C01336A60E5BEA8428D33A82D</key>
+		<key>890EC1D8F13F49995C54DBFD1650B392</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Alamofire-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>892CBFCD1C9D45C48DA7F10C2B97C59B</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1112,11 +1633,31 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>DOUAudioFilePreprocessor.m</string>
+			<string>DOUAudioPlaybackItem.m</string>
 			<key>path</key>
-			<string>src/DOUAudioFilePreprocessor.m</string>
+			<string>src/DOUAudioPlaybackItem.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>896C4868DDA61294E1511038D4368A92</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8EB11202167FCDDF1257AAAB1D1FB244</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4A4F1312F84F63C78004BE095FF3C289</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>903793E09E12C69812DA2F0B7FE74311</key>
 		<dict>
@@ -1143,7 +1684,7 @@
 		<key>90F1031B4B7CCB67B6B43F9E2CA6EC54</key>
 		<dict>
 			<key>fileRef</key>
-			<string>73EBA72D1B3ABF40C09D1F51B92DE32F</string>
+			<string>D8C9EC8619D55DA819BD5325A867C6E1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1152,25 +1693,10 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>9187424322D8D7A6AC1CF13B007950C9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>DOUAudioSpatialAnalyzer.m</string>
-			<key>path</key>
-			<string>src/DOUAudioSpatialAnalyzer.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>91AC3381897EF1CC2182998E251142E3</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C54F0243B3DA888C76822F59AB429833</string>
+			<string>63F2D3AC67D0F3E286227A2323959581</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1181,62 +1707,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>931FF498D17732D1D57892F49E9A2DCD</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CB1E57594833C714EA893B6184E39518</string>
-				<string>DD1BE9AD63F1A7903810B98E84ACB2B4</string>
-				<string>4FDC0E19CAF232C3BF1E066CE0F1473F</string>
-				<string>32B433365FE8405CB4774F9989B6E496</string>
-				<string>E97FB1E5151B6B0B000684717FABC4D4</string>
-				<string>CA87869425C3EDEB3F8566980069D1DA</string>
-				<string>FA1D2F3A1E3F3357D566B392E5A33C81</string>
-				<string>563905B09640B73E921C04F39CF99E6A</string>
-				<string>9EE35F51575F90E62E0304A9684C7D2E</string>
-				<string>6F76EF908A43FEC77F5051CDFA8DD1A6</string>
-				<string>C6119E2546BD7E6115A22722CFFC1CA4</string>
-				<string>FB016BCD82A2424F71E019B28A6062CD</string>
-				<string>8EFE5F4C01336A60E5BEA8428D33A82D</string>
-				<string>F0DF0C36EA0E3C7F619425FB9D96E39A</string>
-				<string>4452DFA459DD5B95BFBE5D08441B28FC</string>
-				<string>9FDAA73165A22B91C8ECD8ED0D967967</string>
-				<string>7B4FDAF0AF677C37121F278F8083B1F4</string>
-				<string>56E0C37BE0297E37564CF91FF409CCF5</string>
-				<string>4EE88850D18530814EEC5E55B96CFB4E</string>
-				<string>BE3045D866E5FBBBCC7E2A993E4BCA15</string>
-				<string>DE101F515F4B0BE362A0812BA893B8A3</string>
-				<string>9AB77AB7D803A7CCF57CB42E3317C10D</string>
-				<string>40F69A45FC63FC5E73B7CC5AAE812305</string>
-				<string>C54F0243B3DA888C76822F59AB429833</string>
-				<string>9187424322D8D7A6AC1CF13B007950C9</string>
-				<string>FDD2FC2E1B4BCF00B0D212EEA10A2156</string>
-				<string>B11784F9CF18414CB426B9FF554BD56A</string>
-				<string>9D0DC0F1325CE225981DF3E0B4B53B95</string>
-				<string>73EBA72D1B3ABF40C09D1F51B92DE32F</string>
-				<string>3DA2288830933271B6C75C2462DC5768</string>
-				<string>ED58E031E382A7A179DDED6AC3FE400A</string>
-				<string>B54642FA321C851464E5BB011C3DCAF7</string>
-				<string>613E193A2CF727294EF86D094145F667</string>
-				<string>C52174EFFF77CF0A887BA26673CAC741</string>
-				<string>7F5A3A5C874A5997273742C842176D24</string>
-				<string>C22D2EC73B195A055F0755674257A9F9</string>
-				<string>A8AE69F936E04ECA37E68116B8697AEE</string>
-				<string>3B1746AE0DD973F84BE560928A61D98F</string>
-				<string>63C8A38AF9038818EF714DE4346A5A1B</string>
-				<string>29FDA05F9C1547F3FDFFD2D73BFB79D6</string>
-				<string>C596D50D44599751140BBACFCFC69EC2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>DOUAudioStreamer</string>
-			<key>path</key>
-			<string>DOUAudioStreamer</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>96856CDD1337EDD4097EEB5423D0F567</key>
+		<key>93ADF5647370B933D2AC45D7DDB55E9F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1244,25 +1715,56 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DOUAudioFileProvider.m</string>
 			<key>path</key>
-			<string>DOUAudioStreamer-dummy.m</string>
+			<string>src/DOUAudioFileProvider.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>98314980AF901F4E141708CBF4AAA71A</key>
+		<key>9469DF81ECB494E84675969B5E13374C</key>
 		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
+			<key>fileRef</key>
+			<string>F6FD5CC08DA2D096CA04E9964FCF9D60</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods_BeautifulDay.framework</string>
-			<key>path</key>
-			<string>Pods_BeautifulDay.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>95CC2C7E06DC188A05DAAEE9CAA555A3</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>ADF19C953CE2A7D0B72EC93A81FCCC26</string>
+				<string>8EB11202167FCDDF1257AAAB1D1FB244</string>
+				<string>5CB05FBCB32D21E194B5ECF680CB6AE0</string>
+				<string>095406039B4D371E48D08B38A2975AC8</string>
+				<string>4081EA628AF0B73AC51FFB9D7AB3B89E</string>
+				<string>C7B6DD7C0456C50289A2C381DFE9FA3F</string>
+				<string>34CCDCA848A701466256BC2927DA8856</string>
+				<string>BE41196F6A3903E59C3306FE3F8B43FE</string>
+				<string>C0DB70AB368765DC64BFB5FEA75E0696</string>
+				<string>EFE92E8D3813DD26E78E93EEAF6D7E7E</string>
+				<string>62E8346F03C03E7F4D631361F325689E</string>
+				<string>3EA8F215C9C1432D74E5CCA4834AA8C0</string>
+				<string>AA314156AC500125F4078EE968DB14C6</string>
+				<string>7B48852C4D848FA2DA416A98F6425869</string>
+				<string>AE4CF87C02C042DF13ED5B21C4FDC1E0</string>
+				<string>16102E4E35FAA0FC4161282FECE56469</string>
+				<string>5BC19E6E0F199276003F0AF96838BCE5</string>
+				<string>2D3405986FC586FA6C0A5E0B6BA7E64E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>98D7551069CC7A2BC75A5A8DE2F434AC</key>
 		<dict>
@@ -1270,36 +1772,6 @@
 			<string>A2D55420A336276880C5CFA28B81C380</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>9AB77AB7D803A7CCF57CB42E3317C10D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DOUAudioRenderer.h</string>
-			<key>path</key>
-			<string>src/DOUAudioRenderer.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9D0DC0F1325CE225981DF3E0B4B53B95</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DOUAudioStreamer+Options.h</string>
-			<key>path</key>
-			<string>src/DOUAudioStreamer+Options.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>9D8A8098B8495E27F654A20B807DDF9D</key>
 		<dict>
@@ -1336,22 +1808,22 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>9EE35F51575F90E62E0304A9684C7D2E</key>
+		<key>A0CB94970E650E407DA501A4072BB850</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>DOUAudioEventLoop.h</string>
+			<string>DOUMPMediaLibraryAssetLoader.m</string>
 			<key>path</key>
-			<string>src/DOUAudioEventLoop.h</string>
+			<string>src/DOUMPMediaLibraryAssetLoader.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9FDAA73165A22B91C8ECD8ED0D967967</key>
+		<key>A1BB76B9D0CAE3E295D6016D370FD3B2</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1360,9 +1832,9 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>DOUAudioFrequencyAnalyzer.h</string>
+			<string>DOUMPMediaLibraryAssetLoader.h</string>
 			<key>path</key>
-			<string>src/DOUAudioFrequencyAnalyzer.h</string>
+			<string>src/DOUMPMediaLibraryAssetLoader.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1400,14 +1872,14 @@
 			<key>productName</key>
 			<string>DOUAudioStreamer</string>
 			<key>productReference</key>
-			<string>3B30B6D39D1B57125F7CA789EDCDE0C7</string>
+			<string>EDC779652947049BEF08BCE7072FC4FD</string>
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
 		</dict>
 		<key>A4375FDC4D90A10CE7B719CA08D610ED</key>
 		<dict>
 			<key>fileRef</key>
-			<string>4452DFA459DD5B95BFBE5D08441B28FC</string>
+			<string>93ADF5647370B933D2AC45D7DDB55E9F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1415,6 +1887,20 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
+		</dict>
+		<key>A6998A0E3E3F57AC11DD9DE609723F8D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>09D94F09F3C7527C4F4452BFD9135603</string>
+				<string>147FE1349362CD814DFAF15DF4AE802C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>A70CDAD61F90AC503C7D04CC22DA2923</key>
 		<dict>
@@ -1489,7 +1975,263 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>A8509D2A814CB2217063A4FACFB47ADB</key>
+		<key>A82057E566318AEAA31F3CFFB67192E3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DOUAudioAnalyzer.h</string>
+			<key>path</key>
+			<string>src/DOUAudioAnalyzer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A95AA6045695EFD52DC90A8A6F6D01E5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>42B241EEFE798DC131B78C0D7B938873</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>AA1A030B28B30E779DE0551BB8E168CE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ServerTrustPolicy.swift</string>
+			<key>path</key>
+			<string>Source/ServerTrustPolicy.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AA314156AC500125F4078EE968DB14C6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3EB90B8733D209CBBB124AB97BA617F5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AA581525CF8B9F3627C209A4F582730F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>AD0E186EFC5455A6FF8BF295F5745DE8</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods_BeautifulDay.framework</string>
+			<key>path</key>
+			<string>Pods_BeautifulDay.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>ADE965C95BBBD1745D59323EF4213E94</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods-BeautifulDay.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ADF19C953CE2A7D0B72EC93A81FCCC26</key>
+		<dict>
+			<key>fileRef</key>
+			<string>77DA596AFA1D44F5606B82BA3C3D7E74</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AE4CF87C02C042DF13ED5B21C4FDC1E0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>202FAD3B301F71942E09F1EF29A223B2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AE9A0F1152314C8C0316AC1F114CB4E8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Upload.swift</string>
+			<key>path</key>
+			<string>Source/Upload.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF84A6F831BB39ABD1E9F346EE3DA5BA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DOUAudioVisualizer.h</string>
+			<key>path</key>
+			<string>src/DOUAudioVisualizer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B1729F851F648EC60EE93CDB3C8BAEAD</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F82198F34DD14753A42F4328CD5E7A6B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B2CF2150813C4FA121131F7B814BD443</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>NetworkReachabilityManager.swift</string>
+			<key>path</key>
+			<string>Source/NetworkReachabilityManager.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B3E412D47FD35AF767AC45544B1C78A7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DOUSimpleHTTPRequest.m</string>
+			<key>path</key>
+			<string>src/DOUSimpleHTTPRequest.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B49348E9DF4CD252F4A9E5D839585FB5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>410F16EDE4603368EFFC195A52569808</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>B7CE49C41510DE5A6125FACDB1904C62</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DOUAudioAnalyzer+Default.m</string>
+			<key>path</key>
+			<string>src/DOUAudioAnalyzer+Default.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B8D87068FA9B3F0A12848A61E4695556</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DOUAudioFile.h</string>
+			<key>path</key>
+			<string>src/DOUAudioFile.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>Podfile</string>
+			<key>path</key>
+			<string>../Podfile</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.ruby</string>
+		</dict>
+		<key>BD0136A92E1195471F473A163C6D005F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DOUAudioStreamer.m</string>
+			<key>path</key>
+			<string>src/DOUAudioStreamer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE41196F6A3903E59C3306FE3F8B43FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FFC7D3E0FB350B8B5C332F9B136594A2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE6E8436FD375A508724DF3432686973</key>
 		<dict>
 			<key>baseConfigurationReference</key>
 			<string>5E65882B4D0E43B83EB7FF90C9BE1F93</string>
@@ -1551,7 +2293,29 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>A8AE69F936E04ECA37E68116B8697AEE</key>
+		<key>BE84BF8FD4853844D6D5A28641C7AB79</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DOUAudioRenderer.m</string>
+			<key>path</key>
+			<string>src/DOUAudioRenderer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BF139CFB5BC735AB592F6BFA5340167E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AA581525CF8B9F3627C209A4F582730F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BF1B5B561E4343586626A0763EEE17FB</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1559,106 +2323,29 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DOUSimpleHTTPRequest.h</string>
 			<key>path</key>
-			<string>src/DOUSimpleHTTPRequest.h</string>
+			<string>Pods-BeautifulDay-umbrella.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A9350189BDF3F8BEEC3F1A9A0ED3687A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>DOUAudioStreamer.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A95AA6045695EFD52DC90A8A6F6D01E5</key>
+		<key>C0DB70AB368765DC64BFB5FEA75E0696</key>
 		<dict>
 			<key>fileRef</key>
-			<string>7B4FDAF0AF677C37121F278F8083B1F4</string>
+			<string>4A57AFD88C2BA6A6E5B0CE92F6FFA415</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
 		</dict>
-		<key>AA581525CF8B9F3627C209A4F582730F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>ADE965C95BBBD1745D59323EF4213E94</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods-BeautifulDay.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B11784F9CF18414CB426B9FF554BD56A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>DOUAudioStreamer.m</string>
-			<key>path</key>
-			<string>src/DOUAudioStreamer.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B49348E9DF4CD252F4A9E5D839585FB5</key>
+		<key>C1306BFF984BE5B11588782EF266CC7B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>8EFE5F4C01336A60E5BEA8428D33A82D</string>
+			<string>0F9F5F681B0EA1CCFEC03F7EC7E0D85A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
 		</dict>
-		<key>B54642FA321C851464E5BB011C3DCAF7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>DOUAudioVisualizer.m</string>
-			<key>path</key>
-			<string>src/DOUAudioVisualizer.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B77F9B793E1015E5A8CEA7B08966397D</key>
+		<key>C3746E36F91278C40D0DCBA78D124E88</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>5D37E8A1B0C9FDB0A204C67F9EA20242</string>
+			<string>735AB87A295BCCA46B5609168DB2320B</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -1675,8 +2362,10 @@
 				<string>@rpath</string>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
 				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Alamofire/Alamofire-prefix.pch</string>
 				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-BeautifulDay/Info.plist</string>
+				<string>Target Support Files/Alamofire/Info.plist</string>
 				<key>INSTALL_PATH</key>
 				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
 				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
@@ -1687,24 +2376,18 @@
 					<string>@executable_path/Frameworks</string>
 					<string>@loader_path/Frameworks</string>
 				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
 				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-BeautifulDay/Pods-BeautifulDay.modulemap</string>
+				<string>Target Support Files/Alamofire/Alamofire.modulemap</string>
 				<key>MTL_ENABLE_DEBUG_INFO</key>
 				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
 				<key>PRODUCT_NAME</key>
-				<string>Pods_BeautifulDay</string>
+				<string>Alamofire</string>
 				<key>SDKROOT</key>
 				<string>iphoneos</string>
 				<key>SKIP_INSTALL</key>
 				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
 				<key>TARGETED_DEVICE_FAMILY</key>
 				<string>1,2</string>
 				<key>VERSIONING_SYSTEM</key>
@@ -1717,37 +2400,7 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>B80394839E63A9CDCBF55E645CADE4E9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>BE3045D866E5FBBBCC7E2A993E4BCA15</key>
+		<key>C68F72B2030A0256DCCF20DA12681842</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1756,116 +2409,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>DOUAudioPlaybackItem.h</string>
+			<string>DOUAudioLPCM.h</string>
 			<key>path</key>
-			<string>src/DOUAudioPlaybackItem.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BF1B5B561E4343586626A0763EEE17FB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-BeautifulDay-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1306BFF984BE5B11588782EF266CC7B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0F9F5F681B0EA1CCFEC03F7EC7E0D85A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C22D2EC73B195A055F0755674257A9F9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>DOUMPMediaLibraryAssetLoader.m</string>
-			<key>path</key>
-			<string>src/DOUMPMediaLibraryAssetLoader.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C52174EFFF77CF0A887BA26673CAC741</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>DOUEAGLView.m</string>
-			<key>path</key>
-			<string>src/DOUEAGLView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C54F0243B3DA888C76822F59AB429833</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DOUAudioSpatialAnalyzer.h</string>
-			<key>path</key>
-			<string>src/DOUAudioSpatialAnalyzer.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C596D50D44599751140BBACFCFC69EC2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A9350189BDF3F8BEEC3F1A9A0ED3687A</string>
-				<string>CF29339A52A96DA4BE36C0941BF45A19</string>
-				<string>96856CDD1337EDD4097EEB5423D0F567</string>
-				<string>D8F2A45A20566816A73F25D24090C789</string>
-				<string>872C8CC52737975BE674A1E5B93F0C5C</string>
-				<string>B80394839E63A9CDCBF55E645CADE4E9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/DOUAudioStreamer</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C6119E2546BD7E6115A22722CFFC1CA4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DOUAudioFile.h</string>
-			<key>path</key>
-			<string>src/DOUAudioFile.h</string>
+			<string>src/DOUAudioLPCM.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>C6DB87C9F8ECE545696DC880C867A4D9</key>
 		<dict>
 			<key>fileRef</key>
-			<string>DE101F515F4B0BE362A0812BA893B8A3</string>
+			<string>892CBFCD1C9D45C48DA7F10C2B97C59B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1877,7 +2430,7 @@
 		<key>C6F877569196B0B9BB72D3A585698C44</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B54642FA321C851464E5BB011C3DCAF7</string>
+			<string>525496AF8D38A3357EA72F32AECCB070</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1886,10 +2439,32 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
+		<key>C77282961C13714214F684CE979AB286</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ResponseSerialization.swift</string>
+			<key>path</key>
+			<string>Source/ResponseSerialization.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C7B6DD7C0456C50289A2C381DFE9FA3F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>31E739E027841039207A02F43A641610</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>C80CCD47FDC6C84D87E8C91F7D0B9083</key>
 		<dict>
 			<key>fileRef</key>
-			<string>4FDC0E19CAF232C3BF1E066CE0F1473F</string>
+			<string>ED824C424D22DDCBBCDE981A3FD7781B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1900,7 +2475,42 @@
 				</array>
 			</dict>
 		</dict>
-		<key>CA87869425C3EDEB3F8566980069D1DA</key>
+		<key>C9F236301A5A4D7A084B789ABA15746F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSData+DOUMappedFile.h</string>
+			<key>path</key>
+			<string>src/NSData+DOUMappedFile.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CB397D96BC2E20532818731BEE7D1997</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>16C23AFB65D1A6A8D6108B7BCCF22FD7</string>
+				<string>FAA85CAB0DE479BB848BF67C845436A3</string>
+				<string>1B1BBC5702C648DA92E086B3FD67D9ED</string>
+				<string>CDA74CE61BDDBC7E30E0C8EA09AB60EB</string>
+				<string>73AF5A560699AC72E9598D07D79601BA</string>
+				<string>896C4868DDA61294E1511038D4368A92</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/DOUAudioStreamer</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CC04922C59308D14FB54CC82BFFFC20F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1915,20 +2525,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>CA8C8F3384D90170D75B56553A96DD78</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>073D5585DD2123FF0ADF0C794F3D61D3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CB1E57594833C714EA893B6184E39518</key>
+		<key>CC17C7FA3BF7D07FF7C8F46B33041646</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1937,29 +2534,84 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>DOUAudioAnalyzer.h</string>
+			<string>DOUAudioDecoder.h</string>
 			<key>path</key>
-			<string>src/DOUAudioAnalyzer.h</string>
+			<string>src/DOUAudioDecoder.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>CF29339A52A96DA4BE36C0941BF45A19</key>
+		<key>CC5A47DACA883536F0CFD1BED3B6E22C</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Manager.swift</string>
 			<key>path</key>
-			<string>DOUAudioStreamer.xcconfig</string>
+			<string>Source/Manager.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDA74CE61BDDBC7E30E0C8EA09AB60EB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>DOUAudioStreamer-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CE954B452A69826092845CB7E01CF023</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>Alamofire</string>
+			<key>target</key>
+			<string>79C040AFDDCE1BCBF6D8B5EB0B85887F</string>
+			<key>targetProxy</key>
+			<string>E262659210F6A570D43E48500669E8A3</string>
+		</dict>
+		<key>CF76773679335FB253EA4583B6754669</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BF1B5B561E4343586626A0763EEE17FB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>D0B423BA5E9761AAA86DCDF516B591D2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DOUEAGLView.h</string>
+			<key>path</key>
+			<string>src/DOUEAGLView.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>D11F10C2FE8DB1244720E8C5470787C2</key>
 		<dict>
 			<key>fileRef</key>
-			<string>CA87869425C3EDEB3F8566980069D1DA</string>
+			<string>CC04922C59308D14FB54CC82BFFFC20F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2004,7 +2656,7 @@
 		<key>D255ED1525204995BC8CB2768D8C37B3</key>
 		<dict>
 			<key>fileRef</key>
-			<string>FB016BCD82A2424F71E019B28A6062CD</string>
+			<string>78B96783E2ADB84802820FD641AB0361</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2015,10 +2667,25 @@
 				</array>
 			</dict>
 		</dict>
+		<key>D2E18C186BB01A2606BC053ED3D1B28E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Request.swift</string>
+			<key>path</key>
+			<string>Source/Request.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>D33EA229A3B4F26AD47B0AD98F78E76B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>96856CDD1337EDD4097EEB5423D0F567</string>
+			<string>1B1BBC5702C648DA92E086B3FD67D9ED</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -2048,7 +2715,7 @@
 			<key>mainGroup</key>
 			<string>7DB346D0F39D3F0E887471402A8071AB</string>
 			<key>productRefGroup</key>
-			<string>6BEEDBBDBD6DDEC9C9E32973F361F41F</string>
+			<string>1545213D18D1C0DDBF41EDDF6FCE1A8D</string>
 			<key>projectDirPath</key>
 			<string></string>
 			<key>projectReferences</key>
@@ -2057,14 +2724,15 @@
 			<string></string>
 			<key>targets</key>
 			<array>
+				<string>79C040AFDDCE1BCBF6D8B5EB0B85887F</string>
 				<string>A39C8A222A24E2686B6781EAE85DA8A9</string>
-				<string>6583C7C4ABC46E82E00B2C97890F99C4</string>
+				<string>39ECF8293DB10EE054415ADABC4A474F</string>
 			</array>
 		</dict>
 		<key>D6C9D5E16C9874635ED287BB344F6C8D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>6F76EF908A43FEC77F5051CDFA8DD1A6</string>
+			<string>84F8897CAA72708BDA49AFB6AEA9784C</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2086,10 +2754,53 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
+		<key>D7DF87001B7ECCE7D89E4D0E1FA6D969</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>BF139CFB5BC735AB592F6BFA5340167E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D81D6C23FDE598C8F97C37E2EC5D8E4B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Error.swift</string>
+			<key>path</key>
+			<string>Source/Error.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D8C9EC8619D55DA819BD5325A867C6E1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DOUAudioStreamer+Options.m</string>
+			<key>path</key>
+			<string>src/DOUAudioStreamer+Options.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>D8D2D4EAE0028AE0E74586ACE3C90B6E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3DA2288830933271B6C75C2462DC5768</string>
+			<string>5F5B91BDA10C93DD150F50452C6F090E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2100,23 +2811,25 @@
 				</array>
 			</dict>
 		</dict>
-		<key>D8F2A45A20566816A73F25D24090C789</key>
+		<key>DB69C3FE829EC9C1DE1DBB294CCD842F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Validation.swift</string>
 			<key>path</key>
-			<string>DOUAudioStreamer-prefix.pch</string>
+			<string>Source/Validation.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>DD12AD6E299B7A4CB40B54E6C57F6E9B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E97FB1E5151B6B0B000684717FABC4D4</string>
+			<string>EFCFD00A39D91903EF287C867FD3F92D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2127,40 +2840,10 @@
 				</array>
 			</dict>
 		</dict>
-		<key>DD1BE9AD63F1A7903810B98E84ACB2B4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>DOUAudioAnalyzer.m</string>
-			<key>path</key>
-			<string>src/DOUAudioAnalyzer.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DE101F515F4B0BE362A0812BA893B8A3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>DOUAudioPlaybackItem.m</string>
-			<key>path</key>
-			<string>src/DOUAudioPlaybackItem.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>DFE354098400A31C3FD4545A2DCDDCBE</key>
 		<dict>
 			<key>fileRef</key>
-			<string>FA1D2F3A1E3F3357D566B392E5A33C81</string>
+			<string>CC17C7FA3BF7D07FF7C8F46B33041646</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2174,7 +2857,7 @@
 		<key>E091C925FFE4B9E98D575BFEC325E4A7</key>
 		<dict>
 			<key>fileRef</key>
-			<string>872C8CC52737975BE674A1E5B93F0C5C</string>
+			<string>73AF5A560699AC72E9598D07D79601BA</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2188,7 +2871,7 @@
 		<key>E234153FDF768CE57119EDCBA48F7CC1</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C22D2EC73B195A055F0755674257A9F9</string>
+			<string>A0CB94970E650E407DA501A4072BB850</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2197,25 +2880,51 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>E97FB1E5151B6B0B000684717FABC4D4</key>
+		<key>E262659210F6A570D43E48500669E8A3</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>79C040AFDDCE1BCBF6D8B5EB0B85887F</string>
+			<key>remoteInfo</key>
+			<string>Alamofire</string>
+		</dict>
+		<key>E4232F4C49F55BB649ADA09A49CF7B3F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>DOUAudioAnalyzer_Private.h</string>
+			<string>DOUAudioLPCM.m</string>
 			<key>path</key>
-			<string>src/DOUAudioAnalyzer_Private.h</string>
+			<string>src/DOUAudioLPCM.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EA7C005F8DB5442C6AAC1AAFF229630B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CF76773679335FB253EA4583B6754669</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>EA9B2F2417544895C5038FEF6699F0FA</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C6119E2546BD7E6115A22722CFFC1CA4</string>
+			<string>B8D87068FA9B3F0A12848A61E4695556</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2226,7 +2935,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>ED58E031E382A7A179DDED6AC3FE400A</key>
+		<key>ED824C424D22DDCBBCDE981A3FD7781B</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2235,11 +2944,26 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>DOUAudioVisualizer.h</string>
+			<string>DOUAudioAnalyzer+Default.h</string>
 			<key>path</key>
-			<string>src/DOUAudioVisualizer.h</string>
+			<string>src/DOUAudioAnalyzer+Default.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EDC779652947049BEF08BCE7072FC4FD</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DOUAudioStreamer.framework</string>
+			<key>path</key>
+			<string>DOUAudioStreamer.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>EE4621153258585FF2CAA0672A646D3B</key>
 		<dict>
@@ -2254,7 +2978,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F0DF0C36EA0E3C7F619425FB9D96E39A</key>
+		<key>EF69BFD54D3141BDCA85898A1E042F09</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2263,11 +2987,86 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>DOUAudioFileProvider.h</string>
+			<string>DOUAudioFrequencyAnalyzer.h</string>
 			<key>path</key>
-			<string>src/DOUAudioFileProvider.h</string>
+			<string>src/DOUAudioFrequencyAnalyzer.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EFCFD00A39D91903EF287C867FD3F92D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DOUAudioAnalyzer_Private.h</string>
+			<key>path</key>
+			<string>src/DOUAudioAnalyzer_Private.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EFDF3B631BBB965A372347705CA14854</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9469DF81ECB494E84675969B5E13374C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>EFE92E8D3813DD26E78E93EEAF6D7E7E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D2E18C186BB01A2606BC053ED3D1B28E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F2349AA0089B53B61AB5934E57E61416</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1FC80BB5060A8831A8123C5EB7DC968E</string>
+				<string>735AB87A295BCCA46B5609168DB2320B</string>
+				<string>77DA596AFA1D44F5606B82BA3C3D7E74</string>
+				<string>890EC1D8F13F49995C54DBFD1650B392</string>
+				<string>F6FD5CC08DA2D096CA04E9964FCF9D60</string>
+				<string>054DC17A07BCA20B296D9A96EDDBB738</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/Alamofire</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F6FD5CC08DA2D096CA04E9964FCF9D60</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Alamofire-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F82198F34DD14753A42F4328CD5E7A6B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AA581525CF8B9F3627C209A4F582730F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>F9964AB5751BBD13B76F3D40E0ACDF53</key>
 		<dict>
@@ -2282,21 +3081,6 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>FA1D2F3A1E3F3357D566B392E5A33C81</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DOUAudioDecoder.h</string>
-			<key>path</key>
-			<string>src/DOUAudioDecoder.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>FA6D094638FE8B0FAE286E1E347C3250</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -2310,18 +3094,16 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>FB016BCD82A2424F71E019B28A6062CD</key>
+		<key>FAA85CAB0DE479BB848BF67C845436A3</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DOUAudioFilePreprocessor.h</string>
+			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>src/DOUAudioFilePreprocessor.h</string>
+			<string>DOUAudioStreamer.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2393,6 +3175,21 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
+		<key>FBB607F0680461004ED98563BF12B795</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DOUAudioStreamer+Options.h</string>
+			<key>path</key>
+			<string>src/DOUAudioStreamer+Options.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>FC5CD7A25171FDA4294F2FB59005BD41</key>
 		<dict>
 			<key>fileRef</key>
@@ -2400,23 +3197,10 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>FD01B7CCFF8C333DF7E3DF67F0C5EB4C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>931FF498D17732D1D57892F49E9A2DCD</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>FD13A352BCD9C3246AA39C5ACE2CBB9B</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>CF29339A52A96DA4BE36C0941BF45A19</string>
+			<string>FAA85CAB0DE479BB848BF67C845436A3</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -2469,18 +3253,18 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>FDD2FC2E1B4BCF00B0D212EEA10A2156</key>
+		<key>FFC7D3E0FB350B8B5C332F9B136594A2</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>DOUAudioStreamer.h</string>
+			<string>Notifications.swift</string>
 			<key>path</key>
-			<string>src/DOUAudioStreamer.h</string>
+			<string>Source/Notifications.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>

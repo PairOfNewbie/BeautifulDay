@@ -5,6 +5,7 @@ use_frameworks!
 
 target 'BeautifulDay' do
 pod 'DOUAudioStreamer'
+pod 'Alamofire'
 end
 
 target 'BeautifulDayTests' do
