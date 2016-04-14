@@ -13,7 +13,7 @@
 
 #####Method
 
-	Post http://112.74.106.192/Beautiful_Day/App/index.app
+	Post http://112.74.106.192/Beautiful_Day/App/index.php
 
 #####Headers
 
@@ -21,14 +21,16 @@
 
 #####Body
 
-	nil
-
-#####Parameters  
-
+	{
 	"date" : "2016-04-14"
+	}
 	
 	explaination：  
 	“2016-04-14”（日期的格式需要占位0）
+
+#####Parameters  
+
+	nil
 
 #####Response
 
@@ -54,16 +56,16 @@
 
 #####Body
 
-	nil
-
-#####Parameters  
-
 	{
 	"date" : "2016-04-14"
 	}
 	
 	explaination：  
 	“2016-04-14”（日期的格式需要占位0）
+
+#####Parameters  
+
+	nil
 
 #####Response
 
