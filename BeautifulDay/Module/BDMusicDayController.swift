@@ -8,6 +8,9 @@
 
 import UIKit
 import DOUAudioStreamer
+import Alamofire
+//import AFNetworking
+import SDWebImage
 let bottomHeight : CGFloat = 44 + 2
 
 class BDMusicDayController: UIViewController, UIScrollViewDelegate {
@@ -32,11 +35,55 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
     //MARK: - Life Cycle
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        trk = Track()
-        trk?.artist = "jason"
-        trk?.title = "jason's song"
-        trk?.audioFileURL = NSURL(string: "http://mr7.doubanio.com/2867d1b829cddffa78318cdb7a3b34ce/1/fm/song/p616953_128k.mp4")
-        resetStreamer()
+    
+        Alamofire.request(.POST, "http://112.74.106.192/Beautiful_Day/App/index.php", parameters: ["date" : "2016-04-14"], encoding: .JSON, headers: nil).responseJSON { [unowned self](response:Response<AnyObject, NSError>)  in
+            if response.result.isSuccess {
+                if let dic = response.result.value {
+                    self.trk = Track()
+                    if let artist = dic.objectForKey("text") as? String {
+                        self.trk?.artist = artist
+                    }
+                    if let title = dic.objectForKey("text") as? String {
+                        self.trk?.title = title
+                    }
+                    if let audioFileURLString = dic.objectForKey("music") as? String {
+                        self.trk?.audioFileURL = NSURL(string: audioFileURLString)
+                        self.resetStreamer()
+                    }
+                    if let imageURLString = dic.objectForKey("img") as? String {
+                        self.bgView.sd_setImageWithURL(NSURL(string: imageURLString))
+                    }
+                    if let date = dic.objectForKey("date") as? String {
+                        self.dateLabel.text = date
+                    }
+                    if let location = dic.objectForKey("text") as? String {
+                        self.locationLabel.text = location
+                    }
+                    if let des = dic.objectForKey("text") as? String {
+                        self.descriptionLabel.text = des
+                    }
+                }
+            }
+        }
+
+        /// 替换方法，使用AFNetworking
+//        let res = AFJSONResponseSerializer()
+//        res.acceptableContentTypes = ["text/html"]
+//        let manager = AFHTTPSessionManager()
+//        manager.responseSerializer = res
+//        manager.requestSerializer = AFJSONRequestSerializer()
+//        manager.POST("http://112.74.106.192/Beautiful_Day/App/index.php", parameters: ["date" : "2016-04-14"], success: { (task:NSURLSessionDataTask, response:AnyObject?) in
+//            print(task)
+//            print(response)
+//        }) { (task:NSURLSessionDataTask?, error:NSError) in
+//            print(error)
+//        }
+        
+//        trk = Track()
+//        trk?.artist = "jason"
+//        trk?.title = "jason's song"
+//        trk?.audioFileURL = NSURL(string: "http://mr7.doubanio.com/2867d1b829cddffa78318cdb7a3b34ce/1/fm/song/p616953_128k.mp4")
+//        resetStreamer()
     }
     //MARK: - Initial Setup
     func setupSubviews() {
