@@ -35,7 +35,7 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
     //MARK: - Life Cycle
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-    
+        
         Alamofire.request(.POST, "http://112.74.106.192/Beautiful_Day/App/index.php", parameters: ["date" : "2016-04-14"], encoding: .JSON, headers: nil).responseJSON { [unowned self](response:Response<AnyObject, NSError>)  in
             if response.result.isSuccess {
                 if let dic = response.result.value {
@@ -49,6 +49,7 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
                     if let audioFileURLString = dic.objectForKey("music") as? String {
                         self.trk?.audioFileURL = NSURL(string: audioFileURLString)
                         self.resetStreamer()
+                        self.mpView.rotate()
                     }
                     if let imageURLString = dic.objectForKey("img") as? String {
                         self.bgView.sd_setImageWithURL(NSURL(string: imageURLString))
@@ -65,25 +66,25 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
                 }
             }
         }
-
-        /// 替换方法，使用AFNetworking
-//        let res = AFJSONResponseSerializer()
-//        res.acceptableContentTypes = ["text/html"]
-//        let manager = AFHTTPSessionManager()
-//        manager.responseSerializer = res
-//        manager.requestSerializer = AFJSONRequestSerializer()
-//        manager.POST("http://112.74.106.192/Beautiful_Day/App/index.php", parameters: ["date" : "2016-04-14"], success: { (task:NSURLSessionDataTask, response:AnyObject?) in
-//            print(task)
-//            print(response)
-//        }) { (task:NSURLSessionDataTask?, error:NSError) in
-//            print(error)
-//        }
         
-//        trk = Track()
-//        trk?.artist = "jason"
-//        trk?.title = "jason's song"
-//        trk?.audioFileURL = NSURL(string: "http://mr7.doubanio.com/2867d1b829cddffa78318cdb7a3b34ce/1/fm/song/p616953_128k.mp4")
-//        resetStreamer()
+        /// 替换方法，使用AFNetworking
+        //        let res = AFJSONResponseSerializer()
+        //        res.acceptableContentTypes = ["text/html"]
+        //        let manager = AFHTTPSessionManager()
+        //        manager.responseSerializer = res
+        //        manager.requestSerializer = AFJSONRequestSerializer()
+        //        manager.POST("http://112.74.106.192/Beautiful_Day/App/index.php", parameters: ["date" : "2016-04-14"], success: { (task:NSURLSessionDataTask, response:AnyObject?) in
+        //            print(task)
+        //            print(response)
+        //        }) { (task:NSURLSessionDataTask?, error:NSError) in
+        //            print(error)
+        //        }
+        
+        //        trk = Track()
+        //        trk?.artist = "jason"
+        //        trk?.title = "jason's song"
+        //        trk?.audioFileURL = NSURL(string: "http://mr7.doubanio.com/2867d1b829cddffa78318cdb7a3b34ce/1/fm/song/p616953_128k.mp4")
+        //        resetStreamer()
     }
     //MARK: - Initial Setup
     func setupSubviews() {
@@ -113,7 +114,6 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
         streamer?.addObserver(self, forKeyPath: "duration", options: .New, context: nil)
         streamer?.addObserver(self, forKeyPath: "bufferingRatio", options: .New, context: nil)
         streamer?.play()
-        
     }
     
     //MARK: - KVO
@@ -142,10 +142,14 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
     func updateStatus() {
         //todo
         //the swift does not recginize the NS_Enum, so ware
+//        if streamer?.status == DOUAudioStreamerPlaying {
+//            
+//        }
     }
     func updateProgress() {
         //todo
     }
+    
     //MARK: - Gesture
     var origin : CGPoint = CGPointZero
     var final : CGPoint = CGPointZero

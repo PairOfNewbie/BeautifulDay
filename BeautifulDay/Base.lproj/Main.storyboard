@@ -79,32 +79,31 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="2fb-7p-HpV">
-                                        <rect key="frame" x="-2" y="44" width="604" height="2"/>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="w0X-ih-BXt">
+                                        <rect key="frame" x="0.0" y="44" width="600" height="2"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="7w8-eS-oh4"/>
-                                            <constraint firstAttribute="height" constant="1" id="zOf-3t-Jap"/>
+                                            <constraint firstAttribute="height" constant="2" id="ldl-Xc-3wu"/>
                                         </constraints>
-                                    </slider>
+                                    </progressView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.80033987760543823" green="0.94461065530776978" blue="0.75810927152633667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="s1u-y7-za9" firstAttribute="leading" secondItem="bOy-fV-1hD" secondAttribute="trailing" constant="8" id="2XX-c0-hlf"/>
-                                    <constraint firstItem="2fb-7p-HpV" firstAttribute="top" secondItem="bOy-fV-1hD" secondAttribute="bottom" id="BAW-0h-i2g"/>
-                                    <constraint firstAttribute="trailing" secondItem="2fb-7p-HpV" secondAttribute="trailing" id="BoY-tG-1Kw"/>
+                                    <constraint firstAttribute="trailing" secondItem="w0X-ih-BXt" secondAttribute="trailing" id="4wg-cA-7t5"/>
+                                    <constraint firstItem="w0X-ih-BXt" firstAttribute="top" secondItem="bOy-fV-1hD" secondAttribute="bottom" id="7g0-Lk-ond"/>
                                     <constraint firstItem="u1P-b5-2Sp" firstAttribute="top" secondItem="MyU-wk-nuE" secondAttribute="top" id="H96-NL-ZO3"/>
                                     <constraint firstItem="bOy-fV-1hD" firstAttribute="top" secondItem="MyU-wk-nuE" secondAttribute="top" id="NmE-Ap-Eqr"/>
                                     <constraint firstItem="u1P-b5-2Sp" firstAttribute="leading" secondItem="bOy-fV-1hD" secondAttribute="trailing" constant="8" id="Qe3-JE-v0h"/>
                                     <constraint firstItem="s1u-y7-za9" firstAttribute="top" secondItem="u1P-b5-2Sp" secondAttribute="bottom" id="d8W-Co-nZy"/>
-                                    <constraint firstItem="2fb-7p-HpV" firstAttribute="leading" secondItem="MyU-wk-nuE" secondAttribute="leading" id="g3t-Tu-hfh"/>
                                     <constraint firstItem="bOy-fV-1hD" firstAttribute="leading" secondItem="MyU-wk-nuE" secondAttribute="leading" id="kV9-iQ-WIL"/>
-                                    <constraint firstItem="2fb-7p-HpV" firstAttribute="top" secondItem="s1u-y7-za9" secondAttribute="bottom" id="yJR-oW-EQ9"/>
+                                    <constraint firstItem="w0X-ih-BXt" firstAttribute="leading" secondItem="MyU-wk-nuE" secondAttribute="leading" id="zWQ-js-i2I"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="yJR-oW-EQ9"/>
-                                    </mask>
-                                </variation>
+                                <connections>
+                                    <outlet property="artistLabel" destination="u1P-b5-2Sp" id="ypr-x0-oZ6"/>
+                                    <outlet property="progressView" destination="w0X-ih-BXt" id="ZWf-9S-5hg"/>
+                                    <outlet property="remainingLabel" destination="s1u-y7-za9" id="lgs-Ct-Hec"/>
+                                    <outlet property="rotateIcon" destination="bOy-fV-1hD" id="d0N-8j-zzZ"/>
+                                </connections>
                             </view>
                         </subviews>
                         <constraints>
