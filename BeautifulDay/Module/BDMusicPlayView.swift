@@ -9,6 +9,11 @@
 import UIKit
 import DOUAudioStreamer
 class BDMusicPlayView: UIView {
+//    var animateProgress : Double = 0 {
+//        didSet {
+//            rotateIcon.layer.timeOffset = animateProgress
+//        }
+//    }
     lazy var rotateImages : [UIImage] = {
         var arr = [UIImage]()
         for index in 0...126 {
@@ -33,20 +38,41 @@ class BDMusicPlayView: UIView {
         commonInit()
     }
     
-    func commonInit() {
-        self.addObserver(self, forKeyPath: "contentOffset", options: .New, context: nil)
+    private func commonInit() {
     }
     
+//    func setupSubviews() {
+//        let fromPoint = rotateIcon.center
+//        let toPoint = self.center
+//        let movePath = UIBezierPath()
+//        movePath.moveToPoint(fromPoint)
+//        movePath.addLineToPoint(toPoint)
+//        let animation = CAKeyframeAnimation(keyPath: "position")
+//        animation.path = movePath.CGPath
+//        //        animation.duration = 1
+//        //        animation.removedOnCompletion = false
+//        //        animation.fillMode = kCAFillModeForwards
+//        //        animation.autoreverses = false
+//        
+//        let animation1 = CABasicAnimation(keyPath: "transform.scale")
+//        animation1.fromValue = NSValue(CATransform3D: CATransform3DIdentity)
+//        animation1.toValue = NSValue(CATransform3D: CATransform3DMakeScale(3, 3, 1))
+//        //        animation1.removedOnCompletion = false
+//        //        animation1.duration = 1
+//        //        animation1.fillMode = kCAFillModeForwards
+//        //        animation1.autoreverses = false
+//        
+//        let animationGroup = CAAnimationGroup()
+//        animationGroup.animations = [animation, animation1]
+//        animationGroup.removedOnCompletion = false
+//        animationGroup.duration = 1
+//        animationGroup.fillMode = kCAFillModeForwards
+//        animationGroup.autoreverses = false
+//        
+//        rotateIcon.layer.addAnimation(animationGroup, forKey: "rotateIcon")
+//    }
     //MARK:- Public
     func updateBufferingStatus(streamer: DOUAudioStreamer) {
-        //todo
-        /**
-         [_miscLabel setText:[NSString stringWithFormat:@"Received %.2f/%.2f MB (%.2f %%), Speed %.2f MB/s", (double)[_streamer receivedLength] / 1024 / 1024, (double)[_streamer expectedLength] / 1024 / 1024, [_streamer bufferingRatio] * 100.0, (double)[_streamer downloadSpeed] / 1024 / 1024]];
-         
-         if ([_streamer bufferingRatio] >= 1.0) {
-         NSLog(@"sha256: %@", [_streamer sha256]);
-         }
-         */
         remainingLabel.text = String(format: "Received %.2f/%.2f MB (%.2f %%), Speed %.2f MB/s", Float(streamer.receivedLength) / 1024 / 1024, Float(streamer.expectedLength) / 1024 / 1024, streamer.bufferingRatio * 100.0, Float(streamer.downloadSpeed) / 1024 / 1024)
     }
     func updateStatus(status: DOUAudioStreamerStatus) {
@@ -104,15 +130,6 @@ class BDMusicPlayView: UIView {
     }
     
     func updateProgress(streamer: DOUAudioStreamer) {
-        //todo
-        /**
-         if ([_streamer duration] == 0.0) {
-         [_progressSlider setValue:0.0f animated:NO];
-         }
-         else {
-         [_progressSlider setValue:[_streamer currentTime] / [_streamer duration] animated:YES];
-         }
-         */
         if  streamer.duration == 0{
             progressView.setProgress(0, animated: false)
         }else {
@@ -125,18 +142,5 @@ class BDMusicPlayView: UIView {
         rotateIcon.animationImages = rotateImages
         rotateIcon.startAnimating()
     }
-    //MARK: - KVO
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        if keyPath == "contentOffset" {
-            
-        }
-    }
-    /*
-     // Only override drawRect: if you perform custom drawing.
-     // An empty implementation adversely affects performance during animation.
-     override func drawRect(rect: CGRect) {
-     // Drawing code
-     }
-     */
     
 }

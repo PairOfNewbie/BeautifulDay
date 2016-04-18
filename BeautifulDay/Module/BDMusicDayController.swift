@@ -88,10 +88,10 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
     }
     //MARK: - Initial Setup
     func setupSubviews() {
-        let panGesture = UIPanGestureRecognizer(target: self, action: NSSelectorFromString("onPan:"))
-        mpView.addGestureRecognizer(panGesture)
-        let tapGesture = UITapGestureRecognizer(target: self, action: NSSelectorFromString("onTap:"))
-        mpView.addGestureRecognizer(tapGesture)
+//        let panGesture = UIPanGestureRecognizer(target: self, action: NSSelectorFromString("onPan:"))
+//        mpView.addGestureRecognizer(panGesture)
+//        let tapGesture = UITapGestureRecognizer(target: self, action: NSSelectorFromString("onTap:"))
+//        mpView.addGestureRecognizer(tapGesture)
     }
     
     //MARK: - DOUPlayer
@@ -101,6 +101,7 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
             streamer?.pause()
             streamer!.removeObserver(self, forKeyPath: "status")
             streamer!.removeObserver(self, forKeyPath: "duration")
+            streamer!.removeObserver(self, forKeyPath: "currentTime")
             streamer!.removeObserver(self, forKeyPath: "bufferingRatio")
             streamer = nil
         }
@@ -112,31 +113,37 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
         streamer = DOUAudioStreamer(audioFile: trk)
         streamer?.addObserver(self, forKeyPath: "status", options: .New, context: nil)
         streamer?.addObserver(self, forKeyPath: "duration", options: .New, context: nil)
+        streamer?.addObserver(self, forKeyPath: "currentTime", options: .New, context: nil)
         streamer?.addObserver(self, forKeyPath: "bufferingRatio", options: .New, context: nil)
         streamer?.play()
     }
     
     //MARK: - KVO
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        if keyPath == "duration" {
+            print("duration")
+        }
+        if keyPath == "currentTime" {
+            print("currentTime")
+        }
         if let kp = keyPath {
             switch kp {
             case "status":
                 dispatch_async(dispatch_get_main_queue(), { [unowned self]() -> Void in
                     self.mpView.updateStatus(self.streamer!.status)
                 })
-                break
             case "duration":
+                fallthrough
+            case "currentTime":
                 dispatch_async(dispatch_get_main_queue(), { [unowned self]() -> Void in
                     self.mpView.updateProgress(self.streamer!)
                     })
-                break
             case "bufferingRatio":
                 dispatch_async(dispatch_get_main_queue(), { [unowned self]() -> Void in
                     self.mpView.updateBufferingStatus(self.streamer!)
                     })
-                break
             default:
-                break
+                super.observeValueForKeyPath(keyPath, ofObject: object, change: change, context: context)
             }
         }
     }
