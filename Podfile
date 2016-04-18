@@ -8,6 +8,7 @@ pod 'DOUAudioStreamer'
 pod 'Alamofire'
 pod 'AFNetworking'
 pod 'SDWebImage'
+pod 'SnapKit'
 end
 
 target 'BeautifulDayTests' do
