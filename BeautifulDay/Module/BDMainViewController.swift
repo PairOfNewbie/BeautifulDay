@@ -79,7 +79,7 @@ class BDMainViewController: UIViewController, UIPageViewControllerDelegate, UIPa
         // Create a new view controller and pass suitable data.
         let pageContentViewController = storyboard?.instantiateViewControllerWithIdentifier("BDMusicDayController") as!BDMusicDayController
         pageContentViewController.view.backgroundColor = UIColor.whiteColor()
-        pageContentViewController.bgView.image = UIImage(named: imageArray[index])
+//        pageContentViewController.bgView.image = UIImage(named: imageArray[index])
         pageContentViewController.dateLabel.text = "index is \(index)"
         pageContentViewController.pageIndex = index
         currentIndex = index

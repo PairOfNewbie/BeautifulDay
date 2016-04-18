@@ -127,14 +127,13 @@ class BDMusicPlayView: UIView {
                 rotate()
             }
         }else if status == .Paused {
-//            rotateIcon.stopAnimating()
             pauseLayer(rotateIcon.layer)
         }else if status == .Idle {
             rotateIcon.stopAnimating()
         }else if status == .Finished {
             rotateIcon.stopAnimating()
         }else if status == .Buffering {
-//            rotateIcon.stopAnimating()
+            
         }else if status == .Error {
             rotateIcon.stopAnimating()
         }
