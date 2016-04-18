@@ -42,6 +42,7 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
                     self.trk = Track()
                     if let artist = dic.objectForKey("text") as? String {
                         self.trk?.artist = artist
+                        self.mpView.artistLabel.text = artist
                     }
                     if let title = dic.objectForKey("text") as? String {
                         self.trk?.title = title
@@ -49,7 +50,6 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
                     if let audioFileURLString = dic.objectForKey("music") as? String {
                         self.trk?.audioFileURL = NSURL(string: audioFileURLString)
                         self.resetStreamer()
-                        self.mpView.rotate()
                     }
                     if let imageURLString = dic.objectForKey("img") as? String {
                         self.bgView.sd_setImageWithURL(NSURL(string: imageURLString))
@@ -121,33 +121,24 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
         if let kp = keyPath {
             switch kp {
             case "status":
-                self.performSelector(NSSelectorFromString("updateStatus"), onThread: NSThread.mainThread(), withObject: nil, waitUntilDone: false, modes: nil)
+                dispatch_async(dispatch_get_main_queue(), { [unowned self]() -> Void in
+                    self.mpView.updateStatus(self.streamer!.status)
+                })
                 break
             case "duration":
-                self.performSelector(NSSelectorFromString("updateProgress"), onThread: NSThread.mainThread(), withObject: nil, waitUntilDone: false, modes: nil)
+                dispatch_async(dispatch_get_main_queue(), { [unowned self]() -> Void in
+                    self.mpView.updateProgress(self.streamer!)
+                    })
                 break
             case "bufferingRatio":
-                self.performSelector(NSSelectorFromString("updateBufferingStatus"), onThread: NSThread.mainThread(), withObject: nil, waitUntilDone: false, modes: nil)
+                dispatch_async(dispatch_get_main_queue(), { [unowned self]() -> Void in
+                    self.mpView.updateBufferingStatus(self.streamer!)
+                    })
                 break
             default:
                 break
             }
         }
-    }
-    
-    //MARK: - Helper
-    func updateBufferingStatus() {
-        //todo
-    }
-    func updateStatus() {
-        //todo
-        //the swift does not recginize the NS_Enum, so ware
-//        if streamer?.status == DOUAudioStreamerPlaying {
-//            
-//        }
-    }
-    func updateProgress() {
-        //todo
     }
     
     //MARK: - Gesture
