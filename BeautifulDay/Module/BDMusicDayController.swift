@@ -85,11 +85,14 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
         //        trk?.audioFileURL = NSURL(string: "http://mr7.doubanio.com/2867d1b829cddffa78318cdb7a3b34ce/1/fm/song/p616953_128k.mp4")
         //        resetStreamer()
     }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
         canncelStreamer()
     }
+//    override func viewWillDisappear(animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        canncelStreamer()
+//    }
     //MARK: - Initial Setup
     func setupSubviews() {
 //        let panGesture = UIPanGestureRecognizer(target: self, action: NSSelectorFromString("onPan:"))
@@ -102,7 +105,8 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
     var streamer : DOUAudioStreamer? = nil
     func canncelStreamer() {
         if streamer != nil {
-            streamer?.pause()
+            streamer?.stop()
+            mpView.rotateIcon.stopAnimating()
             streamer!.removeObserver(self, forKeyPath: "status")
             streamer!.removeObserver(self, forKeyPath: "duration")
             streamer!.removeObserver(self, forKeyPath: "bufferingRatio")

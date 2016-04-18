@@ -134,7 +134,7 @@ class BDMusicPlayView: UIView {
         }else if status == .Finished {
             rotateIcon.stopAnimating()
         }else if status == .Buffering {
-            rotateIcon.stopAnimating()
+//            rotateIcon.stopAnimating()
         }else if status == .Error {
             rotateIcon.stopAnimating()
         }
@@ -161,6 +161,9 @@ class BDMusicPlayView: UIView {
     }
     
     func resumeLayer(layer: CALayer) {
+        if layer.speed == 1 {
+            return
+        }
         let pausedTime = layer.timeOffset
         layer.speed = 1
         layer.timeOffset = 0
