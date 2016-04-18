@@ -7,6 +7,7 @@ target 'BeautifulDay' do
 pod 'DOUAudioStreamer'
 pod 'Alamofire'
 pod 'AFNetworking'
+pod 'SDWebImage'
 end
 
 target 'BeautifulDayTests' do

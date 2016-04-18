@@ -87,9 +87,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-BeautifulDay/AFNetworking.framework"
   install_framework "Pods-BeautifulDay/Alamofire.framework"
   install_framework "Pods-BeautifulDay/DOUAudioStreamer.framework"
+  install_framework "Pods-BeautifulDay/SDWebImage.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-BeautifulDay/AFNetworking.framework"
   install_framework "Pods-BeautifulDay/Alamofire.framework"
   install_framework "Pods-BeautifulDay/DOUAudioStreamer.framework"
+  install_framework "Pods-BeautifulDay/SDWebImage.framework"
 fi
