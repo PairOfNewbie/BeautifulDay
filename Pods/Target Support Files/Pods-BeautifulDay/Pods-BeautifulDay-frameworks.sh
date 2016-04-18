@@ -84,10 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-BeautifulDay/AFNetworking.framework"
   install_framework "Pods-BeautifulDay/Alamofire.framework"
   install_framework "Pods-BeautifulDay/DOUAudioStreamer.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-BeautifulDay/AFNetworking.framework"
   install_framework "Pods-BeautifulDay/Alamofire.framework"
   install_framework "Pods-BeautifulDay/DOUAudioStreamer.framework"
 fi
