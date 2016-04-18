@@ -9,11 +9,18 @@
 import UIKit
 import DOUAudioStreamer
 class BDMusicPlayView: UIView {
+    var timer: NSTimer?
+    var streamer: DOUAudioStreamer? {
+        didSet {
+            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(BDMusicPlayView.updateProgress), userInfo: nil, repeats: true)
+        }
+    }
 //    var animateProgress : Double = 0 {
 //        didSet {
 //            rotateIcon.layer.timeOffset = animateProgress
 //        }
 //    }
+    
     lazy var rotateImages : [UIImage] = {
         var arr = [UIImage]()
         for index in 0...126 {
@@ -38,6 +45,9 @@ class BDMusicPlayView: UIView {
         commonInit()
     }
     
+    deinit {
+        timer?.invalidate()
+    }
     private func commonInit() {
     }
     
@@ -72,10 +82,10 @@ class BDMusicPlayView: UIView {
 //        rotateIcon.layer.addAnimation(animationGroup, forKey: "rotateIcon")
 //    }
     //MARK:- Public
-    func updateBufferingStatus(streamer: DOUAudioStreamer) {
-        remainingLabel.text = String(format: "Received %.2f/%.2f MB (%.2f %%), Speed %.2f MB/s", Float(streamer.receivedLength) / 1024 / 1024, Float(streamer.expectedLength) / 1024 / 1024, streamer.bufferingRatio * 100.0, Float(streamer.downloadSpeed) / 1024 / 1024)
+    func updateBufferingStatus() {
+        remainingLabel.text = String(format: "Received %.2f/%.2f MB (%.2f %%), Speed %.2f MB/s", Float(streamer!.receivedLength) / 1024 / 1024, Float(streamer!.expectedLength) / 1024 / 1024, streamer!.bufferingRatio * 100.0, Float(streamer!.downloadSpeed) / 1024 / 1024)
     }
-    func updateStatus(status: DOUAudioStreamerStatus) {
+    func updateStatus() {
         //todo
         /**
          *
@@ -109,7 +119,7 @@ class BDMusicPlayView: UIView {
          break;
          }
          */
-        
+        let status = streamer!.status
         if status == .Playing {
             if rotateIcon.isAnimating() {
                 return
@@ -129,11 +139,11 @@ class BDMusicPlayView: UIView {
         }
     }
     
-    func updateProgress(streamer: DOUAudioStreamer) {
-        if  streamer.duration == 0{
+    func updateProgress() {
+        if  streamer!.duration == 0{
             progressView.setProgress(0, animated: false)
         }else {
-            progressView.setProgress(Float(streamer.currentTime / streamer.duration), animated: true)
+            progressView.setProgress(Float(streamer!.currentTime / streamer!.duration), animated: true)
         }
     }
     

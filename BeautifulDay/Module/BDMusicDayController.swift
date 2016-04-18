@@ -111,6 +111,7 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
         canncelStreamer()
         assert(trk?.audioFileURL != nil, "the audio url is nil")
         streamer = DOUAudioStreamer(audioFile: trk)
+        mpView.streamer = streamer
         streamer?.addObserver(self, forKeyPath: "status", options: .New, context: nil)
         streamer?.addObserver(self, forKeyPath: "duration", options: .New, context: nil)
         streamer?.addObserver(self, forKeyPath: "currentTime", options: .New, context: nil)
@@ -130,17 +131,17 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
             switch kp {
             case "status":
                 dispatch_async(dispatch_get_main_queue(), { [unowned self]() -> Void in
-                    self.mpView.updateStatus(self.streamer!.status)
+                    self.mpView.updateStatus()
                 })
             case "duration":
                 fallthrough
             case "currentTime":
                 dispatch_async(dispatch_get_main_queue(), { [unowned self]() -> Void in
-                    self.mpView.updateProgress(self.streamer!)
+                    self.mpView.updateProgress()
                     })
             case "bufferingRatio":
                 dispatch_async(dispatch_get_main_queue(), { [unowned self]() -> Void in
-                    self.mpView.updateBufferingStatus(self.streamer!)
+                    self.mpView.updateBufferingStatus()
                     })
             default:
                 super.observeValueForKeyPath(keyPath, ofObject: object, change: change, context: context)
