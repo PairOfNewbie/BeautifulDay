@@ -49,7 +49,6 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
                     }
                     if let audioFileURLString = dic.objectForKey("music") as? String {
                         self.trk?.audioFileURL = NSURL(string: audioFileURLString)
-                        self.resetStreamer()
                     }
                     if let imageURLString = dic.objectForKey("img") as? String {
                         self.bgView.sd_setImageWithURL(NSURL(string: imageURLString))
@@ -86,12 +85,17 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
         //        trk?.audioFileURL = NSURL(string: "http://mr7.doubanio.com/2867d1b829cddffa78318cdb7a3b34ce/1/fm/song/p616953_128k.mp4")
         //        resetStreamer()
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        canncelStreamer()
+    }
     //MARK: - Initial Setup
     func setupSubviews() {
 //        let panGesture = UIPanGestureRecognizer(target: self, action: NSSelectorFromString("onPan:"))
 //        mpView.addGestureRecognizer(panGesture)
-//        let tapGesture = UITapGestureRecognizer(target: self, action: NSSelectorFromString("onTap:"))
-//        mpView.addGestureRecognizer(tapGesture)
+        let tapGesture = UITapGestureRecognizer(target: self, action: NSSelectorFromString("onTap:"))
+        mpView.addGestureRecognizer(tapGesture)
     }
     
     //MARK: - DOUPlayer
@@ -101,7 +105,6 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
             streamer?.pause()
             streamer!.removeObserver(self, forKeyPath: "status")
             streamer!.removeObserver(self, forKeyPath: "duration")
-            streamer!.removeObserver(self, forKeyPath: "currentTime")
             streamer!.removeObserver(self, forKeyPath: "bufferingRatio")
             streamer = nil
         }
@@ -114,19 +117,13 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
         mpView.streamer = streamer
         streamer?.addObserver(self, forKeyPath: "status", options: .New, context: nil)
         streamer?.addObserver(self, forKeyPath: "duration", options: .New, context: nil)
-        streamer?.addObserver(self, forKeyPath: "currentTime", options: .New, context: nil)
         streamer?.addObserver(self, forKeyPath: "bufferingRatio", options: .New, context: nil)
         streamer?.play()
     }
     
     //MARK: - KVO
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        if keyPath == "duration" {
-            print("duration")
-        }
-        if keyPath == "currentTime" {
-            print("currentTime")
-        }
+
         if let kp = keyPath {
             switch kp {
             case "status":
@@ -134,8 +131,6 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
                     self.mpView.updateStatus()
                 })
             case "duration":
-                fallthrough
-            case "currentTime":
                 dispatch_async(dispatch_get_main_queue(), { [unowned self]() -> Void in
                     self.mpView.updateProgress()
                     })
@@ -194,6 +189,13 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
     
     func onTap(tapGesture: UITapGestureRecognizer) {
         print("onTap:")
+        if streamer?.status == .Playing {
+            streamer?.pause()
+        }else if streamer?.status == .Paused {
+            streamer?.play()
+        }else {
+            self.resetStreamer()
+        }
     }
     
 }

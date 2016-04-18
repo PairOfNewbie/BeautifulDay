@@ -122,12 +122,13 @@ class BDMusicPlayView: UIView {
         let status = streamer!.status
         if status == .Playing {
             if rotateIcon.isAnimating() {
-                return
+                resumeLayer(rotateIcon.layer)
             }else {
                 rotate()
             }
         }else if status == .Paused {
-            rotateIcon.stopAnimating()
+//            rotateIcon.stopAnimating()
+            pauseLayer(rotateIcon.layer)
         }else if status == .Idle {
             rotateIcon.stopAnimating()
         }else if status == .Finished {
@@ -153,4 +154,18 @@ class BDMusicPlayView: UIView {
         rotateIcon.startAnimating()
     }
     
+    func pauseLayer(layer: CALayer) {
+        let pauseTime = layer.convertTime(CACurrentMediaTime(), fromLayer: nil)
+        layer.speed = 0
+        layer.timeOffset = pauseTime
+    }
+    
+    func resumeLayer(layer: CALayer) {
+        let pausedTime = layer.timeOffset
+        layer.speed = 1
+        layer.timeOffset = 0
+        layer.beginTime = 0
+        let timeSicePause = layer.convertTime(CACurrentMediaTime(), fromLayer: nil) - pausedTime
+        layer.beginTime = timeSicePause
+    }
 }
