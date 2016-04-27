@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		48E9CDA65E1350F7783D0D17 /* Pods_BeautifulDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E77A58C18A95A953FC1F20FF /* Pods_BeautifulDay.framework */; };
+		B20F07661CD0C0BA008398ED /* BDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F07651CD0C0BA008398ED /* BDService.swift */; };
+		B20F07691CD0C3B6008398ED /* BDUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F07681CD0C3B6008398ED /* BDUserDefaults.swift */; };
 		B24311261CB2A59E000697B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24311251CB2A59E000697B2 /* AppDelegate.swift */; };
 		B243112B1CB2A59E000697B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24311291CB2A59E000697B2 /* Main.storyboard */; };
 		B243112E1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B243112C1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld */; };
@@ -45,6 +47,8 @@
 /* Begin PBXFileReference section */
 		11C0F77255B8EB2D78C25D8C /* Pods-BeautifulDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeautifulDay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeautifulDay/Pods-BeautifulDay.debug.xcconfig"; sourceTree = "<group>"; };
 		2C37A92269C2EEF4692CB37A /* Pods-BeautifulDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeautifulDay.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeautifulDay/Pods-BeautifulDay.release.xcconfig"; sourceTree = "<group>"; };
+		B20F07651CD0C0BA008398ED /* BDService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDService.swift; sourceTree = "<group>"; };
+		B20F07681CD0C3B6008398ED /* BDUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDUserDefaults.swift; sourceTree = "<group>"; };
 		B24311221CB2A59E000697B2 /* BeautifulDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautifulDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24311251CB2A59E000697B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B243112A1CB2A59E000697B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +120,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B20F07641CD0C09B008398ED /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B20F07651CD0C0BA008398ED /* BDService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B20F07671CD0C36D008398ED /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B20F07681CD0C3B6008398ED /* BDUserDefaults.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		B24311191CB2A59E000697B2 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +161,8 @@
 		B24311241CB2A59E000697B2 /* BeautifulDay */ = {
 			isa = PBXGroup;
 			children = (
+				B20F07671CD0C36D008398ED /* Helper */,
+				B20F07641CD0C09B008398ED /* Service */,
 				B297A5241CB3EF35005DCB1D /* Module */,
 				B24311251CB2A59E000697B2 /* AppDelegate.swift */,
 				B24311291CB2A59E000697B2 /* Main.storyboard */,
@@ -372,8 +394,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2CAD22B1CB7A14E00A1030E /* PlayerViewController.m in Sources */,
+				B20F07661CD0C0BA008398ED /* BDService.swift in Sources */,
 				B26A87D11CBC97F10058F7B4 /* MusicResource.swift in Sources */,
 				B2F0A8121CBBA79D00686A1A /* BDMusicPlayView.swift in Sources */,
+				B20F07691CD0C3B6008398ED /* BDUserDefaults.swift in Sources */,
 				B243112E1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld in Sources */,
 				B297A52B1CB3F2EC005DCB1D /* BDMusicDayController.swift in Sources */,
 				B24311261CB2A59E000697B2 /* AppDelegate.swift in Sources */,
