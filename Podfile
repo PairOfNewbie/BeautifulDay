@@ -9,6 +9,7 @@ pod 'Alamofire'
 pod 'AFNetworking'
 pod 'SDWebImage'
 pod 'SnapKit'
+pod 'MonkeyKing'
 end
 
 target 'BeautifulDayTests' do
