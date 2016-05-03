@@ -1,5 +1,5 @@
 //
-//  BDMusicPlayView.swift
+//  MusicPlayBar.swift
 //  BeautifulDay
 //
 //  Created by DaiFengyi on 16/4/11.
@@ -8,11 +8,11 @@
 
 import UIKit
 import DOUAudioStreamer
-class BDMusicPlayView: UIView {
+class MusicPlayBar: UIView {
     var timer: NSTimer?
     var streamer: DOUAudioStreamer? {
         didSet {
-            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(BDMusicPlayView.updateProgress), userInfo: nil, repeats: true)
+            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(MusicPlayBar.updateProgress), userInfo: nil, repeats: true)
         }
     }
 //    var animateProgress : Double = 0 {

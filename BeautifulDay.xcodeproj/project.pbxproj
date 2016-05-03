@@ -10,6 +10,9 @@
 		48E9CDA65E1350F7783D0D17 /* Pods_BeautifulDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E77A58C18A95A953FC1F20FF /* Pods_BeautifulDay.framework */; };
 		B20F07661CD0C0BA008398ED /* BDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F07651CD0C0BA008398ED /* BDService.swift */; };
 		B20F07691CD0C3B6008398ED /* BDUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F07681CD0C3B6008398ED /* BDUserDefaults.swift */; };
+		B2133EB51CD8C8E600FD7DB6 /* MusicPlayBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2133EB41CD8C8E600FD7DB6 /* MusicPlayBar.swift */; };
+		B2133EB71CD8C90E00FD7DB6 /* MusicPlayBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2133EB61CD8C90E00FD7DB6 /* MusicPlayBar.xib */; };
+		B2133EB81CD8D2DA00FD7DB6 /* MainListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0CCA11CD8A1F300A2AA3F /* MainListCell.swift */; };
 		B24311261CB2A59E000697B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24311251CB2A59E000697B2 /* AppDelegate.swift */; };
 		B243112B1CB2A59E000697B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24311291CB2A59E000697B2 /* Main.storyboard */; };
 		B243112E1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B243112C1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld */; };
@@ -25,10 +28,9 @@
 		B2CAD22C1CB7A14E00A1030E /* Track+Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CAD22A1CB7A14E00A1030E /* Track+Provider.m */; };
 		B2E0CC9D1CD8A14700A2AA3F /* BDMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0CC9C1CD8A14700A2AA3F /* BDMainViewController.swift */; };
 		B2E0CC9F1CD8A19200A2AA3F /* MainListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0CC9E1CD8A19200A2AA3F /* MainListController.swift */; };
-		B2E0CCA31CD8A1F300A2AA3F /* MainListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0CCA11CD8A1F300A2AA3F /* MainListCell.swift */; };
 		B2E0CCA41CD8A1F300A2AA3F /* MainListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E0CCA21CD8A1F300A2AA3F /* MainListCell.xib */; };
 		B2E0CCA71CD8A28500A2AA3F /* BDNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0CCA61CD8A28500A2AA3F /* BDNavigationController.swift */; };
-		B2F0A8121CBBA79D00686A1A /* BDMusicPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F0A8111CBBA79D00686A1A /* BDMusicPlayView.swift */; };
+		B2E0CCAC1CD8B1AF00A2AA3F /* UINavigationBar+Translucent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0CCAB1CD8B1AF00A2AA3F /* UINavigationBar+Translucent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		2C37A92269C2EEF4692CB37A /* Pods-BeautifulDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeautifulDay.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeautifulDay/Pods-BeautifulDay.release.xcconfig"; sourceTree = "<group>"; };
 		B20F07651CD0C0BA008398ED /* BDService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDService.swift; sourceTree = "<group>"; };
 		B20F07681CD0C3B6008398ED /* BDUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDUserDefaults.swift; sourceTree = "<group>"; };
+		B2133EB41CD8C8E600FD7DB6 /* MusicPlayBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayBar.swift; sourceTree = "<group>"; };
+		B2133EB61CD8C90E00FD7DB6 /* MusicPlayBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicPlayBar.xib; sourceTree = "<group>"; };
 		B24311221CB2A59E000697B2 /* BeautifulDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautifulDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24311251CB2A59E000697B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B243112A1CB2A59E000697B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,7 +85,7 @@
 		B2E0CCA11CD8A1F300A2AA3F /* MainListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainListCell.swift; sourceTree = "<group>"; };
 		B2E0CCA21CD8A1F300A2AA3F /* MainListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainListCell.xib; sourceTree = "<group>"; };
 		B2E0CCA61CD8A28500A2AA3F /* BDNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDNavigationController.swift; sourceTree = "<group>"; };
-		B2F0A8111CBBA79D00686A1A /* BDMusicPlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDMusicPlayView.swift; sourceTree = "<group>"; };
+		B2E0CCAB1CD8B1AF00A2AA3F /* UINavigationBar+Translucent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Translucent.swift"; sourceTree = "<group>"; };
 		E77A58C18A95A953FC1F20FF /* Pods_BeautifulDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeautifulDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -156,9 +160,19 @@
 		B20F076B1CD0E94D008398ED /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B2133EB31CD8C8C000FD7DB6 /* MusicBar */,
 				B2E0CCA01CD8A1BB00A2AA3F /* Cell */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B2133EB31CD8C8C000FD7DB6 /* MusicBar */ = {
+			isa = PBXGroup;
+			children = (
+				B2133EB41CD8C8E600FD7DB6 /* MusicPlayBar.swift */,
+				B2133EB61CD8C90E00FD7DB6 /* MusicPlayBar.xib */,
+			);
+			path = MusicBar;
 			sourceTree = "<group>";
 		};
 		B24311191CB2A59E000697B2 = {
@@ -224,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				B297A52A1CB3F2EC005DCB1D /* BDMusicDayController.swift */,
-				B2F0A8111CBBA79D00686A1A /* BDMusicPlayView.swift */,
 				B2CAD21E1CB79B8400A1030E /* BDTrack.swift */,
 				B2CAD2231CB79F8900A1030E /* Track.h */,
 				B2CAD2241CB79F8900A1030E /* Track.m */,
@@ -259,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				B2E0CCA61CD8A28500A2AA3F /* BDNavigationController.swift */,
+				B2E0CCAB1CD8B1AF00A2AA3F /* UINavigationBar+Translucent.swift */,
 			);
 			path = Nav;
 			sourceTree = "<group>";
@@ -371,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B24311331CB2A59E000697B2 /* LaunchScreen.storyboard in Resources */,
+				B2133EB71CD8C90E00FD7DB6 /* MusicPlayBar.xib in Resources */,
 				B24311301CB2A59E000697B2 /* Assets.xcassets in Resources */,
 				B2E0CCA41CD8A1F300A2AA3F /* MainListCell.xib in Resources */,
 				B243112B1CB2A59E000697B2 /* Main.storyboard in Resources */,
@@ -446,18 +461,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2133EB81CD8D2DA00FD7DB6 /* MainListCell.swift in Sources */,
 				B2CAD22B1CB7A14E00A1030E /* PlayerViewController.m in Sources */,
 				B20F07661CD0C0BA008398ED /* BDService.swift in Sources */,
 				B26A87D11CBC97F10058F7B4 /* MusicResource.swift in Sources */,
-				B2F0A8121CBBA79D00686A1A /* BDMusicPlayView.swift in Sources */,
 				B20F07691CD0C3B6008398ED /* BDUserDefaults.swift in Sources */,
 				B2E0CCA71CD8A28500A2AA3F /* BDNavigationController.swift in Sources */,
 				B243112E1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld in Sources */,
+				B2E0CCAC1CD8B1AF00A2AA3F /* UINavigationBar+Translucent.swift in Sources */,
 				B2E0CC9F1CD8A19200A2AA3F /* MainListController.swift in Sources */,
+				B2133EB51CD8C8E600FD7DB6 /* MusicPlayBar.swift in Sources */,
 				B297A52B1CB3F2EC005DCB1D /* BDMusicDayController.swift in Sources */,
 				B24311261CB2A59E000697B2 /* AppDelegate.swift in Sources */,
 				B2E0CC9D1CD8A14700A2AA3F /* BDMainViewController.swift in Sources */,
-				B2E0CCA31CD8A1F300A2AA3F /* MainListCell.swift in Sources */,
 				B2CAD2251CB79F8900A1030E /* Track.m in Sources */,
 				B2CAD22C1CB7A14E00A1030E /* Track+Provider.m in Sources */,
 				B2CAD21F1CB79B8400A1030E /* BDTrack.swift in Sources */,

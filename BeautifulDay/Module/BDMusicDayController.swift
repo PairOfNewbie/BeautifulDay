@@ -21,7 +21,7 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var mpView: BDMusicPlayView!
+    @IBOutlet weak var mpView: MusicPlayBar!
     
     override func awakeFromNib() {
         super.awakeFromNib()
