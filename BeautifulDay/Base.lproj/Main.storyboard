@@ -19,10 +19,31 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="ObS-Je-zlS"/>
+                    <connections>
+                        <segue destination="eop-gw-gSc" kind="show" identifier="showAlbumDetail" id="bbk-jg-eN0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X1y-rq-cB4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="883" y="447"/>
+        </scene>
+        <!--Album Detail Controller-->
+        <scene sceneID="XF0-Ml-1yd">
+            <objects>
+                <tableViewController id="eop-gw-gSc" customClass="AlbumDetailController" customModule="BeautifulDay" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="cyA-gf-nUd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="eop-gw-gSc" id="yV3-QC-eQP"/>
+                            <outlet property="delegate" destination="eop-gw-gSc" id="wDM-D7-yNP"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d9I-HX-cWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1579" y="447"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oVw-m9-kwV">

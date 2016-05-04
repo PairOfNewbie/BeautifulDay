@@ -40,8 +40,8 @@ class MainListController: UITableViewController {
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-        self.navigationController?.navigationBar.opaqueBar()
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+//        self.navigationController?.navigationBar.opaqueBar()
     }
     
     override func didReceiveMemoryWarning() {
@@ -75,6 +75,9 @@ class MainListController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        // todo: sender should be something to pass
+        performSegueWithIdentifier("showAlbumDetail", sender: nil)
     }
     /*
      // Override to support conditional editing of the table view.
@@ -111,7 +114,7 @@ class MainListController: UITableViewController {
      }
      */
     
-    /*
+
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -119,6 +122,6 @@ class MainListController: UITableViewController {
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
      }
-     */
+
     
 }
