@@ -10,10 +10,8 @@ import UIKit
 
 private let mainListCellIdentifier = "MainListCell"
 
-
-
 class MainListController: UITableViewController {
-    
+    var trk : Track? = nil
     //MARK:- Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +28,12 @@ class MainListController: UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        fetchTestInfo({ (error) in
+            
+            }) { [unowned self] (isSuccess, trk) in
+                self.trk = trk
+                BDAudioService.shareManager.trk = trk
+        }
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationController?.navigationBar.translucentBar()
     }
@@ -62,12 +66,15 @@ class MainListController: UITableViewController {
         
         // Configure the cell...
         cell.backgroundColor = UIColor(red: (CGFloat(arc4random_uniform(100))) / 100 , green:  (CGFloat(arc4random_uniform(100))) / 100, blue:  (CGFloat(arc4random_uniform(100))) / 100, alpha:  (CGFloat(arc4random_uniform(100))) / 100)
-        
         return cell
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return tableView.bounds.height
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     /*
      // Override to support conditional editing of the table view.

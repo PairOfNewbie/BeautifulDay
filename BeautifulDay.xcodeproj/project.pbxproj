@@ -22,6 +22,7 @@
 		B24311491CB2A59E000697B2 /* BeautifulDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24311481CB2A59E000697B2 /* BeautifulDayUITests.swift */; };
 		B26A87D11CBC97F10058F7B4 /* MusicResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26A87D01CBC97F10058F7B4 /* MusicResource.swift */; };
 		B297A52B1CB3F2EC005DCB1D /* BDMusicDayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B297A52A1CB3F2EC005DCB1D /* BDMusicDayController.swift */; };
+		B2C8A37E1CD9D54F00E61B69 /* BDAudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8A37D1CD9D54F00E61B69 /* BDAudioService.swift */; };
 		B2CAD21F1CB79B8400A1030E /* BDTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CAD21E1CB79B8400A1030E /* BDTrack.swift */; };
 		B2CAD2251CB79F8900A1030E /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CAD2241CB79F8900A1030E /* Track.m */; };
 		B2CAD22B1CB7A14E00A1030E /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CAD2281CB7A14E00A1030E /* PlayerViewController.m */; };
@@ -72,6 +73,7 @@
 		B243114A1CB2A59E000697B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B26A87D01CBC97F10058F7B4 /* MusicResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicResource.swift; sourceTree = "<group>"; };
 		B297A52A1CB3F2EC005DCB1D /* BDMusicDayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDMusicDayController.swift; sourceTree = "<group>"; };
+		B2C8A37D1CD9D54F00E61B69 /* BDAudioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDAudioService.swift; sourceTree = "<group>"; };
 		B2CAD21E1CB79B8400A1030E /* BDTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDTrack.swift; sourceTree = "<group>"; };
 		B2CAD2231CB79F8900A1030E /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
 		B2CAD2241CB79F8900A1030E /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				B20F07651CD0C0BA008398ED /* BDService.swift */,
+				B2C8A37D1CD9D54F00E61B69 /* BDAudioService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				B2CAD22B1CB7A14E00A1030E /* PlayerViewController.m in Sources */,
 				B20F07661CD0C0BA008398ED /* BDService.swift in Sources */,
 				B26A87D11CBC97F10058F7B4 /* MusicResource.swift in Sources */,
+				B2C8A37E1CD9D54F00E61B69 /* BDAudioService.swift in Sources */,
 				B20F07691CD0C3B6008398ED /* BDUserDefaults.swift in Sources */,
 				B2E0CCA71CD8A28500A2AA3F /* BDNavigationController.swift in Sources */,
 				B243112E1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld in Sources */,

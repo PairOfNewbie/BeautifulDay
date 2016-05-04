@@ -49,6 +49,8 @@ class MusicPlayBar: UIView {
         timer?.invalidate()
     }
     private func commonInit() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: NSSelectorFromString("onTap:"))
+        addGestureRecognizer(tapGesture)
     }
     
 //    func setupSubviews() {
@@ -81,6 +83,18 @@ class MusicPlayBar: UIView {
 //        
 //        rotateIcon.layer.addAnimation(animationGroup, forKey: "rotateIcon")
 //    }
+    
+    //MAKR:- Action
+    func onTap(tapGesture: UITapGestureRecognizer) {
+        print("onTap:")
+        if streamer?.status == .Playing {
+            BDAudioService.shareManager.pause()
+        }else if streamer?.status == .Paused {
+            BDAudioService.shareManager.play()
+        }else {
+            BDAudioService.shareManager.resetStreamer()
+        }
+    }
     //MARK:- Public
     func updateBufferingStatus() {
         remainingLabel.text = String(format: "Received %.2f/%.2f MB (%.2f %%), Speed %.2f MB/s", Float(streamer!.receivedLength) / 1024 / 1024, Float(streamer!.expectedLength) / 1024 / 1024, streamer!.bufferingRatio * 100.0, Float(streamer!.downloadSpeed) / 1024 / 1024)
