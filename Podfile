@@ -10,6 +10,7 @@ pod 'AFNetworking'
 pod 'SDWebImage'
 pod 'SnapKit'
 pod 'MonkeyKing'
+pod 'RESideMenu'
 end
 
 target 'BeautifulDayTests' do
