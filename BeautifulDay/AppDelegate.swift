@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-
+import RESideMenu
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window?.rootViewController = reSideMenuAfterSetup()
+        window?.makeKeyAndVisible()
         return true
     }
 
@@ -42,6 +45,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
+    }
+    
+    //MARK: - Configuration
+    private func reSideMenuAfterSetup() -> RESideMenu {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let contentVC = sb.instantiateViewControllerWithIdentifier("mainNav")
+        let leftVC = sb.instantiateViewControllerWithIdentifier("leftVC")
+        let rm = RESideMenu(contentViewController: contentVC, leftMenuViewController: leftVC, rightMenuViewController: nil)
+        rm.contentViewScaleValue = 1
+        rm.contentViewInPortraitOffsetCenterX = UIScreen.mainScreen().bounds.width * (0.75-0.5)
+        return rm
     }
 
     // MARK: - Core Data stack
