@@ -35,7 +35,7 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="fTd-Mc-2xA" userLabel="Mp View Container">
+                    <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="fTd-Mc-2xA" userLabel="Mp View Container">
                         <rect key="frame" x="0.0" y="365.5" width="375" height="44"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="44" id="8vb-r9-I43"/>
