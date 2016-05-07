@@ -11,6 +11,7 @@ pod 'SDWebImage'
 pod 'SnapKit'
 pod 'MonkeyKing'
 pod 'RESideMenu'
+pod 'AlamofireObjectMapper'
 end
 
 target 'BeautifulDayTests' do

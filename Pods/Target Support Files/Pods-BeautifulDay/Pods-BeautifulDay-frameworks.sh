@@ -86,8 +86,10 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-BeautifulDay/AFNetworking.framework"
   install_framework "Pods-BeautifulDay/Alamofire.framework"
+  install_framework "Pods-BeautifulDay/AlamofireObjectMapper.framework"
   install_framework "Pods-BeautifulDay/DOUAudioStreamer.framework"
   install_framework "Pods-BeautifulDay/MonkeyKing.framework"
+  install_framework "Pods-BeautifulDay/ObjectMapper.framework"
   install_framework "Pods-BeautifulDay/RESideMenu.framework"
   install_framework "Pods-BeautifulDay/SDWebImage.framework"
   install_framework "Pods-BeautifulDay/SnapKit.framework"
@@ -95,8 +97,10 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-BeautifulDay/AFNetworking.framework"
   install_framework "Pods-BeautifulDay/Alamofire.framework"
+  install_framework "Pods-BeautifulDay/AlamofireObjectMapper.framework"
   install_framework "Pods-BeautifulDay/DOUAudioStreamer.framework"
   install_framework "Pods-BeautifulDay/MonkeyKing.framework"
+  install_framework "Pods-BeautifulDay/ObjectMapper.framework"
   install_framework "Pods-BeautifulDay/RESideMenu.framework"
   install_framework "Pods-BeautifulDay/SDWebImage.framework"
   install_framework "Pods-BeautifulDay/SnapKit.framework"
