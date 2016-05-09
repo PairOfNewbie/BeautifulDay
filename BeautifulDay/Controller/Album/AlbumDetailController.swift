@@ -12,6 +12,7 @@ private let albumZanCellIdentifier = "AlbumZanCell"
 private let albumCommentCellIdentifier = "AlbumCommentCell"
 
 class AlbumDetailController: UITableViewController {
+    @IBOutlet weak var webHeader: UIWebView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,10 @@ class AlbumDetailController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let request = NSURLRequest(URL: NSURL(string: "http://www.crossd.me")!, cachePolicy: .UseProtocolCachePolicy, timeoutInterval: 10)
+        webHeader.loadRequest(request)
+        webHeader.scrollView.scrollEnabled = false
+        
         tableView.estimatedRowHeight = 44
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.registerNib(UINib(nibName: albumZanCellIdentifier, bundle: nil), forCellReuseIdentifier: albumZanCellIdentifier)
@@ -33,7 +38,7 @@ class AlbumDetailController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
     }
@@ -106,5 +111,15 @@ class AlbumDetailController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
 
+extension AlbumDetailController: UIWebViewDelegate {
+    func webViewDidFinishLoad(webView: UIWebView) {
+//        webHeader.frame.size = webHeader.scrollView.contentSize
+        webHeader.frame.size = webHeader.sizeThatFits(CGSizeZero)
+        tableView.reloadData()
+    }
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
+        
+    }
 }

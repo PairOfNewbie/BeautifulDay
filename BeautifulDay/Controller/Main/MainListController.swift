@@ -29,7 +29,7 @@ class MainListController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         fetchTestInfo({ (error) in
-            
+            print("fetchTestInfo error")
             }) { [unowned self] (isSuccess, trk) in
                 self.trk = trk
                 BDAudioService.shareManager.trk = trk
