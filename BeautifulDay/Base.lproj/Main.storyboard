@@ -27,6 +27,34 @@
             </objects>
             <point key="canvasLocation" x="883" y="447"/>
         </scene>
+        <!--Album List Controller-->
+        <scene sceneID="Ov7-Wp-6nN">
+            <objects>
+                <tableViewController storyboardIdentifier="AlbumListController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lSt-lv-rzQ" customClass="AlbumListController" customModule="BeautifulDay" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6u9-Fy-VwN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Tcb-XA-RU9">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tcb-XA-RU9" id="gfR-pf-qnS">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lSt-lv-rzQ" id="ooV-gU-khj"/>
+                            <outlet property="delegate" destination="lSt-lv-rzQ" id="WaN-Gk-rbt"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Vs-4Q-d9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883" y="1127"/>
+        </scene>
         <!--Album Detail Controller-->
         <scene sceneID="XF0-Ml-1yd">
             <objects>
@@ -83,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="125" y="447"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Left Menu Controller-->
         <scene sceneID="IS3-3h-Y4Y">
             <objects>
-                <tableViewController storyboardIdentifier="leftVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ou8-GA-fX1" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="leftVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ou8-GA-fX1" customClass="LeftMenuController" customModule="BeautifulDay" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jzW-Sv-eX8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

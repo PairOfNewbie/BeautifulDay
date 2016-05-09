@@ -12,6 +12,10 @@
 		B20F07691CD0C3B6008398ED /* BDUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F07681CD0C3B6008398ED /* BDUserDefaults.swift */; };
 		B2133EB51CD8C8E600FD7DB6 /* MusicPlayBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2133EB41CD8C8E600FD7DB6 /* MusicPlayBar.swift */; };
 		B2133EB71CD8C90E00FD7DB6 /* MusicPlayBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2133EB61CD8C90E00FD7DB6 /* MusicPlayBar.xib */; };
+		B230D7861CE0DF7600BFA70D /* AlbumListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230D7851CE0DF7600BFA70D /* AlbumListController.swift */; };
+		B230D7891CE0DFC900BFA70D /* AlbumListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230D7871CE0DFC900BFA70D /* AlbumListCell.swift */; };
+		B230D78A1CE0DFC900BFA70D /* AlbumListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B230D7881CE0DFC900BFA70D /* AlbumListCell.xib */; };
+		B230D78C1CE0E1C200BFA70D /* LeftMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230D78B1CE0E1C200BFA70D /* LeftMenuController.swift */; };
 		B24311261CB2A59E000697B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24311251CB2A59E000697B2 /* AppDelegate.swift */; };
 		B243112B1CB2A59E000697B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24311291CB2A59E000697B2 /* Main.storyboard */; };
 		B243112E1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B243112C1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld */; };
@@ -64,6 +68,10 @@
 		B20F07681CD0C3B6008398ED /* BDUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDUserDefaults.swift; sourceTree = "<group>"; };
 		B2133EB41CD8C8E600FD7DB6 /* MusicPlayBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayBar.swift; sourceTree = "<group>"; };
 		B2133EB61CD8C90E00FD7DB6 /* MusicPlayBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicPlayBar.xib; sourceTree = "<group>"; };
+		B230D7851CE0DF7600BFA70D /* AlbumListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumListController.swift; sourceTree = "<group>"; };
+		B230D7871CE0DFC900BFA70D /* AlbumListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumListCell.swift; sourceTree = "<group>"; };
+		B230D7881CE0DFC900BFA70D /* AlbumListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumListCell.xib; sourceTree = "<group>"; };
+		B230D78B1CE0E1C200BFA70D /* LeftMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuController.swift; sourceTree = "<group>"; };
 		B24311221CB2A59E000697B2 /* BeautifulDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautifulDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24311251CB2A59E000697B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B243112A1CB2A59E000697B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -279,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				B2C8A3801CDA29D600E61B69 /* AlbumDetailController.swift */,
+				B230D7851CE0DF7600BFA70D /* AlbumListController.swift */,
 			);
 			path = Album;
 			sourceTree = "<group>";
@@ -290,6 +299,8 @@
 				B2C8A3891CDA2B0B00E61B69 /* AlbumZanCell.xib */,
 				B2C8A38C1CDA2B1E00E61B69 /* AlbumCommentCell.swift */,
 				B2C8A38D1CDA2B1E00E61B69 /* AlbumCommentCell.xib */,
+				B230D7871CE0DFC900BFA70D /* AlbumListCell.swift */,
+				B230D7881CE0DFC900BFA70D /* AlbumListCell.xib */,
 			);
 			path = Album;
 			sourceTree = "<group>";
@@ -308,6 +319,7 @@
 			children = (
 				B2E0CC9C1CD8A14700A2AA3F /* BDMainViewController.swift */,
 				B2E0CC9E1CD8A19200A2AA3F /* MainListController.swift */,
+				B230D78B1CE0E1C200BFA70D /* LeftMenuController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -444,6 +456,7 @@
 				B2C8A3871CDA2A1D00E61B69 /* MainListCell.xib in Resources */,
 				B2C8A38F1CDA2B1E00E61B69 /* AlbumCommentCell.xib in Resources */,
 				B243112B1CB2A59E000697B2 /* Main.storyboard in Resources */,
+				B230D78A1CE0DFC900BFA70D /* AlbumListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +535,7 @@
 				B20F07661CD0C0BA008398ED /* BDService.swift in Sources */,
 				B26A87D11CBC97F10058F7B4 /* MusicResource.swift in Sources */,
 				B2C8A37E1CD9D54F00E61B69 /* BDAudioService.swift in Sources */,
+				B230D7891CE0DFC900BFA70D /* AlbumListCell.swift in Sources */,
 				B20F07691CD0C3B6008398ED /* BDUserDefaults.swift in Sources */,
 				B2E0CCA71CD8A28500A2AA3F /* BDNavigationController.swift in Sources */,
 				B243112E1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld in Sources */,
@@ -529,6 +543,7 @@
 				B2C8A38E1CDA2B1E00E61B69 /* AlbumCommentCell.swift in Sources */,
 				B2E0CC9F1CD8A19200A2AA3F /* MainListController.swift in Sources */,
 				B2133EB51CD8C8E600FD7DB6 /* MusicPlayBar.swift in Sources */,
+				B230D7861CE0DF7600BFA70D /* AlbumListController.swift in Sources */,
 				B297A52B1CB3F2EC005DCB1D /* BDMusicDayController.swift in Sources */,
 				B24311261CB2A59E000697B2 /* AppDelegate.swift in Sources */,
 				B2C8A3861CDA2A1D00E61B69 /* MainListCell.swift in Sources */,
@@ -537,6 +552,7 @@
 				B2CAD2251CB79F8900A1030E /* Track.m in Sources */,
 				B2CAD22C1CB7A14E00A1030E /* Track+Provider.m in Sources */,
 				B2CAD21F1CB79B8400A1030E /* BDTrack.swift in Sources */,
+				B230D78C1CE0E1C200BFA70D /* LeftMenuController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
