@@ -12,6 +12,8 @@ private let mainListCellIdentifier = "MainListCell"
 
 class MainListController: UITableViewController {
     var trk : Track? = nil
+    var albumList = Array<Album>()
+    
     //MARK:- Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +30,17 @@ class MainListController: UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        fetchTestInfo({ (error) in
-            print("fetchTestInfo error")
-            }) { [unowned self] (isSuccess, trk) in
-                self.trk = trk
-                BDAudioService.shareManager.trk = trk
+//        fetchTestInfo({ (error) in
+//            print("fetchTestInfo error")
+//            }) { [unowned self] (isSuccess, trk) in
+//                self.trk = trk
+//                BDAudioService.shareManager.trk = trk
+//        }
+        fetchAblumList({ (error) in
+            print(error.description)
+            }) { [unowned self](success, albumList) in
+            self.albumList = albumList
+            self.tableView.reloadData()
         }
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationController?.navigationBar.translucentBar()
@@ -44,11 +52,6 @@ class MainListController: UITableViewController {
 //        self.navigationController?.navigationBar.opaqueBar()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     // MARK: - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -58,7 +61,7 @@ class MainListController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return albumList.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -66,6 +69,7 @@ class MainListController: UITableViewController {
         
         // Configure the cell...
         cell.backgroundColor = UIColor(red: (CGFloat(arc4random_uniform(100))) / 100 , green:  (CGFloat(arc4random_uniform(100))) / 100, blue:  (CGFloat(arc4random_uniform(100))) / 100, alpha:  (CGFloat(arc4random_uniform(100))) / 100)
+        cell.album = albumList[indexPath.row]
         return cell
     }
     

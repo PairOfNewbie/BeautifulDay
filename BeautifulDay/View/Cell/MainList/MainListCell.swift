@@ -16,6 +16,25 @@ class MainListCell: UITableViewCell {
     @IBOutlet weak var mpViewContrainer: UIView!
     var mpView: MusicPlayBar!
     
+    var album: Album? {
+        didSet {
+            if let album = self.album {
+                if let imgUrl = album.imgUrl {
+                    bgView.sd_setImageWithURL(NSURL(string: imgUrl), placeholderImage: nil, options: .RetryFailed)
+                }
+                dateLabel.text = album.date
+                descriptionLabel.text = album.text
+                let trk = Track()
+                trk.artist = album.text
+                trk.title = album.text
+                if let musicUrl = album.musicUrl {
+                    trk.audioFileURL = NSURL(string: musicUrl)
+                }
+            }
+            
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

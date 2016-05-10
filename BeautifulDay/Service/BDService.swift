@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import AlamofireObjectMapper
 
 #if STAGING
 let baseURL = NSURL(string: "https://park-staging.catchchatchina.com/api")!
@@ -42,7 +43,7 @@ func fetchOneDayInfo(date:String) {
 }
 
 //MARK:- test
-func fetchTestInfo(failure: Error -> Void, success: ((Bool, Track) -> Void)) {
+func fetchTestInfo(failure: NSError -> Void, success: ((Bool, Track) -> Void)) {
     Alamofire.request(.POST, "http://112.74.106.192/Beautiful_Day/App/index.php", parameters: ["date" : "2016-04-14"], encoding: .JSON, headers: nil).responseJSON { (response:Response<AnyObject, NSError>)  in
         if response.result.isSuccess {
             if let dic = response.result.value {
@@ -57,22 +58,35 @@ func fetchTestInfo(failure: Error -> Void, success: ((Bool, Track) -> Void)) {
                     trk.audioFileURL = NSURL(string: audioFileURLString)
                 }
                 if let imageURLString = dic.objectForKey("img") as? String {
-//                    self.bgView.sd_setImageWithURL(NSURL(string: imageURLString))
+                    //                    self.bgView.sd_setImageWithURL(NSURL(string: imageURLString))
                 }
                 if let date = dic.objectForKey("date") as? String {
-//                    self.dateLabel.text = date
+                    //                    self.dateLabel.text = date
                 }
                 if let location = dic.objectForKey("text") as? String {
-//                    self.locationLabel.text = location
+                    //                    self.locationLabel.text = location
                 }
                 if let des = dic.objectForKey("text") as? String {
-//                    self.descriptionLabel.text = des
+                    //                    self.descriptionLabel.text = des
                 }
                 success(true, trk)
             }
         }
     }
+}
 
+func fetchAblumList(failure: NSError -> Void, success:((Bool, [Album]) -> Void)) {
+    Alamofire.request(.POST, "http://112.74.106.192/Beautiful_Day/App/index.php", parameters: ["date" : "2016-04-14"], encoding: .JSON, headers: nil).responseArray { (reponse: Response<[Album], NSError>) in
+        let albumlist = reponse.result.value
+        print(albumlist)
+        
+        if let al = albumlist {
+            success(true, al)
+        }else {
+            let error = Error.errorWithCode(0, failureReason: "album is nil")
+            failure(error)
+        }
+    }
 }
 //func registerMobile(mobile: String, withAreaCode areaCode: String, nickname: String, failureHandler: FailureHandler?, completion: Bool -> Void) {
 //    let requestParameters: JSONDictionary = [
@@ -82,17 +96,17 @@ func fetchTestInfo(failure: Error -> Void, success: ((Bool, Track) -> Void)) {
 //        "longitude": 0, // TODO: 注册时不好提示用户访问位置，或许设置技能或用户利用位置查找好友时再提示并更新位置信息
 //        "latitude": 0
 //    ]
-//    
+//
 //    let parse: JSONDictionary -> Bool? = { data in
 //        if let state = data["state"] as? String {
 //            if state == "blocked" {
 //                return true
 //            }
 //        }
-//        
+//
 //        return false
 //    }
-//    
+//
 //    let resource = jsonResource(path: "/v1/registration/create", method: .POST, requestParameters: requestParameters, parse: parse)
 //    
 //    apiRequest({_ in}, baseURL: yepBaseURL, resource: resource, failure: failureHandler, completion: completion)
