@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		48E9CDA65E1350F7783D0D17 /* Pods_BeautifulDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E77A58C18A95A953FC1F20FF /* Pods_BeautifulDay.framework */; };
-		B20F07661CD0C0BA008398ED /* BDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F07651CD0C0BA008398ED /* BDService.swift */; };
+		B20F07661CD0C0BA008398ED /* BDNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F07651CD0C0BA008398ED /* BDNetworkService.swift */; };
 		B20F07691CD0C3B6008398ED /* BDUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F07681CD0C3B6008398ED /* BDUserDefaults.swift */; };
 		B2133EB51CD8C8E600FD7DB6 /* MusicPlayBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2133EB41CD8C8E600FD7DB6 /* MusicPlayBar.swift */; };
 		B2133EB71CD8C90E00FD7DB6 /* MusicPlayBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2133EB61CD8C90E00FD7DB6 /* MusicPlayBar.xib */; };
@@ -64,7 +64,7 @@
 /* Begin PBXFileReference section */
 		11C0F77255B8EB2D78C25D8C /* Pods-BeautifulDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeautifulDay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeautifulDay/Pods-BeautifulDay.debug.xcconfig"; sourceTree = "<group>"; };
 		2C37A92269C2EEF4692CB37A /* Pods-BeautifulDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeautifulDay.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeautifulDay/Pods-BeautifulDay.release.xcconfig"; sourceTree = "<group>"; };
-		B20F07651CD0C0BA008398ED /* BDService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDService.swift; sourceTree = "<group>"; };
+		B20F07651CD0C0BA008398ED /* BDNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDNetworkService.swift; sourceTree = "<group>"; };
 		B20F07681CD0C3B6008398ED /* BDUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDUserDefaults.swift; sourceTree = "<group>"; };
 		B2133EB41CD8C8E600FD7DB6 /* MusicPlayBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayBar.swift; sourceTree = "<group>"; };
 		B2133EB61CD8C90E00FD7DB6 /* MusicPlayBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicPlayBar.xib; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 		B20F07641CD0C09B008398ED /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				B20F07651CD0C0BA008398ED /* BDService.swift */,
+				B20F07651CD0C0BA008398ED /* BDNetworkService.swift */,
 				B2C8A37D1CD9D54F00E61B69 /* BDAudioService.swift */,
 			);
 			path = Service;
@@ -532,7 +532,7 @@
 				B26645C21CDDE09A00E5B274 /* Model.swift in Sources */,
 				B2C8A38A1CDA2B0B00E61B69 /* AlbumZanCell.swift in Sources */,
 				B2CAD22B1CB7A14E00A1030E /* PlayerViewController.m in Sources */,
-				B20F07661CD0C0BA008398ED /* BDService.swift in Sources */,
+				B20F07661CD0C0BA008398ED /* BDNetworkService.swift in Sources */,
 				B26A87D11CBC97F10058F7B4 /* MusicResource.swift in Sources */,
 				B2C8A37E1CD9D54F00E61B69 /* BDAudioService.swift in Sources */,
 				B230D7891CE0DFC900BFA70D /* AlbumListCell.swift in Sources */,
