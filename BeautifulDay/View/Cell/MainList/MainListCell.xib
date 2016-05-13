@@ -11,11 +11,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="410"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="409.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="410"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tiC-fB-U2E">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="409.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="410"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WtI-Oe-QwX">
                         <rect key="frame" x="15" y="75" width="252" height="21"/>
@@ -36,7 +36,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="fTd-Mc-2xA" userLabel="Mp View Container">
-                        <rect key="frame" x="0.0" y="365.5" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="366" width="375" height="44"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="44" id="8vb-r9-I43"/>
                         </constraints>

@@ -9,17 +9,37 @@
 import UIKit
 import DOUAudioStreamer
 class MusicPlayBar: UIView {
-    var timer: NSTimer?
-    var streamer: DOUAudioStreamer? {
+    var trk: Track? {
         didSet {
-            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(MusicPlayBar.updateProgress), userInfo: nil, repeats: true)
+            if trk?.audioFileURL == BDAudioService.shareManager.trk?.audioFileURL {
+                BDAudioService.shareManager.updateAction = { [unowned self](type) in
+                    switch type {
+                    case .Status:
+                        self.updateStatus()
+                    case .Duration:
+                        self.updateProgress()
+                    case .BufferingRatio:
+                        self.updateBufferingStatus()
+                    }
+                }
+                if BDAudioService.shareManager.streamer?.status == .Some(.Playing) {
+                    rotate()
+                    self.updateProgress()
+                }
+            }
         }
     }
-//    var animateProgress : Double = 0 {
-//        didSet {
-//            rotateIcon.layer.timeOffset = animateProgress
-//        }
-//    }
+    var timer: NSTimer?
+    //    var animateProgress : Double = 0 {
+    //        didSet {
+    //            rotateIcon.layer.timeOffset = animateProgress
+    //        }
+    //    }
+    var streamer: DOUAudioStreamer? {
+        get {
+            return BDAudioService.shareManager.streamer
+        }
+    }
     
     lazy var rotateImages : [UIImage] = {
         var arr = [UIImage]()
@@ -53,46 +73,72 @@ class MusicPlayBar: UIView {
         addGestureRecognizer(tapGesture)
     }
     
-//    func setupSubviews() {
-//        let fromPoint = rotateIcon.center
-//        let toPoint = self.center
-//        let movePath = UIBezierPath()
-//        movePath.moveToPoint(fromPoint)
-//        movePath.addLineToPoint(toPoint)
-//        let animation = CAKeyframeAnimation(keyPath: "position")
-//        animation.path = movePath.CGPath
-//        //        animation.duration = 1
-//        //        animation.removedOnCompletion = false
-//        //        animation.fillMode = kCAFillModeForwards
-//        //        animation.autoreverses = false
-//        
-//        let animation1 = CABasicAnimation(keyPath: "transform.scale")
-//        animation1.fromValue = NSValue(CATransform3D: CATransform3DIdentity)
-//        animation1.toValue = NSValue(CATransform3D: CATransform3DMakeScale(3, 3, 1))
-//        //        animation1.removedOnCompletion = false
-//        //        animation1.duration = 1
-//        //        animation1.fillMode = kCAFillModeForwards
-//        //        animation1.autoreverses = false
-//        
-//        let animationGroup = CAAnimationGroup()
-//        animationGroup.animations = [animation, animation1]
-//        animationGroup.removedOnCompletion = false
-//        animationGroup.duration = 1
-//        animationGroup.fillMode = kCAFillModeForwards
-//        animationGroup.autoreverses = false
-//        
-//        rotateIcon.layer.addAnimation(animationGroup, forKey: "rotateIcon")
-//    }
+    //    func setupSubviews() {
+    //        let fromPoint = rotateIcon.center
+    //        let toPoint = self.center
+    //        let movePath = UIBezierPath()
+    //        movePath.moveToPoint(fromPoint)
+    //        movePath.addLineToPoint(toPoint)
+    //        let animation = CAKeyframeAnimation(keyPath: "position")
+    //        animation.path = movePath.CGPath
+    //        //        animation.duration = 1
+    //        //        animation.removedOnCompletion = false
+    //        //        animation.fillMode = kCAFillModeForwards
+    //        //        animation.autoreverses = false
+    //
+    //        let animation1 = CABasicAnimation(keyPath: "transform.scale")
+    //        animation1.fromValue = NSValue(CATransform3D: CATransform3DIdentity)
+    //        animation1.toValue = NSValue(CATransform3D: CATransform3DMakeScale(3, 3, 1))
+    //        //        animation1.removedOnCompletion = false
+    //        //        animation1.duration = 1
+    //        //        animation1.fillMode = kCAFillModeForwards
+    //        //        animation1.autoreverses = false
+    //
+    //        let animationGroup = CAAnimationGroup()
+    //        animationGroup.animations = [animation, animation1]
+    //        animationGroup.removedOnCompletion = false
+    //        animationGroup.duration = 1
+    //        animationGroup.fillMode = kCAFillModeForwards
+    //        animationGroup.autoreverses = false
+    //
+    //        rotateIcon.layer.addAnimation(animationGroup, forKey: "rotateIcon")
+    //    }
     
     //MAKR:- Action
     func onTap(tapGesture: UITapGestureRecognizer) {
         print("onTap:")
         if streamer?.status == .Playing {
-            BDAudioService.shareManager.pause()
+            if trk?.audioFileURL == BDAudioService.shareManager.trk?.audioFileURL {
+                BDAudioService.shareManager.pause()
+            }else {
+                if let trk = self.trk {
+                    BDAudioService.shareManager.resetStreamer(trk, updateAction: { [unowned self](type) in
+                        switch type {
+                        case .Status:
+                            self.updateStatus()
+                        case .Duration:
+                            self.updateProgress()
+                        case .BufferingRatio:
+                            self.updateBufferingStatus()
+                        }
+                        })
+                }
+            }
         }else if streamer?.status == .Paused {
             BDAudioService.shareManager.play()
         }else {
-            BDAudioService.shareManager.resetStreamer()
+            if let trk = self.trk {
+                BDAudioService.shareManager.resetStreamer(trk, updateAction: { [unowned self](type) in
+                    switch type {
+                    case .Status:
+                        self.updateStatus()
+                    case .Duration:
+                        self.updateProgress()
+                    case .BufferingRatio:
+                        self.updateBufferingStatus()
+                    }
+                    })
+            }
         }
     }
     //MARK:- Public

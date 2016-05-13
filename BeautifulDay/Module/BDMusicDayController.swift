@@ -118,7 +118,7 @@ class BDMusicDayController: UIViewController, UIScrollViewDelegate {
         canncelStreamer()
         assert(trk?.audioFileURL != nil, "the audio url is nil")
         streamer = DOUAudioStreamer(audioFile: trk)
-        mpView.streamer = streamer
+//        mpView.streamer = streamer
         streamer?.addObserver(self, forKeyPath: "status", options: .New, context: nil)
         streamer?.addObserver(self, forKeyPath: "duration", options: .New, context: nil)
         streamer?.addObserver(self, forKeyPath: "bufferingRatio", options: .New, context: nil)

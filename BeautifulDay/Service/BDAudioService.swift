@@ -14,7 +14,7 @@ import DOUAudioStreamer
 class BDAudioService: NSObject {
     static let shareManager = BDAudioService()
     
-    private var streamer : DOUAudioStreamer? = nil
+    var streamer : DOUAudioStreamer? = nil 
     
     var trk: Track? = nil
 
@@ -44,9 +44,11 @@ class BDAudioService: NSObject {
         }
     }
     
-    func resetStreamer() {
+    func resetStreamer(trk: Track, updateAction:((type: UpdateType) -> Void)?) {
         canncelStreamer()
-        assert(trk?.audioFileURL != nil, "the audio url is nil")
+        assert(trk.audioFileURL != nil, "the audio url is nil")
+        self.trk = trk
+        self.updateAction = updateAction
         streamer = DOUAudioStreamer(audioFile: trk)
 //        mpView.streamer = streamer
         streamer?.addObserver(self, forKeyPath: "status", options: .New, context: nil)
@@ -61,9 +63,13 @@ class BDAudioService: NSObject {
         if let kp = keyPath {
             switch kp {
             case "status":
-                dispatch_async(dispatch_get_main_queue(), { 
+                print("status is \(streamer?.status)")
+                dispatch_async(dispatch_get_main_queue(), {
                     self.updateAction?(type: .Status)
                 })
+                if streamer?.status == .Some(.Finished) {
+                    self .resetStreamer(trk!, updateAction: self.updateAction)
+                }
             case "duration":
                 dispatch_async(dispatch_get_main_queue(), { [unowned self]() -> Void in
                     self.updateAction?(type: .Duration)

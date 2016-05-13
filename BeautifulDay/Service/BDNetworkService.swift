@@ -88,6 +88,7 @@ func fetchAblumList(failure: NSError -> Void, success:((Bool, [Album]) -> Void))
         }
     }
 }
+
 //func registerMobile(mobile: String, withAreaCode areaCode: String, nickname: String, failureHandler: FailureHandler?, completion: Bool -> Void) {
 //    let requestParameters: JSONDictionary = [
 //        "mobile": mobile,

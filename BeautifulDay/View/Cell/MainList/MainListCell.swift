@@ -30,6 +30,7 @@ class MainListCell: UITableViewCell {
                 if let musicUrl = album.musicUrl {
                     trk.audioFileURL = NSURL(string: musicUrl)
                 }
+                mpView.trk = trk
             }
             
         }
