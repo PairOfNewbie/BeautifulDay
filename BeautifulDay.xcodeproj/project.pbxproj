@@ -25,6 +25,7 @@
 		B24311491CB2A59E000697B2 /* BeautifulDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24311481CB2A59E000697B2 /* BeautifulDayUITests.swift */; };
 		B260514B1CEC409A00F81E8D /* LoadMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26051491CEC409A00F81E8D /* LoadMoreCell.swift */; };
 		B260514C1CEC409A00F81E8D /* LoadMoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B260514A1CEC409A00F81E8D /* LoadMoreCell.xib */; };
+		B260514E1CEC793400F81E8D /* AlbumCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B260514D1CEC793400F81E8D /* AlbumCollectionController.swift */; };
 		B26645C21CDDE09A00E5B274 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26645C11CDDE09A00E5B274 /* Model.swift */; };
 		B26A87D11CBC97F10058F7B4 /* MusicResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26A87D01CBC97F10058F7B4 /* MusicResource.swift */; };
 		B26BBD861CE5AEB80009BD2F /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = B26BBD851CE5AEB80009BD2F /* ReadMe.txt */; };
@@ -90,6 +91,7 @@
 		B243114A1CB2A59E000697B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B26051491CEC409A00F81E8D /* LoadMoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMoreCell.swift; sourceTree = "<group>"; };
 		B260514A1CEC409A00F81E8D /* LoadMoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadMoreCell.xib; sourceTree = "<group>"; };
+		B260514D1CEC793400F81E8D /* AlbumCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCollectionController.swift; sourceTree = "<group>"; };
 		B26645C11CDDE09A00E5B274 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B26A87D01CBC97F10058F7B4 /* MusicResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicResource.swift; sourceTree = "<group>"; };
 		B26BBD851CE5AEB80009BD2F /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		B20F076B1CD0E94D008398ED /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B260514F1CEC797B00F81E8D /* ReusableView */,
 				B2133EB31CD8C8C000FD7DB6 /* MusicBar */,
 				B2E0CCA01CD8A1BB00A2AA3F /* Cell */,
 			);
@@ -275,6 +278,13 @@
 			path = LoadMore;
 			sourceTree = "<group>";
 		};
+		B260514F1CEC797B00F81E8D /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReusableView;
+			sourceTree = "<group>";
+		};
 		B26645C01CDDE08400E5B274 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +314,7 @@
 			children = (
 				B2C8A3801CDA29D600E61B69 /* AlbumDetailController.swift */,
 				B230D7851CE0DF7600BFA70D /* AlbumListController.swift */,
+				B260514D1CEC793400F81E8D /* AlbumCollectionController.swift */,
 			);
 			path = Album;
 			sourceTree = "<group>";
@@ -561,6 +572,7 @@
 				B243112E1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld in Sources */,
 				B2E0CCAC1CD8B1AF00A2AA3F /* UINavigationBar+Translucent.swift in Sources */,
 				B2C8A38E1CDA2B1E00E61B69 /* AlbumCommentCell.swift in Sources */,
+				B260514E1CEC793400F81E8D /* AlbumCollectionController.swift in Sources */,
 				B2E0CC9F1CD8A19200A2AA3F /* MainListController.swift in Sources */,
 				B2133EB51CD8C8E600FD7DB6 /* MusicPlayBar.swift in Sources */,
 				B230D7861CE0DF7600BFA70D /* AlbumListController.swift in Sources */,
