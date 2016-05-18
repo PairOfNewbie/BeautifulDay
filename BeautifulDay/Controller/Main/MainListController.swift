@@ -9,15 +9,20 @@
 import UIKit
 
 private let mainListCellIdentifier = "MainListCell"
+private let loadMoreCellIdentifier = "LoadMoreCell"
 
 class MainListController: UITableViewController {
     var trk : Track? = nil
     var albumList = Array<Album>()
     
+    let activityIndicator = UIActivityIndicatorView()
+    
     //MARK:- Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let rc = UIRefreshControl()
+        rc.addTarget(self, action: #selector(MainListController.refresh(_:)), forControlEvents: .ValueChanged)
+        refreshControl = rc
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -26,21 +31,14 @@ class MainListController: UITableViewController {
         
         tableView.pagingEnabled = true
         tableView.registerNib(UINib(nibName: mainListCellIdentifier, bundle: nil), forCellReuseIdentifier: mainListCellIdentifier)
+        tableView.registerNib(UINib(nibName: loadMoreCellIdentifier, bundle:nil), forCellReuseIdentifier: loadMoreCellIdentifier)
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-//        fetchTestInfo({ (error) in
-//            print("fetchTestInfo error")
-//            }) { [unowned self] (isSuccess, trk) in
-//                self.trk = trk
-//                BDAudioService.shareManager.trk = trk
-//        }
-        fetchAblumList({ (error) in
-            print(error.description)
-            }) { [unowned self](success, albumList) in
-            self.albumList = albumList
-            self.tableView.reloadData()
+        if albumList.isEmpty {
+            refresh(refreshControl!)
+            refreshControl?.beginRefreshing()
         }
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationController?.navigationBar.translucentBar()
@@ -49,32 +47,184 @@ class MainListController: UITableViewController {
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-//        self.navigationController?.navigationBar.opaqueBar()
+        //        self.navigationController?.navigationBar.opaqueBar()
+    }
+    
+    
+    // MARK: - Refresh
+    @objc private func refresh(sender: UIRefreshControl) {
+        
+        updateDiscoverUsers(mode: .TopRefresh) {
+            dispatch_async(dispatch_get_main_queue()) {
+                sender.endRefreshing()
+            }
+        }
+    }
+    
+    private var currentPageIndex = 0
+    private var isFetching = false
+    private enum UpdateMode {
+        case Static
+        case TopRefresh
+        case LoadMore
+    }
+    private func updateDiscoverUsers(mode mode: UpdateMode, finish: (() -> Void)? = nil) {
+        
+        if isFetching {
+            return
+        }
+        
+        isFetching = true
+        
+        if case .Static = mode {
+            activityIndicator.startAnimating()
+            view.bringSubviewToFront(activityIndicator)
+        }
+        
+        if case .LoadMore = mode {
+            currentPageIndex += 1
+            
+        } else {
+            currentPageIndex = 1
+        }
+        
+        // todo 根据updateMode的区别来做不同的事情
+        fetchAblumList({ (error) in
+            print(error.description)
+        }) { (success, albumList) in
+            dispatch_async(dispatch_get_main_queue(), {[weak self] in
+                self?.albumList = albumList
+                self?.tableView.reloadData()
+                self?.isFetching = false
+                finish?()
+                })
+        }
+        //        discoverUsers(masterSkillIDs: [], learningSkillIDs: [], discoveredUserSortStyle: discoveredUserSortStyle, inPage: currentPageIndex, withPerPage: 21, failureHandler: { (reason, errorMessage) in
+        //            defaultFailureHandler(reason: reason, errorMessage: errorMessage)
+        //
+        //            dispatch_async(dispatch_get_main_queue()) { [weak self] in
+        //                self?.activityIndicator.stopAnimating()
+        //                self?.isFetching = false
+        //
+        //                finish?()
+        //            }
+        //
+        //            }, completion: { discoveredUsers in
+        //
+        //                for user in discoveredUsers {
+        //
+        //                    for skill in user.masterSkills {
+        //
+        //                        let skillLocalName = skill.localName ?? ""
+        //
+        //                        let skillID =  skill.id
+        //
+        //                        if let _ = skillSizeCache[skillID] {
+        //
+        //                        } else {
+        //                            let rect = skillLocalName.boundingRectWithSize(CGSize(width: CGFloat(FLT_MAX), height: SkillCell.height), options: [.UsesLineFragmentOrigin, .UsesFontLeading], attributes: skillTextAttributes, context: nil)
+        //
+        //                            skillSizeCache[skillID] = rect
+        //                        }
+        //                    }
+        //                }
+        //
+        //                dispatch_async(dispatch_get_main_queue()) { [weak self] in
+        //
+        //                    guard let strongSelf = self else {
+        //                        return
+        //                    }
+        //
+        //                    var wayToUpdate: UICollectionView.WayToUpdate = .None
+        //
+        //                    if case .LoadMore = mode {
+        //                        let oldDiscoveredUsersCount = strongSelf.discoveredUsers.count
+        //                        strongSelf.discoveredUsers += discoveredUsers
+        //                        let newDiscoveredUsersCount = strongSelf.discoveredUsers.count
+        //
+        //                        let indexPaths = Array(oldDiscoveredUsersCount..<newDiscoveredUsersCount).map({ NSIndexPath(forItem: $0, inSection: Section.User.rawValue) })
+        //                        if !indexPaths.isEmpty {
+        //                            wayToUpdate = .Insert(indexPaths)
+        //                        }
+        //
+        //                    } else {
+        //                        strongSelf.discoveredUsers = discoveredUsers
+        //                        wayToUpdate = .ReloadData
+        //                    }
+        //
+        //                    strongSelf.activityIndicator.stopAnimating()
+        //                    strongSelf.isFetching = false
+        //
+        //                    finish?()
+        //
+        //                    wayToUpdate.performWithCollectionView(strongSelf.discoveredUsersCollectionView)
+        //                }
+        //        })
     }
     
     // MARK: - Table view data source
-    
+    private enum Section: Int {
+        case Normal
+        case LoadMore
+    }
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return albumList.count
+        switch section {
+        case Section.Normal.rawValue:
+            return albumList.count
+        case Section.LoadMore.rawValue:
+            return albumList.isEmpty ? 0 : 1
+        default:
+            return 0
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(mainListCellIdentifier, forIndexPath: indexPath) as! MainListCell
-        
-        // Configure the cell...
-        cell.backgroundColor = UIColor(red: (CGFloat(arc4random_uniform(100))) / 100 , green:  (CGFloat(arc4random_uniform(100))) / 100, blue:  (CGFloat(arc4random_uniform(100))) / 100, alpha:  (CGFloat(arc4random_uniform(100))) / 100)
-        cell.album = albumList[indexPath.row]
-        return cell
+        switch indexPath.section {
+        case Section.Normal.rawValue:
+            let cell = tableView.dequeueReusableCellWithIdentifier(mainListCellIdentifier, forIndexPath: indexPath) as! MainListCell
+            return cell
+        case Section.LoadMore.rawValue:
+            let cell = tableView.dequeueReusableCellWithIdentifier(loadMoreCellIdentifier, forIndexPath: indexPath) as! LoadMoreCell
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return tableView.bounds.height
+        switch indexPath.section {
+        case Section.Normal.rawValue:
+            return tableView.bounds.height
+        case Section.LoadMore.rawValue:
+            return 44
+        default:
+            return 0
+        }
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        switch indexPath.section {
+        case Section.Normal.rawValue:
+            if let cell = cell as? MainListCell {
+                cell.album = albumList[indexPath.row]
+            }
+        case Section.LoadMore.rawValue:
+            if let cell = cell as? LoadMoreCell {
+                print("load more data")
+                if !cell.loadingActivityIndicator.isAnimating() {
+                    cell.loadingActivityIndicator.startAnimating()
+                }
+                updateDiscoverUsers(mode: .LoadMore, finish: {[weak cell] in
+                    cell?.loadingActivityIndicator.stopAnimating()
+                    })
+            }
+        default:
+            break
+        }
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -83,6 +233,7 @@ class MainListController: UITableViewController {
         // todo: sender should be something to pass
         performSegueWithIdentifier("showAlbumDetail", sender: nil)
     }
+    
     /*
      // Override to support conditional editing of the table view.
      override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -118,14 +269,14 @@ class MainListController: UITableViewController {
      }
      */
     
-
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    
     
 }

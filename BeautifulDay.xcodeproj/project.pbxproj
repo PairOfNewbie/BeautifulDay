@@ -23,6 +23,8 @@
 		B24311331CB2A59E000697B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24311311CB2A59E000697B2 /* LaunchScreen.storyboard */; };
 		B243113E1CB2A59E000697B2 /* BeautifulDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B243113D1CB2A59E000697B2 /* BeautifulDayTests.swift */; };
 		B24311491CB2A59E000697B2 /* BeautifulDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24311481CB2A59E000697B2 /* BeautifulDayUITests.swift */; };
+		B260514B1CEC409A00F81E8D /* LoadMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26051491CEC409A00F81E8D /* LoadMoreCell.swift */; };
+		B260514C1CEC409A00F81E8D /* LoadMoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B260514A1CEC409A00F81E8D /* LoadMoreCell.xib */; };
 		B26645C21CDDE09A00E5B274 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26645C11CDDE09A00E5B274 /* Model.swift */; };
 		B26A87D11CBC97F10058F7B4 /* MusicResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26A87D01CBC97F10058F7B4 /* MusicResource.swift */; };
 		B26BBD861CE5AEB80009BD2F /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = B26BBD851CE5AEB80009BD2F /* ReadMe.txt */; };
@@ -86,6 +88,8 @@
 		B24311441CB2A59E000697B2 /* BeautifulDayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeautifulDayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24311481CB2A59E000697B2 /* BeautifulDayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautifulDayUITests.swift; sourceTree = "<group>"; };
 		B243114A1CB2A59E000697B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B26051491CEC409A00F81E8D /* LoadMoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMoreCell.swift; sourceTree = "<group>"; };
+		B260514A1CEC409A00F81E8D /* LoadMoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadMoreCell.xib; sourceTree = "<group>"; };
 		B26645C11CDDE09A00E5B274 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B26A87D01CBC97F10058F7B4 /* MusicResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicResource.swift; sourceTree = "<group>"; };
 		B26BBD851CE5AEB80009BD2F /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
@@ -262,6 +266,15 @@
 			path = BeautifulDayUITests;
 			sourceTree = "<group>";
 		};
+		B26051481CEC408600F81E8D /* LoadMore */ = {
+			isa = PBXGroup;
+			children = (
+				B26051491CEC409A00F81E8D /* LoadMoreCell.swift */,
+				B260514A1CEC409A00F81E8D /* LoadMoreCell.xib */,
+			);
+			path = LoadMore;
+			sourceTree = "<group>";
+		};
 		B26645C01CDDE08400E5B274 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +343,7 @@
 		B2E0CCA01CD8A1BB00A2AA3F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				B26051481CEC408600F81E8D /* LoadMore */,
 				B2C8A3821CDA2A1D00E61B69 /* Album */,
 				B2C8A3831CDA2A1D00E61B69 /* MainList */,
 			);
@@ -458,6 +472,7 @@
 				B2C8A38B1CDA2B0B00E61B69 /* AlbumZanCell.xib in Resources */,
 				B2C8A3871CDA2A1D00E61B69 /* MainListCell.xib in Resources */,
 				B2C8A38F1CDA2B1E00E61B69 /* AlbumCommentCell.xib in Resources */,
+				B260514C1CEC409A00F81E8D /* LoadMoreCell.xib in Resources */,
 				B243112B1CB2A59E000697B2 /* Main.storyboard in Resources */,
 				B26BBD861CE5AEB80009BD2F /* ReadMe.txt in Resources */,
 				B230D78A1CE0DFC900BFA70D /* AlbumListCell.xib in Resources */,
@@ -536,6 +551,7 @@
 				B26645C21CDDE09A00E5B274 /* Model.swift in Sources */,
 				B2C8A38A1CDA2B0B00E61B69 /* AlbumZanCell.swift in Sources */,
 				B2CAD22B1CB7A14E00A1030E /* PlayerViewController.m in Sources */,
+				B260514B1CEC409A00F81E8D /* LoadMoreCell.swift in Sources */,
 				B20F07661CD0C0BA008398ED /* BDNetworkService.swift in Sources */,
 				B26A87D11CBC97F10058F7B4 /* MusicResource.swift in Sources */,
 				B2C8A37E1CD9D54F00E61B69 /* BDAudioService.swift in Sources */,
