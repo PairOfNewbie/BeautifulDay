@@ -1,5 +1,5 @@
 //
-//  LoadMoreCollectionCell.swift
+//  AlbumCollectionCardCell.swift
 //  BeautifulDay
 //
 //  Created by DaiFengyi on 16/5/19.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class LoadMoreCollectionCell: UICollectionViewCell {
-    @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView!
+class AlbumCollectionCardCell: UICollectionViewCell {
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -8,89 +8,113 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
-private let loadMoreReusableViewIdentifier = "LoadMoreReusableView"
-private let albumCollectionViewIdentifier = "AlbumCollectionReusableView"
+private let albumCollectionNormalCellReuseIdentifier = "AlbumCollectionNormalCell"
+//private let albumCollectionCardCellReuseIdentifier = "AlbumCollectionCardCell"
+private let loadMoreCollectionCellReuseIdentifier = "LoadMoreCollectionCell"
 
 class AlbumCollectionController: UICollectionViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+        self.collectionView!.registerNib(UINib(nibName:albumCollectionNormalCellReuseIdentifier, bundle: nil) , forCellWithReuseIdentifier: albumCollectionNormalCellReuseIdentifier)
+        //        self.collectionView!.registerNib(UINib(nibName: albumCollectionCardCellReuseIdentifier, bundle: nil) , forCellWithReuseIdentifier: albumCollectionCardCellReuseIdentifier)
+        self.collectionView!.registerNib(UINib(nibName: loadMoreCollectionCellReuseIdentifier, bundle: nil) , forCellWithReuseIdentifier: loadMoreCollectionCellReuseIdentifier)
+        
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    // MARK: UICollectionView
+    private enum Section: Int {
+        case Content
+        case LoadMore
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: UICollectionViewDataSource
-
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
-
-
+    
+    
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        return 8
     }
-
+    
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
+        switch indexPath.section {
+        case Section.Content.rawValue:
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(albumCollectionNormalCellReuseIdentifier, forIndexPath: indexPath) as! AlbumCollectionNormalCell
+            return cell
+        case Section.LoadMore.rawValue:
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(loadMoreCollectionCellReuseIdentifier, forIndexPath: indexPath) as! LoadMoreCollectionCell
+            return cell
+        default:
+            return UICollectionViewCell()
+        }
+    }
     
-        // Configure the cell
     
-        return cell
-    }
-
-    // MARK: UICollectionViewDelegate
-
     /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(collectionView: UICollectionView, shouldShowMenuForItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(collectionView: UICollectionView, canPerformAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
-        return false
-    }
-
-    override func collectionView(collectionView: UICollectionView, performAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
+     // Uncomment this method to specify if the specified item should be highlighted during tracking
+     override func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+     return true
+     }
+     */
     
-    }
-    */
+    /*
+     // Uncomment this method to specify if the specified item should be selected
+     override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+     return true
+     }
+     */
+    
+    /*
+     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
+     override func collectionView(collectionView: UICollectionView, shouldShowMenuForItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+     return false
+     }
+     
+     override func collectionView(collectionView: UICollectionView, canPerformAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
+     return false
+     }
+     
+     override func collectionView(collectionView: UICollectionView, performAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
+     
+     }
+     */
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using [segue destinationViewController].
+     // Pass the selected object to the new view controller.
+     }
+     */
+}
 
+extension AlbumCollectionController: UICollectionViewDelegateFlowLayout {
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        switch indexPath.section {
+        case Section.Content.rawValue:
+            return CGSizeMake(UIScreen.mainScreen().bounds.width, 80)
+        case Section.LoadMore.rawValue:
+            return CGSizeMake(UIScreen.mainScreen().bounds.width, 80)
+        default:
+            return CGSizeZero
+        }
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        switch section {
+        case Section.Content.rawValue:
+            return UIEdgeInsetsZero
+        case Section.LoadMore.rawValue:
+            return UIEdgeInsetsZero
+        default:
+            return UIEdgeInsetsZero
+        }
+    }
 }

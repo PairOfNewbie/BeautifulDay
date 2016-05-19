@@ -24,7 +24,12 @@ class LeftMenuController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
         case 0:
-            print("what the fuck")
+            print("AlbumCollectionController")
+            let albumListController = self.storyboard!.instantiateViewControllerWithIdentifier("AlbumCollectionController")
+            if let nav = self.sideMenuViewController.contentViewController as? UINavigationController {
+                nav.pushViewController(albumListController, animated: true)
+            }
+            self.sideMenuViewController.hideMenuViewController()
         case 1:
             let albumListController = self.storyboard!.instantiateViewControllerWithIdentifier("AlbumListController")
             if let nav = self.sideMenuViewController.contentViewController as? UINavigationController {
