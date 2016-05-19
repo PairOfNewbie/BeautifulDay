@@ -9,6 +9,8 @@
 import UIKit
 
 private let reuseIdentifier = "Cell"
+private let loadMoreReusableViewIdentifier = "LoadMoreReusableView"
+private let albumCollectionViewIdentifier = "AlbumCollectionReusableView"
 
 class AlbumCollectionController: UICollectionViewController {
 

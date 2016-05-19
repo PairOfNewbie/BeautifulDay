@@ -1,5 +1,5 @@
 //
-//  LoadMoreCell.swift
+//  LoadMoreTableCell.swift
 //  BeautifulDay
 //
 //  Created by DaiFengyi on 16/5/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoadMoreCell: UITableViewCell {
+class LoadMoreTableCell: UITableViewCell {
     @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView!
 
     override func awakeFromNib() {

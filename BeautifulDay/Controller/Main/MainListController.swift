@@ -9,7 +9,7 @@
 import UIKit
 
 private let mainListCellIdentifier = "MainListCell"
-private let loadMoreCellIdentifier = "LoadMoreCell"
+private let loadMoreTableCellIdentifier = "LoadMoreTableCell"
 
 class MainListController: UITableViewController {
     var trk : Track? = nil
@@ -31,7 +31,7 @@ class MainListController: UITableViewController {
         
         tableView.pagingEnabled = true
         tableView.registerNib(UINib(nibName: mainListCellIdentifier, bundle: nil), forCellReuseIdentifier: mainListCellIdentifier)
-        tableView.registerNib(UINib(nibName: loadMoreCellIdentifier, bundle:nil), forCellReuseIdentifier: loadMoreCellIdentifier)
+        tableView.registerNib(UINib(nibName: loadMoreTableCellIdentifier, bundle:nil), forCellReuseIdentifier: loadMoreTableCellIdentifier)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -188,7 +188,7 @@ class MainListController: UITableViewController {
             let cell = tableView.dequeueReusableCellWithIdentifier(mainListCellIdentifier, forIndexPath: indexPath) as! MainListCell
             return cell
         case Section.LoadMore.rawValue:
-            let cell = tableView.dequeueReusableCellWithIdentifier(loadMoreCellIdentifier, forIndexPath: indexPath) as! LoadMoreCell
+            let cell = tableView.dequeueReusableCellWithIdentifier(loadMoreTableCellIdentifier, forIndexPath: indexPath) as! LoadMoreTableCell
             return cell
         default:
             return UITableViewCell()
@@ -213,7 +213,7 @@ class MainListController: UITableViewController {
                 cell.album = albumList[indexPath.row]
             }
         case Section.LoadMore.rawValue:
-            if let cell = cell as? LoadMoreCell {
+            if let cell = cell as? LoadMoreTableCell {
                 print("load more data")
                 if !cell.loadingActivityIndicator.isAnimating() {
                     cell.loadingActivityIndicator.startAnimating()
