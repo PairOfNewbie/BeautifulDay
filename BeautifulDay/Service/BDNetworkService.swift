@@ -16,6 +16,7 @@ let baseURL = NSURL(string: "https://park-staging.catchchatchina.com/api")!
 let baseURL = NSURL(string: "https://api.soyep.com")!
 #endif
 
+
 // Model
 struct LoginUser: CustomStringConvertible {
     let userID: String
@@ -75,9 +76,10 @@ func fetchTestInfo(failure: NSError -> Void, success: ((Bool, Track) -> Void)) {
     }
 }
 
-func fetchAblumList(failure: NSError -> Void, success:((Bool, [Album]) -> Void)) {
-    Alamofire.request(.POST, "http://112.74.106.192/Beautiful_Day/App/index.php", parameters: ["date" : "2016-04-14"], encoding: .JSON, headers: nil).responseArray { (reponse: Response<[Album], NSError>) in
-        let albumlist = reponse.result.value
+func fetchAlbumList(failure: NSError -> Void, success:((Bool, [Album]) -> Void)) {
+    let param = ["startdate" : "2016-05-18", "count" : 2]
+    Alamofire.request(.POST, "http://www.dev4love.com/api/daylist", parameters: param, encoding: .JSON, headers: nil).responseArray(keyPath: "album_datas") { (response: Response<[Album], NSError>) in
+        let albumlist = response.result.value
         print(albumlist)
         
         if let al = albumlist {
@@ -89,6 +91,10 @@ func fetchAblumList(failure: NSError -> Void, success:((Bool, [Album]) -> Void))
     }
 }
 
+
+func fetchAlbumDetailInfo(failure: NSError -> Void, success:(Bool, [Album] -> Void)) {
+    
+}
 //func registerMobile(mobile: String, withAreaCode areaCode: String, nickname: String, failureHandler: FailureHandler?, completion: Bool -> Void) {
 //    let requestParameters: JSONDictionary = [
 //        "mobile": mobile,
