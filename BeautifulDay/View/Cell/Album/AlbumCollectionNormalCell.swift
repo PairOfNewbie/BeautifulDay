@@ -9,7 +9,9 @@
 import UIKit
 
 class AlbumCollectionNormalCell: UICollectionViewCell {
-
+    @IBOutlet weak var thumbnail: UIImageView!
+    @IBOutlet weak var summary: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

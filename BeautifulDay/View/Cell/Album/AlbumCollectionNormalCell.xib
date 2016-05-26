@@ -13,7 +13,7 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JU0-8a-yKA">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="JU0-8a-yKA">
                         <rect key="frame" x="8" y="8" width="64" height="64"/>
                         <color key="backgroundColor" red="0.89019607840000003" green="0.20000000000000001" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -40,7 +40,14 @@
                 <constraint firstItem="JU0-8a-yKA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="l4q-Lh-IUO"/>
             </constraints>
             <size key="customSize" width="330" height="73"/>
+            <connections>
+                <outlet property="summary" destination="sGc-Xd-AeV" id="CO5-Pc-cgb"/>
+                <outlet property="thumbnail" destination="JU0-8a-yKA" id="xzM-ev-iwj"/>
+            </connections>
             <point key="canvasLocation" x="286.5" y="283"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="banner" width="414" height="196"/>
+    </resources>
 </document>
