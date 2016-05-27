@@ -11,9 +11,33 @@
 import Foundation
 import ObjectMapper
 
-//public protocol Mappable {
-//    init?
-//}
+struct Comment: Mappable {
+    var albumId: String?
+    var content: String?
+    var userId: String?
+    
+    init?(_ map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        albumId <- map["album_id"]
+        content <- map["content"]
+        userId <- map["user_id"]
+    }
+}
+
+struct Zan: Mappable {
+    var userName: String?
+    
+    init?(_ map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        userName <- map["user_name"]
+    }
+}
 
 struct Album: Mappable {
     var albumId: String?
@@ -34,5 +58,23 @@ struct Album: Mappable {
         imgUrl <- map["img_url"]
         musicUrl <- map["music_url"]
         pageUrl <- map["page_url"]
+    }
+}
+
+struct AlbumDetail: Mappable {
+    var zan: Bool?
+    var albuminfo: Album?
+    var commentList: [Comment]?
+    var zanList: [Zan]?
+
+    init?(_ map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        zan <- map["zan"]
+        albuminfo <- map["albuminfo"]
+        commentList <- map["commentlist"]
+        zanList <- map["zanlist"]
     }
 }

@@ -9,6 +9,10 @@
 import UIKit
 
 class AlbumCommentCell: UITableViewCell {
+    @IBOutlet weak var avatar: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var content: UITextView!
+    @IBOutlet weak var time: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

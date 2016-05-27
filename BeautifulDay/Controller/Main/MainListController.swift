@@ -230,8 +230,7 @@ class MainListController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        // todo: sender should be something to pass
-        performSegueWithIdentifier("showAlbumDetail", sender: nil)
+        performSegueWithIdentifier("showAlbumDetail", sender: indexPath.row)
     }
     
     /*
@@ -276,6 +275,11 @@ class MainListController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if let row = sender as? Int {
+            let adc = segue.destinationViewController as! AlbumDetailController
+            adc.albumId = albumList[row].albumId!
+        }
+        
     }
     
     

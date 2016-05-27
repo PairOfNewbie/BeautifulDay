@@ -9,6 +9,7 @@
 import UIKit
 
 class AlbumZanCell: UITableViewCell {
+    @IBOutlet weak var zanList: UITextView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

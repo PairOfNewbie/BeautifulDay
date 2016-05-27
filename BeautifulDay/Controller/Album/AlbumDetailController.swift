@@ -13,7 +13,24 @@ private let albumCommentCellIdentifier = "AlbumCommentCell"
 
 class AlbumDetailController: UITableViewController {
     @IBOutlet weak var webHeader: UIWebView!
-
+    var albumId = "" {
+        didSet {
+            fetchAlbumDetailInfo(albumId, userId: "3", failure: { (error) in
+                print(error.description)
+                }, success: { [unowned self](success, albumDetail) in
+                    self.albumDetail = albumDetail
+                    
+                    // webHeader
+                    let request = NSURLRequest(URL: NSURL(string: (albumDetail.albuminfo?.pageUrl)!)!, cachePolicy: .UseProtocolCachePolicy, timeoutInterval: 10)
+                    self.webHeader.loadRequest(request)
+                    self.webHeader.scrollView.scrollEnabled = false
+                    
+                    self.tableView.reloadData()
+            })
+        }
+    }
+    var albumDetail: AlbumDetail?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,10 +39,6 @@ class AlbumDetailController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        let request = NSURLRequest(URL: NSURL(string: "http://www.crossd.me")!, cachePolicy: .UseProtocolCachePolicy, timeoutInterval: 10)
-        webHeader.loadRequest(request)
-        webHeader.scrollView.scrollEnabled = false
-        
         tableView.estimatedRowHeight = 44
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.registerNib(UINib(nibName: albumZanCellIdentifier, bundle: nil), forCellReuseIdentifier: albumZanCellIdentifier)
@@ -48,7 +61,11 @@ class AlbumDetailController: UITableViewController {
         case 0:
             return 1
         case 1:
-            return 3
+            if let list = albumDetail?.commentList {
+                return list.count
+            }else {
+                return 0
+            }
         default:
             return 0
         }
@@ -64,6 +81,35 @@ class AlbumDetailController: UITableViewController {
             return cell
         default:
             return UITableViewCell()
+        }
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        switch indexPath.section {
+        case 0:
+            let c = cell as! AlbumZanCell
+            var zlist = String()
+            if let zanlist = albumDetail?.zanList {
+                for z in zanlist {
+                    if let userName = z.userName {
+                        if zlist.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) == 0 {
+                            zlist = userName
+                        }else {
+                            zlist = zlist + (",\(userName)")
+                        }
+                    }
+                }
+            }
+            c.zanList.text = zlist
+            break;
+        case 1:
+            let c = cell as! AlbumCommentCell
+            if let comment = albumDetail?.commentList![indexPath.row] {
+                c.name.text = comment.userId
+                c.content.text = comment.content
+            }
+        default:
+            break;
         }
     }
 

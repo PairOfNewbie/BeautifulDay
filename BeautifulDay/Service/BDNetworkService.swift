@@ -92,8 +92,19 @@ func fetchAlbumList(failure: NSError -> Void, success:((Bool, [Album]) -> Void))
 }
 
 
-func fetchAlbumDetailInfo(failure: NSError -> Void, success:(Bool, [Album] -> Void)) {
-    
+func fetchAlbumDetailInfo(albumId:String, userId:String, failure: NSError -> Void, success:((Bool, AlbumDetail) -> Void)) {
+    let param = ["album_id" : albumId, "user_id" : userId]
+    Alamofire.request(.POST, "http://www.dev4love.com/api/albumdetail", parameters: param, encoding: .JSON, headers: nil).responseObject{ (response: Response<AlbumDetail, NSError>) in
+        let albumDetail = response.result.value
+        print(albumDetail)
+        
+        if let ad = albumDetail {
+            success(true, ad)
+        }else {
+            let error = Error.errorWithCode(0, failureReason: "album is nil")
+            failure(error)
+        }
+    }
 }
 //func registerMobile(mobile: String, withAreaCode areaCode: String, nickname: String, failureHandler: FailureHandler?, completion: Bool -> Void) {
 //    let requestParameters: JSONDictionary = [
