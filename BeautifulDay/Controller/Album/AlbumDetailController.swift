@@ -45,11 +45,6 @@ class AlbumDetailController: UITableViewController {
         tableView.registerNib(UINib(nibName: albumCommentCellIdentifier, bundle: nil), forCellReuseIdentifier: albumCommentCellIdentifier)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -71,6 +66,25 @@ class AlbumDetailController: UITableViewController {
         }
     }
 
+    
+    override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        if section == 0 {
+            return nil
+        }
+        let inputBar = NSBundle.mainBundle().loadNibNamed("InputBar", owner: self, options: nil).last as? InputBar
+        inputBar?.clickAction = {
+            print("edit comment")
+        }
+        return inputBar
+    }
+    
+    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return 0
+        }
+        return 44
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
