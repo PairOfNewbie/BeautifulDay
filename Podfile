@@ -12,6 +12,7 @@ pod 'SnapKit'
 pod 'MonkeyKing'
 pod 'RESideMenu'
 pod 'AlamofireObjectMapper'
+pod 'SlackTextViewController‘
 end
 
 target 'BeautifulDayTests' do

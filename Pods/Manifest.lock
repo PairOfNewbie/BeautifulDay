@@ -25,6 +25,7 @@ PODS:
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
+  - SlackTextViewController (1.9.3)
   - SnapKit (0.20.0)
 
 DEPENDENCIES:
@@ -35,6 +36,7 @@ DEPENDENCIES:
   - MonkeyKing
   - RESideMenu
   - SDWebImage
+  - SlackTextViewController
   - SnapKit
 
 SPEC CHECKSUMS:
@@ -46,6 +48,7 @@ SPEC CHECKSUMS:
   ObjectMapper: b1e9c7c8a9f6400b72690c80072c131504caa66f
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  SlackTextViewController: bd2a34c188d4f7dec93cf42388f38551263fac82
   SnapKit: 5fce3c1bbbf1fbd31de9aa92f33eb9fa03f15650
 
 COCOAPODS: 0.39.0

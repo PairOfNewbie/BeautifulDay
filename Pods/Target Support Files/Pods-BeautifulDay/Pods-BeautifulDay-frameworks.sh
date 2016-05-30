@@ -92,6 +92,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-BeautifulDay/ObjectMapper.framework"
   install_framework "Pods-BeautifulDay/RESideMenu.framework"
   install_framework "Pods-BeautifulDay/SDWebImage.framework"
+  install_framework "Pods-BeautifulDay/SlackTextViewController.framework"
   install_framework "Pods-BeautifulDay/SnapKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -103,5 +104,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-BeautifulDay/ObjectMapper.framework"
   install_framework "Pods-BeautifulDay/RESideMenu.framework"
   install_framework "Pods-BeautifulDay/SDWebImage.framework"
+  install_framework "Pods-BeautifulDay/SlackTextViewController.framework"
   install_framework "Pods-BeautifulDay/SnapKit.framework"
 fi
