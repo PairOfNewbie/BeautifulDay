@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Main List Controller-->
         <scene sceneID="snD-oG-jPr">
             <objects>
                 <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="848-kZ-vwp" customClass="MainListController" customModule="BeautifulDay" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                             <outlet property="delegate" destination="848-kZ-vwp" id="dH1-eH-dth"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="ObS-Je-zlS"/>
+                    <navigationItem key="navigationItem" id="ObS-Je-zlS"/>
                     <connections>
                         <segue destination="eop-gw-gSc" kind="show" identifier="showAlbumDetail" id="bbk-jg-eN0"/>
                     </connections>

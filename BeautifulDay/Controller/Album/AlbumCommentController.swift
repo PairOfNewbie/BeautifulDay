@@ -54,13 +54,7 @@ class AlbumCommentController: SLKTextViewController {
         self.keyboardPanningEnabled = true
         self.shouldScrollToBottomAfterKeyboardShows = false
         self.inverted = false
-//
-////        self.leftButton.setImage(UIImage(named: "icn_upload"), forState: .Normal)
-//        self.leftButton.tintColor = UIColor.grayColor()
-//        
-////        self.rightButton.setTitle(NSLocalizedString("Send", comment: ""), forState: .Normal)
-//        
-//        
+        
         self.textInputbar.autoHideRightButton = true
         self.textInputbar.maxCharCount = 256
         self.textInputbar.counterStyle = .Split
@@ -128,11 +122,11 @@ class AlbumCommentController: SLKTextViewController {
         switch section {
         case 0:
             let header = UILabel();
-            header.text = "section 0"
+            header.text = "喜欢"
             return header
         case 1:
             let header = UILabel();
-            header.text = "section 1"
+            header.text = "评论"
             return header
         default:
             return nil

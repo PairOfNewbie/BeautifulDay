@@ -39,6 +39,8 @@ class AlbumDetailController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationController?.hidesBarsOnSwipe = true
+        
         tableView.estimatedRowHeight = 44
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.registerNib(UINib(nibName: albumZanCellIdentifier, bundle: nil), forCellReuseIdentifier: albumZanCellIdentifier)
