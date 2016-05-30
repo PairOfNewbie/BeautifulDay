@@ -59,12 +59,12 @@ class AlbumCommentController: SLKTextViewController {
         self.textInputbar.maxCharCount = 256
         self.textInputbar.counterStyle = .Split
         self.textInputbar.counterPosition = .Top
-
+        
         self.textInputbar.editorTitle.textColor = UIColor.darkGrayColor()
         self.textInputbar.editorLeftButton.tintColor = UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1)
         self.textInputbar.editorRightButton.tintColor = UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1)
         
-//        self.autoCompletionView.registerClass(MessageTableViewCell.classForCoder(), forCellReuseIdentifier: AutoCompletionCellIdentifier)
+        //        self.autoCompletionView.registerClass(MessageTableViewCell.classForCoder(), forCellReuseIdentifier: AutoCompletionCellIdentifier)
         self.registerPrefixesForAutoCompletion(["@",  "#", ":", "+:", "/"])
         
         self.textView.registerMarkdownFormattingSymbol("*", withTitle: "Bold")
@@ -73,9 +73,13 @@ class AlbumCommentController: SLKTextViewController {
         self.textView.registerMarkdownFormattingSymbol("`", withTitle: "Code")
         self.textView.registerMarkdownFormattingSymbol("```", withTitle: "Preformatted")
         self.textView.registerMarkdownFormattingSymbol(">", withTitle: "Quote")
-
+        
     }
     
+//    override func viewDidAppear(animated: Bool) {
+//        self.navigationController?.hidesBarsOnSwipe = false
+//        super.viewDidAppear(animated)
+//    }
     // MARK: - Action
     
     func textInputbarDidMove(note: NSNotification) {
@@ -97,7 +101,31 @@ class AlbumCommentController: SLKTextViewController {
         
         pipWindow.frame = frame
     }
-
+    
+    override func didPressRightButton(sender: AnyObject!) {
+        
+        // This little trick validates any pending auto-correction or auto-spelling just after hitting the 'Send' button
+        self.textView.refreshFirstResponder()
+        postComment((albumDetail?.albuminfo?.albumId)!, userId: "1", content: textView.text, failure: { (error) in
+            print("comment fail: \(error.description)")
+        }) { [unowned self](success, comment) in
+            let indexPath = NSIndexPath(forRow: 0, inSection: 1)
+            let rowAnimation: UITableViewRowAnimation = self.inverted ? .Bottom : .Top
+            let scrollPosition: UITableViewScrollPosition = self.inverted ? .Bottom : .Top
+            dispatch_async(dispatch_get_main_queue(), {
+                self.tableView!.beginUpdates()
+                self.albumDetail?.commentList?.insert(comment, atIndex: 0)
+                self.tableView!.insertRowsAtIndexPaths([indexPath], withRowAnimation: rowAnimation)
+                self.tableView!.endUpdates()
+                
+                self.tableView!.scrollToRowAtIndexPath(indexPath, atScrollPosition: scrollPosition, animated: true)
+                
+                self.tableView!.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            })
+        }
+        super.didPressRightButton(sender)
+    }
+    
     // MARK: - UITableView
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
@@ -122,10 +150,12 @@ class AlbumCommentController: SLKTextViewController {
         switch section {
         case 0:
             let header = UILabel();
+            header.backgroundColor = UIColor.lightGrayColor()
             header.text = "喜欢"
             return header
         case 1:
             let header = UILabel();
+            header.backgroundColor = UIColor.lightGrayColor()
             header.text = "评论"
             return header
         default:

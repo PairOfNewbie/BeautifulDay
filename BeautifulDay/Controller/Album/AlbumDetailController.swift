@@ -39,7 +39,7 @@ class AlbumDetailController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        self.navigationController?.hidesBarsOnSwipe = true
+        self.automaticallyAdjustsScrollViewInsets = true
         
         tableView.estimatedRowHeight = 44
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -47,6 +47,10 @@ class AlbumDetailController: UITableViewController {
         tableView.registerNib(UINib(nibName: albumCommentCellIdentifier, bundle: nil), forCellReuseIdentifier: albumCommentCellIdentifier)
     }
 
+    override func viewDidAppear(animated: Bool) {
+        self.navigationController?.hidesBarsOnSwipe = true
+        super.viewDidAppear(animated)
+    }
     // MARK: - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

@@ -47,7 +47,7 @@ class MainListController: UITableViewController {
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        //        self.navigationController?.navigationBar.opaqueBar()
+        self.navigationController?.navigationBar.opaqueBar()
     }
     
     
