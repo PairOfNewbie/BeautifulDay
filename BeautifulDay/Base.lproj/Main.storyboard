@@ -40,7 +40,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tcb-XA-RU9" id="gfR-pf-qnS">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -147,7 +147,7 @@
                                 <rect key="frame" x="0.0" y="628" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rR0-zI-vtq" id="wBL-Lh-sMz">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -159,11 +159,30 @@
                     </tableView>
                     <connections>
                         <outlet property="webHeader" destination="vpg-Z7-oEl" id="npK-wx-ab4"/>
+                        <segue destination="FQM-Pe-zNs" kind="show" identifier="showComment" id="UAX-uP-QA8"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9I-HX-cWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1579" y="447"/>
+            <point key="canvasLocation" x="1589" y="447"/>
+        </scene>
+        <!--Album Comment Controller-->
+        <scene sceneID="yUr-k7-7qp">
+            <objects>
+                <viewController id="FQM-Pe-zNs" customClass="AlbumCommentController" customModule="BeautifulDay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qHN-dz-L31"/>
+                        <viewControllerLayoutGuide type="bottom" id="lsE-hx-8Aj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="daG-GH-4ah">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xkn-tb-agR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2305" y="447"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oVw-m9-kwV">
