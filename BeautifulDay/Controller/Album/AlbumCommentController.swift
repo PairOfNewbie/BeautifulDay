@@ -75,11 +75,7 @@ class AlbumCommentController: SLKTextViewController {
         self.textView.registerMarkdownFormattingSymbol(">", withTitle: "Quote")
         
     }
-    
-//    override func viewDidAppear(animated: Bool) {
-//        self.navigationController?.hidesBarsOnSwipe = false
-//        super.viewDidAppear(animated)
-//    }
+
     // MARK: - Action
     
     func textInputbarDidMove(note: NSNotification) {

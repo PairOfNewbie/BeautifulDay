@@ -47,9 +47,15 @@ class AlbumDetailController: UITableViewController {
         tableView.registerNib(UINib(nibName: albumCommentCellIdentifier, bundle: nil), forCellReuseIdentifier: albumCommentCellIdentifier)
     }
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
         self.navigationController?.hidesBarsOnSwipe = true
-        super.viewDidAppear(animated)
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.hidesBarsOnSwipe = false
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        super.viewWillDisappear(animated)
     }
     // MARK: - Table view data source
     
