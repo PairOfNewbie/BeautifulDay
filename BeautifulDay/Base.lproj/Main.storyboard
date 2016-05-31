@@ -21,9 +21,11 @@
                     <navigationItem key="navigationItem" id="ObS-Je-zlS"/>
                     <connections>
                         <segue destination="eop-gw-gSc" kind="show" identifier="showAlbumDetail" id="bbk-jg-eN0"/>
+                        <segue destination="lSt-lv-rzQ" kind="show" identifier="pushAlbumList" animates="NO" id="SyK-ug-mVO"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X1y-rq-cB4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="YZb-Aq-dQr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="883" y="447"/>
         </scene>
@@ -37,7 +39,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Tcb-XA-RU9">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tcb-XA-RU9" id="gfR-pf-qnS">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -50,6 +52,9 @@
                             <outlet property="delegate" destination="lSt-lv-rzQ" id="WaN-Gk-rbt"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="YZb-Aq-dQr" kind="unwind" identifier="popAlbumList" unwindAction="unwindToThisViewController:" id="LWn-vx-xff"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Vs-4Q-d9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

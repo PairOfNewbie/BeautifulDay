@@ -13,7 +13,6 @@ private let loadMoreTableCellIdentifier = "LoadMoreTableCell"
 
 class MainListController: UITableViewController {
     var trk : Track? = nil
-    var albumList = Array<Album>()
     
     let activityIndicator = UIActivityIndicatorView()
     
@@ -91,9 +90,9 @@ class MainListController: UITableViewController {
         // todo 根据updateMode的区别来做不同的事情
         fetchAlbumList({ (error) in
             print(error.description)
-        }) { (success, albumList) in
+        }) { (success, al) in
             dispatch_async(dispatch_get_main_queue(), {[weak self] in
-                self?.albumList = albumList
+                albumList = al
                 self?.tableView.reloadData()
                 self?.isFetching = false
                 finish?()
@@ -282,5 +281,8 @@ class MainListController: UITableViewController {
         
     }
     
+    @IBAction func unwindToThisViewController(segue: UIStoryboardSegue) {
+        
+    }
     
 }

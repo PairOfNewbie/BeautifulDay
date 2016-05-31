@@ -9,7 +9,6 @@
 import UIKit
 let albumListCellIdentifier = "AlbumListCell"
 class AlbumListController: UITableViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,11 +21,6 @@ class AlbumListController: UITableViewController {
         tableView.registerNib(UINib(nibName: albumListCellIdentifier, bundle: nil), forCellReuseIdentifier: albumListCellIdentifier)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     // MARK: - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -34,7 +28,7 @@ class AlbumListController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return albumList.count
     }
     
     
@@ -43,7 +37,19 @@ class AlbumListController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = cell as! AlbumListCell
+        cell.thumbnail.sd_setImageWithURL(NSURL(string:albumList[indexPath.row].imgUrl!), placeholderImage: nil, options: .RetryFailed, completed: nil)
+        cell.summary.text = albumList[indexPath.row].text
+    }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if let vc = self.navigationController?.viewControllers[0] as? MainListController {
+            vc.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: .Top, animated: true)
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+//        performSegueWithIdentifier("popAlbumList", sender: nil)
+    }
     /*
      // Override to support conditional editing of the table view.
      override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

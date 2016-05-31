@@ -78,3 +78,5 @@ struct AlbumDetail: Mappable {
         zanList <- map["zanlist"]
     }
 }
+
+var albumList = [Album]()
