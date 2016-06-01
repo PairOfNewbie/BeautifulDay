@@ -57,6 +57,17 @@ class AlbumDetailController: UITableViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         super.viewWillDisappear(animated)
     }
+    
+    // MARK: - Action
+    @objc func zan(sender: UIButton) {
+        sender.selected = !sender.selected
+        postZan(sender.selected)
+    }
+    
+    private func postZan(status: Bool) {
+        // todo 
+        
+    }
     // MARK: - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -101,6 +112,10 @@ class AlbumDetailController: UITableViewController {
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCellWithIdentifier(albumZanCellIdentifier, forIndexPath: indexPath)
+            if let button = cell.accessoryView as? UIButton {
+                button.addTarget(self, action: #selector(AlbumDetailController.zan(_:)), forControlEvents: .TouchUpInside)
+            }
+            
             return cell
         case 1:
             let cell = tableView.dequeueReusableCellWithIdentifier(albumCommentCellIdentifier, forIndexPath: indexPath)

@@ -14,6 +14,10 @@ class AlbumZanCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        let button = UIButton(frame: CGRectMake(0, 0, 30, 30))
+        button.setImage(UIImage(named: "like_normal"), forState: .Normal)
+        button.setImage(UIImage(named: "like_selected"), forState: .Selected)
+        accessoryView = button
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

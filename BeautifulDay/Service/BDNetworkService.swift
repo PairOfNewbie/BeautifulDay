@@ -107,6 +107,26 @@ func fetchAlbumDetailInfo(albumId:String, userId:String, failure: NSError -> Voi
     }
 }
 
+enum ZanType: Int {
+    case Zan = 0
+    case Unzan
+}
+
+func postZan(albumId:String, userId:String, zan:ZanType, failure: NSError -> Void, success:((Bool, Zan) -> Void)) {
+    let param = ["album_id" : albumId, "user_id" : userId, "zan" : "\(zan.rawValue)"]
+    Alamofire.request(.POST, "http://www.dev4love.com/api/zan", parameters: param, encoding: .JSON, headers: nil).responseObject{ (response: Response<Zan, NSError>) in
+        let c = response.result.value
+        print(c)
+        
+        if let c = c {
+            success(true, c)
+        }else {
+            let error = Error.errorWithCode(0, failureReason: "comment fail")
+            failure(error)
+        }
+    }
+}
+
 func postComment(albumId:String, userId:String, content:String,failure: NSError -> Void, success:((Bool, Comment) -> Void)) {
     let param = ["album_id" : albumId, "user_id" : userId, "content" : content]
     Alamofire.request(.POST, "http://www.dev4love.com/api/comment", parameters: param, encoding: .JSON, headers: nil).responseObject(keyPath: "comment"){ (response: Response<Comment, NSError>) in
