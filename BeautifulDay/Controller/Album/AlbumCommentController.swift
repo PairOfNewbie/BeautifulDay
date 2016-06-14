@@ -77,6 +77,21 @@ class AlbumCommentController: SLKTextViewController {
     }
 
     // MARK: - Action
+    @objc func zan(sender: UIButton) {
+        sender.selected = !sender.selected
+        let keyframeAni = CAKeyframeAnimation(keyPath: "transform.scale")
+        keyframeAni.duration = 0.5;
+        keyframeAni.values = [0.1, 1.5, 1.0];
+        keyframeAni.keyTimes = [0, 0.8, 1];
+        keyframeAni.calculationMode = kCAAnimationLinear;
+        sender.layer.addAnimation(keyframeAni, forKey: "zan")
+        postZan(sender.selected)
+    }
+    
+    private func postZan(status: Bool) {
+        // todo
+        
+    }
     
     func textInputbarDidMove(note: NSNotification) {
         
@@ -168,6 +183,9 @@ class AlbumCommentController: SLKTextViewController {
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCellWithIdentifier(albumZanCellIdentifier, forIndexPath: indexPath)
+            if let button = cell.accessoryView as? UIButton {
+                button.addTarget(self, action: #selector(AlbumCommentController.zan(_:)), forControlEvents: .TouchUpInside)
+            }
             return cell
         case 1:
             let cell = tableView.dequeueReusableCellWithIdentifier(albumCommentCellIdentifier, forIndexPath: indexPath)

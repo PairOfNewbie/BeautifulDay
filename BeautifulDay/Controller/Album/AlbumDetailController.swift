@@ -61,6 +61,12 @@ class AlbumDetailController: UITableViewController {
     // MARK: - Action
     @objc func zan(sender: UIButton) {
         sender.selected = !sender.selected
+        let keyframeAni = CAKeyframeAnimation(keyPath: "transform.scale")
+        keyframeAni.duration = 0.5;
+        keyframeAni.values = [0.1, 1.5, 1.0];
+        keyframeAni.keyTimes = [0, 0.8, 1];
+        keyframeAni.calculationMode = kCAAnimationLinear;
+        sender.layer.addAnimation(keyframeAni, forKey: "zan")
         postZan(sender.selected)
     }
     

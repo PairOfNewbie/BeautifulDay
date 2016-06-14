@@ -17,6 +17,8 @@ class AlbumCommentCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        let imageName = "\(arc4random_uniform(UInt32(10)))"
+        avatar.image = UIImage(named: imageName)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
