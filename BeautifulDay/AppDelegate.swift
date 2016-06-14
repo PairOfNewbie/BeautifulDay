@@ -53,6 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let contentVC = sb.instantiateViewControllerWithIdentifier("mainNav")
         let leftVC = sb.instantiateViewControllerWithIdentifier("leftVC")
         let rm = RESideMenu(contentViewController: contentVC, leftMenuViewController: leftVC, rightMenuViewController: nil)
+        rm.panFromEdge = true
         rm.contentViewScaleValue = 1
         rm.contentViewInPortraitOffsetCenterX = UIScreen.mainScreen().bounds.width * (0.75-0.5)
         return rm
