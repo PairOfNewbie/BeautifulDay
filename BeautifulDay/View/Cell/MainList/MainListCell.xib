@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -17,23 +17,41 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tiC-fB-U2E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="410"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WtI-Oe-QwX">
-                        <rect key="frame" x="15" y="75" width="252" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WtI-Oe-QwX">
+                        <rect key="frame" x="8" y="260" width="37" height="22"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                        <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <size key="shadowOffset" width="1" height="1"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kE-Vd-KVC">
-                        <rect key="frame" x="15" y="139" width="286" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kE-Vd-KVC">
+                        <rect key="frame" x="8" y="290" width="72" height="24"/>
+                        <attributedString key="attributedText">
+                            <fragment content="location">
+                                <attributes>
+                                    <color key="NSColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" size="20" name="Helvetica-Light"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
                         <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <size key="shadowOffset" width="1" height="1"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GH-E3-paT">
-                        <rect key="frame" x="15" y="195" width="244" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GH-E3-paT">
+                        <rect key="frame" x="8" y="322" width="102" height="24"/>
+                        <attributedString key="attributedText">
+                            <fragment content="description">
+                                <attributes>
+                                    <color key="NSColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" size="20" name="Helvetica-Light"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
                         <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <size key="shadowOffset" width="1" height="1"/>
                     </label>
                     <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="fTd-Mc-2xA" userLabel="Mp View Container">
                         <rect key="frame" x="0.0" y="366" width="375" height="44"/>
@@ -46,8 +64,14 @@
                     <constraint firstAttribute="trailing" secondItem="fTd-Mc-2xA" secondAttribute="trailing" id="12f-n3-l6O"/>
                     <constraint firstItem="fTd-Mc-2xA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2P4-Ue-2bT"/>
                     <constraint firstAttribute="bottom" secondItem="fTd-Mc-2xA" secondAttribute="bottom" id="9NK-eR-t5J"/>
+                    <constraint firstItem="WtI-Oe-QwX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="BgZ-cz-G0Y"/>
+                    <constraint firstItem="5kE-Vd-KVC" firstAttribute="top" secondItem="WtI-Oe-QwX" secondAttribute="bottom" constant="8" id="Et5-Ua-rCA"/>
                     <constraint firstAttribute="bottom" secondItem="tiC-fB-U2E" secondAttribute="bottom" id="Oya-Qq-jQg"/>
+                    <constraint firstItem="9GH-E3-paT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Rq1-Gm-JVr"/>
+                    <constraint firstItem="9GH-E3-paT" firstAttribute="top" secondItem="5kE-Vd-KVC" secondAttribute="bottom" constant="8" id="YjW-YJ-iUP"/>
+                    <constraint firstItem="fTd-Mc-2xA" firstAttribute="top" secondItem="9GH-E3-paT" secondAttribute="bottom" constant="20" id="ZFr-HV-aEW"/>
                     <constraint firstItem="tiC-fB-U2E" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fno-A6-WQo"/>
+                    <constraint firstItem="5kE-Vd-KVC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="iWi-wE-QMW"/>
                     <constraint firstItem="tiC-fB-U2E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="iwG-OC-ugh"/>
                     <constraint firstAttribute="trailing" secondItem="tiC-fB-U2E" secondAttribute="trailing" id="k7J-5L-p1I"/>
                 </constraints>

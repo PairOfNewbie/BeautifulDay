@@ -22,7 +22,13 @@ class MainListCell: UITableViewCell {
                 if let imgUrl = album.imgUrl {
                     bgView.sd_setImageWithURL(NSURL(string: imgUrl), placeholderImage: nil, options: .RetryFailed)
                 }
-                dateLabel.text = album.date
+                
+//                let shadow = NSShadow()
+//                shadow.shadowColor = UIColor.grayColor()
+//                shadow.shadowOffset = CGSizeMake(1, 1)
+                
+                let at = NSAttributedString(string: album.date!, attributes: [NSFontAttributeName : UIFont(name: "HelveticaNeue-UltraLight", size: 100)!])
+                dateLabel.attributedText = at
                 descriptionLabel.text = album.text
                 let trk = Track()
                 trk.artist = album.text
@@ -44,6 +50,7 @@ class MainListCell: UITableViewCell {
         mpView.snp_makeConstraints { [unowned self](make) in
             make.edges.equalTo(self.mpViewContrainer)
         }
+        
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
