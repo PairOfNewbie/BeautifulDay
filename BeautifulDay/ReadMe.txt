@@ -7,3 +7,7 @@ if the music is playing and is the same one as the bar has: rotate the icon, set
 if not music is the same one as the bar has: set the updateAction of BDAudioService
 if totally not: nothing
 
+
+theme：
+blue color : 268EEC
+

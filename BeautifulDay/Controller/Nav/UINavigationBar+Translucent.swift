@@ -12,13 +12,13 @@ extension UINavigationBar {
     
     func opaqueBar() {
         self.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Compact)
-        self.setBackgroundImage(UIImage(named: "orange2x2"), forBarMetrics: UIBarMetrics.Default)
+        self.setBackgroundImage(UIImage(named: "blue2x2"), forBarMetrics: UIBarMetrics.Default)
         self.clipsToBounds = false
     }
     
     func translucentBar() {
         self.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
-        self.setBackgroundImage(UIImage(named: "orange2x2"), forBarMetrics: UIBarMetrics.Compact)
+        self.setBackgroundImage(UIImage(named: "blue2x2"), forBarMetrics: UIBarMetrics.Compact)
         self.clipsToBounds = true
     }
 }
