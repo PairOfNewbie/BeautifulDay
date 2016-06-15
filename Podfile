@@ -13,6 +13,7 @@ pod 'MonkeyKing'
 pod 'RESideMenu'
 pod 'AlamofireObjectMapper'
 pod 'SlackTextViewController‘
+pod 'ChameleonFramework/Swift'
 end
 
 target 'BeautifulDayTests' do
