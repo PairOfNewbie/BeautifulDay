@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="410"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="410"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="409.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tiC-fB-U2E">
@@ -39,8 +39,8 @@
                         <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <size key="shadowOffset" width="1" height="1"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GH-E3-paT">
-                        <rect key="frame" x="8" y="322" width="102" height="24"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GH-E3-paT">
+                        <rect key="frame" x="8" y="322" width="359" height="24"/>
                         <attributedString key="attributedText">
                             <fragment content="description">
                                 <attributes>
@@ -68,6 +68,7 @@
                     <constraint firstItem="5kE-Vd-KVC" firstAttribute="top" secondItem="WtI-Oe-QwX" secondAttribute="bottom" constant="8" id="Et5-Ua-rCA"/>
                     <constraint firstAttribute="bottom" secondItem="tiC-fB-U2E" secondAttribute="bottom" id="Oya-Qq-jQg"/>
                     <constraint firstItem="9GH-E3-paT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Rq1-Gm-JVr"/>
+                    <constraint firstAttribute="trailing" secondItem="9GH-E3-paT" secondAttribute="trailing" constant="8" id="VHX-jS-gh7"/>
                     <constraint firstItem="9GH-E3-paT" firstAttribute="top" secondItem="5kE-Vd-KVC" secondAttribute="bottom" constant="8" id="YjW-YJ-iUP"/>
                     <constraint firstItem="fTd-Mc-2xA" firstAttribute="top" secondItem="9GH-E3-paT" secondAttribute="bottom" constant="20" id="ZFr-HV-aEW"/>
                     <constraint firstItem="tiC-fB-U2E" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fno-A6-WQo"/>
