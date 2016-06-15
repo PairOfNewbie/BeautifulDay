@@ -26,14 +26,14 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="92V-Gq-25P">
-                                <rect key="frame" x="200" y="120" width="201" height="200"/>
+                                <rect key="frame" x="225" y="120" width="151" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="jPT-bU-vcm"/>
+                                    <constraint firstAttribute="height" constant="150" id="jPT-bU-vcm"/>
                                     <constraint firstAttribute="width" secondItem="92V-Gq-25P" secondAttribute="height" multiplier="389:388" id="m19-25-MPC"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="不虚此行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVV-FE-tp5">
-                                <rect key="frame" x="228" y="340" width="144" height="43"/>
+                                <rect key="frame" x="228" y="290" width="144" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
