@@ -107,10 +107,10 @@ class MusicPlayBar: UIView {
     //MAKR:- Action
     func onTap(tapGesture: UITapGestureRecognizer) {
         print("onTap:")
-        if streamer?.status == .Playing {
-            if trk?.audioFileURL == BDAudioService.shareManager.trk?.audioFileURL {
+        if streamer?.status == .Playing {// 正在播放
+            if trk?.audioFileURL == BDAudioService.shareManager.trk?.audioFileURL {// 当前音乐，则暂停播放
                 BDAudioService.shareManager.pause()
-            }else {
+            }else {// 非当前音乐，切歌
                 if let trk = self.trk {
                     BDAudioService.shareManager.resetStreamer(trk, updateAction: { [unowned self](type) in
                         switch type {
@@ -124,8 +124,23 @@ class MusicPlayBar: UIView {
                         })
                 }
             }
-        }else if streamer?.status == .Paused {
-            BDAudioService.shareManager.play()
+        }else if streamer?.status == .Paused {// 正在暂停
+            if let trk = self.trk {
+                if trk.audioFileURL != BDAudioService.shareManager.trk?.audioFileURL {// 不是当前音乐，切歌
+                    BDAudioService.shareManager.resetStreamer(trk, updateAction: { [unowned self](type) in
+                        switch type {
+                        case .Status:
+                            self.updateStatus()
+                        case .Duration:
+                            self.updateProgress()
+                        case .BufferingRatio:
+                            self.updateBufferingStatus()
+                        }
+                        })
+                }else {// 当前音乐，播放
+                    BDAudioService.shareManager.play()
+                }
+            }
         }else {
             if let trk = self.trk {
                 BDAudioService.shareManager.resetStreamer(trk, updateAction: { [unowned self](type) in
