@@ -18,28 +18,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="word" translatesAutoresizingMaskIntoConstraints="NO" id="rNa-Y9-v3V">
-                                <rect key="frame" x="109" y="515" width="382" height="65"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="word" translatesAutoresizingMaskIntoConstraints="NO" id="rNa-Y9-v3V">
+                                <rect key="frame" x="183" y="520" width="235" height="40"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1bN-go-kIu"/>
                                     <constraint firstAttribute="width" secondItem="rNa-Y9-v3V" secondAttribute="height" multiplier="382:65" id="EeF-fN-2xJ"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="92V-Gq-25P">
-                                <rect key="frame" x="193" y="108" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="92V-Gq-25P">
+                                <rect key="frame" x="200" y="120" width="201" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="jPT-bU-vcm"/>
+                                    <constraint firstAttribute="width" secondItem="92V-Gq-25P" secondAttribute="height" multiplier="389:388" id="m19-25-MPC"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="不虚此行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVV-FE-tp5">
-                                <rect key="frame" x="292" y="289" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="不虚此行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVV-FE-tp5">
+                                <rect key="frame" x="228" y="340" width="144" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.36933219432830811" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.10573754459619522" green="0.54779857397079468" blue="0.93810290098190308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xVV-FE-tp5" firstAttribute="top" secondItem="92V-Gq-25P" secondAttribute="bottom" constant="20" id="1hc-Dm-5mA"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="rNa-Y9-v3V" secondAttribute="bottom" constant="40" id="7rJ-my-syX"/>
+                            <constraint firstItem="92V-Gq-25P" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="100" id="DhA-5F-bP2"/>
+                            <constraint firstItem="92V-Gq-25P" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="GJE-e1-Apo"/>
+                            <constraint firstItem="rNa-Y9-v3V" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="OEj-lw-fk1"/>
+                            <constraint firstItem="xVV-FE-tp5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="uR5-xw-piC"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="43" y="448"/>
         </scene>
     </scenes>
     <resources>
