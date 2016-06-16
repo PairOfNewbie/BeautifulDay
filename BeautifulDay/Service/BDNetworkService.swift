@@ -142,6 +142,23 @@ func postComment(albumId:String, userId:String, content:String,failure: NSError 
     }
 }
 
+func postRegister(username:String, password:String, failure: NSError -> Void, success:((Bool, String) -> Void)) {
+    let param = ["user_name" : username, "password" : password]
+    Alamofire.request(.POST, "http://www.dev4love.com/api/register", parameters: param, encoding: .JSON, headers: nil).responseJSON { (response) in
+        if let result = response.result.value as? [String : String] {
+            switch result["status"]! {
+            case "occupied":
+                print("occupied")
+                failure(NSError(domain: "http://www.dev4love.com/api/register", code: 1, userInfo: ["reason" : "occupied"]))
+            case "success":
+                print(result["token"])
+                success(true, result["token"]!)
+            default:
+                break
+            }
+        }
+    }
+}
 //func registerMobile(mobile: String, withAreaCode areaCode: String, nickname: String, failureHandler: FailureHandler?, completion: Bool -> Void) {
 //    let requestParameters: JSONDictionary = [
 //        "mobile": mobile,
