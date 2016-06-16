@@ -22,6 +22,7 @@ PODS:
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
   - DOUAudioStreamer (0.2.15)
+  - MBProgressHUD (0.9.2)
   - MOBFoundation (2.0.1)
   - MonkeyKing (0.9.2)
   - ObjectMapper (1.2.0)
@@ -45,6 +46,7 @@ DEPENDENCIES:
   - AlamofireObjectMapper
   - ChameleonFramework/Swift
   - DOUAudioStreamer
+  - MBProgressHUD
   - MOBFoundation
   - MonkeyKing
   - RESideMenu
@@ -63,6 +65,7 @@ SPEC CHECKSUMS:
   AlamofireObjectMapper: 2d16585d06177be0116d76de73497e77437798af
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   DOUAudioStreamer: 14f217bab01b52171fc2bd7d96e1f8fdd50fce68
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MOBFoundation: a42168392e216fc56cbcbdfc3d5dcb3bbce5ef87
   MonkeyKing: 2cf420f9202a51714734374c97d96cf496e7ae2b
   ObjectMapper: b1e9c7c8a9f6400b72690c80072c131504caa66f
