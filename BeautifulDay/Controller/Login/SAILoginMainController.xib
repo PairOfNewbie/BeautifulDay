@@ -273,35 +273,6 @@
                         </mask>
                     </variation>
                 </textField>
-                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exI-SI-e0z">
-                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="44" id="JEq-5a-68p"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <state key="normal" title="已有账号登录">
-                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="5"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="JEq-5a-68p"/>
-                        </mask>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <mask key="constraints">
-                            <include reference="JEq-5a-68p"/>
-                        </mask>
-                    </variation>
-                    <connections>
-                        <action selector="loginButtonClick:" destination="-1" eventType="touchUpInside" id="YR3-S8-mKd"/>
-                    </connections>
-                </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dotline" translatesAutoresizingMaskIntoConstraints="NO" id="z5l-Le-BPj">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <constraints>
@@ -349,7 +320,7 @@
                         <constraint firstAttribute="height" constant="44" id="b8v-0i-4BL"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <state key="normal" title="注册">
+                    <state key="normal" title="确定">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <userDefinedRuntimeAttributes>
@@ -417,7 +388,6 @@
                 <constraint firstItem="2I7-Au-PBK" firstAttribute="top" secondItem="j1m-mY-Lyo" secondAttribute="bottom" constant="20" id="aXR-Wd-8bc"/>
                 <constraint firstItem="AYH-GZ-tOf" firstAttribute="top" secondItem="y1B-gE-Vjx" secondAttribute="top" id="dLT-YC-QiE"/>
                 <constraint firstAttribute="bottom" secondItem="xDG-T6-yXD" secondAttribute="bottom" constant="54" id="fId-ch-ZTC"/>
-                <constraint firstItem="exI-SI-e0z" firstAttribute="top" secondItem="2I7-Au-PBK" secondAttribute="bottom" constant="20" id="fUF-xx-Svi"/>
                 <constraint firstItem="iag-8o-c2s" firstAttribute="top" secondItem="y1B-gE-Vjx" secondAttribute="top" id="gi8-F5-VHx"/>
                 <constraint firstItem="8Fy-hP-GRl" firstAttribute="top" secondItem="Ba6-qL-Goi" secondAttribute="bottom" constant="8" id="goj-6w-gBC">
                     <variation key="heightClass=regular-widthClass=compact" constant="12"/>
@@ -426,8 +396,6 @@
                 <constraint firstItem="j1m-mY-Lyo" firstAttribute="leading" secondItem="EPx-tr-CUi" secondAttribute="trailing" constant="8" id="kCD-XO-aVq"/>
                 <constraint firstItem="h1d-Jt-jLs" firstAttribute="width" secondItem="y1B-gE-Vjx" secondAttribute="width" id="kiU-gS-6Li"/>
                 <constraint firstItem="y1B-gE-Vjx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nSX-2m-C9s"/>
-                <constraint firstItem="exI-SI-e0z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="pUx-g4-tb1"/>
-                <constraint firstAttribute="trailing" secondItem="exI-SI-e0z" secondAttribute="trailing" constant="20" id="qiq-3R-RnP"/>
                 <constraint firstItem="EPx-tr-CUi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="sw8-dX-BhK"/>
                 <constraint firstItem="j1m-mY-Lyo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="tvV-dP-UDf"/>
                 <constraint firstAttribute="trailing" secondItem="j1m-mY-Lyo" secondAttribute="trailing" constant="20" id="tvz-VO-zm7"/>
@@ -453,7 +421,6 @@
                     <exclude reference="EZU-xm-YWP"/>
                     <exclude reference="0Vx-3d-BDp"/>
                     <exclude reference="j1m-mY-Lyo"/>
-                    <exclude reference="exI-SI-e0z"/>
                     <exclude reference="z5l-Le-BPj"/>
                     <exclude reference="EPx-tr-CUi"/>
                     <exclude reference="2I7-Au-PBK"/>
@@ -466,9 +433,6 @@
                     <exclude reference="aXR-Wd-8bc"/>
                     <exclude reference="vBV-kK-XGV"/>
                     <exclude reference="y98-Ub-NFG"/>
-                    <exclude reference="fUF-xx-Svi"/>
-                    <exclude reference="pUx-g4-tb1"/>
-                    <exclude reference="qiq-3R-RnP"/>
                     <exclude reference="5t5-PD-BQC"/>
                     <exclude reference="6QE-9Z-2oc"/>
                     <exclude reference="wAv-cJ-24N"/>
@@ -517,7 +481,6 @@
                     <include reference="EZU-xm-YWP"/>
                     <include reference="0Vx-3d-BDp"/>
                     <include reference="j1m-mY-Lyo"/>
-                    <include reference="exI-SI-e0z"/>
                     <include reference="z5l-Le-BPj"/>
                     <include reference="EPx-tr-CUi"/>
                     <include reference="2I7-Au-PBK"/>
@@ -530,9 +493,6 @@
                     <include reference="aXR-Wd-8bc"/>
                     <include reference="vBV-kK-XGV"/>
                     <include reference="y98-Ub-NFG"/>
-                    <include reference="fUF-xx-Svi"/>
-                    <include reference="pUx-g4-tb1"/>
-                    <include reference="qiq-3R-RnP"/>
                     <include reference="5t5-PD-BQC"/>
                     <include reference="6QE-9Z-2oc"/>
                     <include reference="wAv-cJ-24N"/>

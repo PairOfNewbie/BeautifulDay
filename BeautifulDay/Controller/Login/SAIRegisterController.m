@@ -6,8 +6,6 @@
 //  Copyright © 2015年 Malong Tech. All rights reserved.
 //
 
-#import "SAIAPI.h"
-#import "SAIAuthentication.h"
 #import "SAIRegisterController.h"
 #import "SAIUtil.h"
 #define kCountTime 60
@@ -43,18 +41,18 @@
     //按钮置灰
     [self startCount];
     [SAIUtil showLoading];
-    [SAIAuthentication sendValidateCodeByMobile:self.phone
-        success:^{
-            [SAIUtil hideHUD];
-            [SAIUtil showMsg:@"验证码已发送"];
-        }
-        failure:^(NSError *error) {
-            [SAIUtil hideHUD];
-            [SAIUtil showMsg:error.localizedDescription];
-            [_countTimer invalidate];
-            self.resendValidationCodeButton.enabled = YES;
-            [self.resendValidationCodeButton setTitle:@"发送验证码" forState:UIControlStateDisabled];
-        }];
+//    [SAIAuthentication sendValidateCodeByMobile:self.phone
+//        success:^{
+//            [SAIUtil hideHUD];
+//            [SAIUtil showMsg:@"验证码已发送"];
+//        }
+//        failure:^(NSError *error) {
+//            [SAIUtil hideHUD];
+//            [SAIUtil showMsg:error.localizedDescription];
+//            [_countTimer invalidate];
+//            self.resendValidationCodeButton.enabled = YES;
+//            [self.resendValidationCodeButton setTitle:@"发送验证码" forState:UIControlStateDisabled];
+//        }];
 }
 
 - (IBAction)registerButtonClick:(UIButton *)sender {
@@ -68,27 +66,27 @@
         return;
     }
     [SAIUtil showLoading];
-    [SAIAuthentication signupByMobile:self.phone
-                             password:self.passwordTextField.text
-                           verifyCode:self.validateCodeTextField.text
-                       onStateChanged:^(SAIUserInfo *user, NSError *error) {
-                           [SAIUtil hideHUD];
-                           if (error) {
-                               dispatch_async(dispatch_get_main_queue(), ^{
-                                   UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"注册失败"
-                                                                                message:error.localizedDescription
-                                                                               delegate:nil
-                                                                      cancelButtonTitle:@"确定"
-                                                                      otherButtonTitles:nil];
-                                   [av show];
-                               });
-                               return;
-                           }
-                           dispatch_async(dispatch_get_main_queue(), ^{
-                               [SAIUtil showMsg:@"注册成功"];
-                               [self.navigationController dismissViewControllerAnimated:YES completion:nil];
-                           });
-                       }];
+//    [SAIAuthentication signupByMobile:self.phone
+//                             password:self.passwordTextField.text
+//                           verifyCode:self.validateCodeTextField.text
+//                       onStateChanged:^(SAIUserInfo *user, NSError *error) {
+//                           [SAIUtil hideHUD];
+//                           if (error) {
+//                               dispatch_async(dispatch_get_main_queue(), ^{
+//                                   UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"注册失败"
+//                                                                                message:error.localizedDescription
+//                                                                               delegate:nil
+//                                                                      cancelButtonTitle:@"确定"
+//                                                                      otherButtonTitles:nil];
+//                                   [av show];
+//                               });
+//                               return;
+//                           }
+//                           dispatch_async(dispatch_get_main_queue(), ^{
+//                               [SAIUtil showMsg:@"注册成功"];
+//                               [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+//                           });
+//                       }];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

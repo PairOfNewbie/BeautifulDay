@@ -7,9 +7,9 @@
 //
 
 #import "SAILoginMainController.h"
-//#import "SAIUtil.h"
 #import "SAIRegisterController.h"
 #import "ShareSDK/ShareSDK.h"
+#import "SAIUtil.h"
 @interface SAILoginMainController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
 
@@ -43,15 +43,22 @@
     }
 }
 - (IBAction)WeiboLogin:(id)sender {
-    [self.delegate WeiboLogin];
+    if ([self.delegate respondsToSelector:@selector(WeiboLogin)]) {
+        [self.delegate WeiboLogin];
+    }
 }
 
 - (IBAction)QQLogin:(id)sender {
-    [self.delegate QQLogin];
+    if ([self.delegate respondsToSelector:@selector(QQLogin)]) {
+        [self.delegate QQLogin];
+    }
 }
 
 - (IBAction)WeichatLogin:(id)sender {
-    [self.delegate WeichatLogin];
+    if ([self.delegate respondsToSelector:@selector(WeichatLogin)]) {
+        [self.delegate WeichatLogin];
+    }
+    
 }
 - (IBAction)registerButtonClick:(UIButton *)sender {
     if (![SAIUtil validateMobile:self.phoneTextField.text]) {
@@ -59,27 +66,22 @@
         return;
     }
     [SAIUtil showLoading];
-    [SAIAuthentication sendValidateCodeByMobile:self.phoneTextField.text
-        success:^{
-            SAIRegisterController *rc = [[SAIRegisterController alloc] initWithPhone:self.phoneTextField.text];
-            [self.navigationController pushViewController:rc animated:YES];
-            [SAIUtil showMsg:@"验证码已发送"];
-        }
-        failure:^(NSError *error) {
-            if (error.code == 10008) {
-                [self loginButtonClick:nil];
-            } else {
-                [SAIMonitor trackError:monitor_eventLabel_error_sendRegistValidateCode error:error];
-            }
-            [SAIUtil showMsg:error.localizedDescription];
-        }];
-}
-
-- (IBAction)loginButtonClick:(UIButton *)sender {
-    SAILoginController *loginController = [[SAILoginController alloc] initWithAccount:self.phoneTextField.text];
-    [self.navigationController pushViewController:loginController animated:YES];
-    // loginController.accountTextField.text = self.phoneTextField.text;
-    //    [self.delegate EmailLogin:self.phoneTextField.text password:self.passwordTextField.text];
+    
+    
+//    [SAIAuthentication sendValidateCodeByMobile:self.phoneTextField.text
+//        success:^{
+//            SAIRegisterController *rc = [[SAIRegisterController alloc] initWithPhone:self.phoneTextField.text];
+//            [self.navigationController pushViewController:rc animated:YES];
+//            [SAIUtil showMsg:@"验证码已发送"];
+//        }
+//        failure:^(NSError *error) {
+//            if (error.code == 10008) {
+//                [self loginButtonClick:nil];
+//            } else {
+//                [SAIMonitor trackError:monitor_eventLabel_error_sendRegistValidateCode error:error];
+//            }
+//            [SAIUtil showMsg:error.localizedDescription];
+//        }];
 }
 
 /*
