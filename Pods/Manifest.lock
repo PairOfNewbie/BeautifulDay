@@ -22,12 +22,20 @@ PODS:
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
   - DOUAudioStreamer (0.2.15)
+  - MOBFoundation (2.0.1)
   - MonkeyKing (0.9.2)
   - ObjectMapper (1.2.0)
   - RESideMenu (4.0.7)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
+  - ShareSDK3 (3.3.2):
+    - ShareSDK3/ShareSDK (= 3.3.2)
+  - ShareSDK3/ShareSDK (3.3.2)
+  - ShareSDK3/ShareSDKPlatforms/QQ (3.3.2)
+  - ShareSDK3/ShareSDKPlatforms/SinaWeibo (3.3.2)
+  - ShareSDK3/ShareSDKPlatforms/WeChat (3.3.2)
+  - ShareSDK3/ShareSDKUI (3.3.2)
   - SlackTextViewController (1.9.3)
   - SnapKit (0.20.0)
 
@@ -37,9 +45,15 @@ DEPENDENCIES:
   - AlamofireObjectMapper
   - ChameleonFramework/Swift
   - DOUAudioStreamer
+  - MOBFoundation
   - MonkeyKing
   - RESideMenu
   - SDWebImage
+  - ShareSDK3
+  - ShareSDK3/ShareSDKPlatforms/QQ
+  - ShareSDK3/ShareSDKPlatforms/SinaWeibo
+  - ShareSDK3/ShareSDKPlatforms/WeChat
+  - ShareSDK3/ShareSDKUI
   - SlackTextViewController
   - SnapKit
 
@@ -49,10 +63,12 @@ SPEC CHECKSUMS:
   AlamofireObjectMapper: 2d16585d06177be0116d76de73497e77437798af
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   DOUAudioStreamer: 14f217bab01b52171fc2bd7d96e1f8fdd50fce68
+  MOBFoundation: a42168392e216fc56cbcbdfc3d5dcb3bbce5ef87
   MonkeyKing: 2cf420f9202a51714734374c97d96cf496e7ae2b
   ObjectMapper: b1e9c7c8a9f6400b72690c80072c131504caa66f
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  ShareSDK3: c76cb96eb38e079952b8157071486d945faa2df2
   SlackTextViewController: bd2a34c188d4f7dec93cf42388f38551263fac82
   SnapKit: 5fce3c1bbbf1fbd31de9aa92f33eb9fa03f15650
 
