@@ -218,6 +218,11 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.14901960784313725" green="0.55686274509803924" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="oVO-Jw-pQs">
+                            <rect key="frame" x="0.0" y="218" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <sections>
                             <tableViewSection headerTitle="Section-1" id="pDj-4d-P4V">
                                 <cells>
