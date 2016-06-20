@@ -90,7 +90,7 @@
         <!--Login Main Controller-->
         <scene sceneID="1qZ-FI-TJU">
             <objects>
-                <viewController id="rxy-ju-ctZ" customClass="LoginMainController" customModule="BeautifulDay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginMainController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rxy-ju-ctZ" customClass="LoginMainController" customModule="BeautifulDay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mnQ-Ti-ooy"/>
                         <viewControllerLayoutGuide type="bottom" id="6a1-Kp-IqX"/>
@@ -544,7 +544,7 @@
                                     <constraint firstAttribute="height" constant="30" id="zOa-r0-mRf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="zOa-r0-mRf"/>

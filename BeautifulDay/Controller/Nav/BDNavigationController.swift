@@ -7,12 +7,11 @@
 //
 
 import UIKit
-
 class BDNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationBar.opaqueBar()
         // Do any additional setup after loading the view.
     }
 

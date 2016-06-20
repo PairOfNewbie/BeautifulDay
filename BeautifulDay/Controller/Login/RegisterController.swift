@@ -16,13 +16,22 @@ class RegisterController: UIViewController {
         super.viewDidLoad()
         
         title = "注册"
-        phoneLabel.text = "手机号：\(phone)"
+        if let phone = phone {
+            phoneLabel.text = "手机号：\(phone)"
+        }
     }
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         view.endEditing(true)
     }
     
     // MARK: - ACTION
+    @objc private func dismissSelf() {
+        if let nc = navigationController {
+            nc.dismissViewControllerAnimated(true, completion: {
+                
+            })
+        }
+    }
     
     @IBAction func comfirm(sender: UIButton) {
         guard usernameTextField.text != nil else {
@@ -37,7 +46,15 @@ class RegisterController: UIViewController {
         
         SAIUtil.showLoading()
         
-        
+        postRegister(phone!, username: usernameTextField.text!, password: "888888", failure: { (error: NSError) in
+            SAIUtil.showMsg("已注册")
+            }) { [weak self] (userid, token) in
+                currentUser.userid = userid
+                currentUser.token = token
+                currentUser.username = self!.usernameTextField.text!
+                SAIUtil.showMsg("注册成功")
+                self!.dismissSelf()
+        }
     }
     
     

@@ -60,6 +60,9 @@ class AlbumDetailController: UITableViewController {
     
     // MARK: - Action
     @objc func zan(sender: UIButton) {
+        guard currentUser.isLogin else {
+            return
+        }
         sender.selected = !sender.selected
         let keyframeAni = CAKeyframeAnimation(keyPath: "transform.scale")
         keyframeAni.duration = 0.5;
@@ -72,8 +75,6 @@ class AlbumDetailController: UITableViewController {
     
     private func postZan(status: Bool) {
         // todo
-//        postComment(albumId, userId: "abc", content: <#T##String#>, failure: <#T##NSError -> Void#>, success: <#T##((Bool, Comment) -> Void)##((Bool, Comment) -> Void)##(Bool, Comment) -> Void#>)
-
         
 //        postZan(albumId, userId: currentUser.userid, zan: ZanType(status), failure: { (error) in
 //            print("zan failure")
@@ -111,7 +112,9 @@ class AlbumDetailController: UITableViewController {
         }
         let inputBar = NSBundle.mainBundle().loadNibNamed("InputBar", owner: self, options: nil).last as? InputBar
         inputBar?.clickAction = {
-            self.performSegueWithIdentifier("showComment", sender: nil)
+            if currentUser.isLogin {
+                self.performSegueWithIdentifier("showComment", sender: nil)
+            }
         }
         return inputBar
     }
@@ -169,6 +172,13 @@ class AlbumDetailController: UITableViewController {
         }
     }
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        if currentUser.isLogin {
+            self.performSegueWithIdentifier("showComment", sender: nil)
+        }
+        
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -213,6 +223,7 @@ class AlbumDetailController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
+    
 }
 
 extension AlbumDetailController: UIWebViewDelegate {

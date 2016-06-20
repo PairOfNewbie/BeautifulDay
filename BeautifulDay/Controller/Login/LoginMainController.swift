@@ -41,17 +41,24 @@ class LoginMainController: UIViewController {
         }
         SAIUtil.showLoading()
         // todo login API
-        SAIUtil.hideHUD()
-        performSegueWithIdentifier("showRegister", sender: nil)
-//        postRegister(phoneTextField.text!, password: "", failure: { (error) in
-//            
-//            }) { (success, token) in
-//                if success {
-//                    currentUser.token = token
-//                    currentUser.userid = "11"
-//                }
-//        }
-        
+//        performSegueWithIdentifier("showRegister", sender: nil)
+        postLogin(phoneTextField.text!, password: "888888", failure: { [weak self] (error: NSError) in
+            if error.code == 2 {
+                self?.performSegueWithIdentifier("showRegister", sender: nil)
+                SAIUtil.hideHUD()
+            }else if error.code == 1 {
+                SAIUtil.showMsg("账号或者密码不正确")
+            }else {
+                SAIUtil.hideHUD()
+            }
+            }) { (userid, username,token) in
+                print("userid,username,token")
+                currentUser.userid = userid
+                currentUser.username = username
+                currentUser.token = token
+                self.dismissSelf()
+                SAIUtil.hideHUD()
+        }
     }
     
     @IBAction func WeiboLogin(sender: UIButton) {
@@ -76,4 +83,5 @@ class LoginMainController: UIViewController {
             vc.phone = phoneTextField.text!
         }
     }
+
 }

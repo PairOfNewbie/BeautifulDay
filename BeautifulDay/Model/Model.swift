@@ -96,7 +96,8 @@ struct User {
             if userid != nil {
                 return true
             }else {
-                let lc = LoginMainController()
+                let sb = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+                let lc = sb.instantiateViewControllerWithIdentifier("LoginMainController")
                 let nc = BDNavigationController(rootViewController: lc)
                 UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(nc, animated: true, completion: { 
                     

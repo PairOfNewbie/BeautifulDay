@@ -146,24 +146,47 @@ func postComment(albumId:String, userId:String, content:String,failure: NSError 
     }
 }
 
-//@objc(postRegisterWithUsername:password:failure:success:)
-public func postRegister(username:String, password:String, failure: NSError -> Void, success:((Bool, String) -> Void)) {
-    let param = ["user_name" : username, "password" : password]
+func postRegister(uid:String, username:String, password:String, failure: NSError -> Void, success:((String, String) -> Void)) {
+    let param = ["uid" : uid, "user_name" : username, "password" : password]
     Alamofire.request(.POST, "http://www.dev4love.com/api/register", parameters: param, encoding: .JSON, headers: nil).responseJSON { (response) in
-        if let result = response.result.value as? [String : String] {
-            switch result["status"]! {
+        if let result = response.result.value {
+            switch result["status"] as! String {
             case "occupied":
                 print("occupied")
                 failure(NSError(domain: "http://www.dev4love.com/api/register", code: 1, userInfo: ["reason" : "occupied"]))
             case "success":
                 print(result["token"])
-                success(true, result["token"]!)
+                success("\(result["user_id"] as? Int)", result["token"] as! String)
             default:
                 break
             }
         }
     }
 }
+
+func postLogin(uid:String, password:String, failure: NSError -> Void, success:((String, String, String) -> Void)) {
+    let param = ["uid" : uid, "password" : password]
+    Alamofire.request(.POST, "http://www.dev4love.com/api/login", parameters: param, encoding: .JSON, headers: nil).responseJSON { (response) in
+        if let result = response.result.value {
+            switch result["status"] as! String {
+            case "wrong_password":
+                print("wrong_password")
+                failure(NSError(domain: "http://www.dev4love.com/api/login", code: 1, userInfo: ["reason" : "wrong_password"]))
+            case "unregister":
+                print("unregister")
+                failure(NSError(domain: "http://www.dev4love.com/api/login", code: 2, userInfo: ["reason" : "unregister"]))
+            case "success":
+                print(result["token"])
+                success("\(result["user_id"] as? Int)", result["user_name"] as! String, result["token"] as! String)
+            default:
+                break
+            }
+        }
+    }
+
+}
+
+
 //func registerMobile(mobile: String, withAreaCode areaCode: String, nickname: String, failureHandler: FailureHandler?, completion: Bool -> Void) {
 //    let requestParameters: JSONDictionary = [
 //        "mobile": mobile,
