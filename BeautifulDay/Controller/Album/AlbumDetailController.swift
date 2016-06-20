@@ -71,7 +71,16 @@ class AlbumDetailController: UITableViewController {
     }
     
     private func postZan(status: Bool) {
-        // todo 
+        // todo
+//        postComment(albumId, userId: "abc", content: <#T##String#>, failure: <#T##NSError -> Void#>, success: <#T##((Bool, Comment) -> Void)##((Bool, Comment) -> Void)##(Bool, Comment) -> Void#>)
+
+        
+//        postZan(albumId, userId: currentUser.userid, zan: ZanType(status), failure: { (error) in
+//            print("zan failure")
+//            SAIUtil.showMsg("点赞失败")
+//            }, success:{ (success, status) in
+//                print("zan success")
+//        })
         
     }
     // MARK: - Table view data source

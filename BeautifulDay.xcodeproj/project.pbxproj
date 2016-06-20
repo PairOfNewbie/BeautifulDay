@@ -30,11 +30,9 @@
 		B26645C21CDDE09A00E5B274 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26645C11CDDE09A00E5B274 /* Model.swift */; };
 		B26A87D11CBC97F10058F7B4 /* MusicResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26A87D01CBC97F10058F7B4 /* MusicResource.swift */; };
 		B26BBD861CE5AEB80009BD2F /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = B26BBD851CE5AEB80009BD2F /* ReadMe.txt */; };
-		B2786A951D12584200C73E8F /* SAILoginMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2786A901D12584200C73E8F /* SAILoginMainController.m */; };
-		B2786A961D12584200C73E8F /* SAILoginMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2786A911D12584200C73E8F /* SAILoginMainController.xib */; };
-		B2786A971D12584200C73E8F /* SAIRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2786A931D12584200C73E8F /* SAIRegisterController.m */; };
-		B2786A981D12584200C73E8F /* SAIRegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2786A941D12584200C73E8F /* SAIRegisterController.xib */; };
 		B2786A9B1D125AED00C73E8F /* SAIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B2786A9A1D125AED00C73E8F /* SAIUtil.m */; };
+		B2786A9D1D1398C900C73E8F /* LoginMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2786A9C1D1398C900C73E8F /* LoginMainController.swift */; };
+		B2786A9F1D13DEC100C73E8F /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2786A9E1D13DEC100C73E8F /* RegisterController.swift */; };
 		B283EC521CFB3458002C08E9 /* InputBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = B283EC511CFB3458002C08E9 /* InputBar.xib */; };
 		B283EC561CFB37FE002C08E9 /* InputBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283EC551CFB37FE002C08E9 /* InputBar.swift */; };
 		B297A52B1CB3F2EC005DCB1D /* BDMusicDayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B297A52A1CB3F2EC005DCB1D /* BDMusicDayController.swift */; };
@@ -113,14 +111,10 @@
 		B26645C11CDDE09A00E5B274 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B26A87D01CBC97F10058F7B4 /* MusicResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicResource.swift; sourceTree = "<group>"; };
 		B26BBD851CE5AEB80009BD2F /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
-		B2786A8F1D12584200C73E8F /* SAILoginMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAILoginMainController.h; sourceTree = "<group>"; };
-		B2786A901D12584200C73E8F /* SAILoginMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAILoginMainController.m; sourceTree = "<group>"; };
-		B2786A911D12584200C73E8F /* SAILoginMainController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAILoginMainController.xib; sourceTree = "<group>"; };
-		B2786A921D12584200C73E8F /* SAIRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAIRegisterController.h; sourceTree = "<group>"; };
-		B2786A931D12584200C73E8F /* SAIRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAIRegisterController.m; sourceTree = "<group>"; };
-		B2786A941D12584200C73E8F /* SAIRegisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAIRegisterController.xib; sourceTree = "<group>"; };
 		B2786A991D125AED00C73E8F /* SAIUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAIUtil.h; sourceTree = "<group>"; };
 		B2786A9A1D125AED00C73E8F /* SAIUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAIUtil.m; sourceTree = "<group>"; };
+		B2786A9C1D1398C900C73E8F /* LoginMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginMainController.swift; sourceTree = "<group>"; };
+		B2786A9E1D13DEC100C73E8F /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		B283EC511CFB3458002C08E9 /* InputBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputBar.xib; sourceTree = "<group>"; };
 		B283EC551CFB37FE002C08E9 /* InputBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputBar.swift; sourceTree = "<group>"; };
 		B297A52A1CB3F2EC005DCB1D /* BDMusicDayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDMusicDayController.swift; sourceTree = "<group>"; };
@@ -340,12 +334,8 @@
 		B2786A7F1D12499F00C73E8F /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				B2786A8F1D12584200C73E8F /* SAILoginMainController.h */,
-				B2786A901D12584200C73E8F /* SAILoginMainController.m */,
-				B2786A911D12584200C73E8F /* SAILoginMainController.xib */,
-				B2786A921D12584200C73E8F /* SAIRegisterController.h */,
-				B2786A931D12584200C73E8F /* SAIRegisterController.m */,
-				B2786A941D12584200C73E8F /* SAIRegisterController.xib */,
+				B2786A9C1D1398C900C73E8F /* LoginMainController.swift */,
+				B2786A9E1D13DEC100C73E8F /* RegisterController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -576,8 +566,6 @@
 				B283EC521CFB3458002C08E9 /* InputBar.xib in Resources */,
 				B2C8A38F1CDA2B1E00E61B69 /* AlbumCommentCell.xib in Resources */,
 				B260514C1CEC409A00F81E8D /* LoadMoreTableCell.xib in Resources */,
-				B2786A961D12584200C73E8F /* SAILoginMainController.xib in Resources */,
-				B2786A981D12584200C73E8F /* SAIRegisterController.xib in Resources */,
 				B2C264531CEDB15200971A91 /* MediaViewCell.xib in Resources */,
 				B243112B1CB2A59E000697B2 /* Main.storyboard in Resources */,
 				B26BBD861CE5AEB80009BD2F /* ReadMe.txt in Resources */,
@@ -665,6 +653,7 @@
 				B2C8A37E1CD9D54F00E61B69 /* BDAudioService.swift in Sources */,
 				B230D7891CE0DFC900BFA70D /* AlbumListCell.swift in Sources */,
 				B20F07691CD0C3B6008398ED /* BDUserDefaults.swift in Sources */,
+				B2786A9F1D13DEC100C73E8F /* RegisterController.swift in Sources */,
 				B2E0CCA71CD8A28500A2AA3F /* BDNavigationController.swift in Sources */,
 				B2C264521CEDB15200971A91 /* MediaViewCell.swift in Sources */,
 				B243112E1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld in Sources */,
@@ -675,9 +664,7 @@
 				B2E0CC9F1CD8A19200A2AA3F /* MainListController.swift in Sources */,
 				B2C264441CED5FE700971A91 /* AlbumCollectionCardCell.swift in Sources */,
 				B2133EB51CD8C8E600FD7DB6 /* MusicPlayBar.swift in Sources */,
-				B2786A951D12584200C73E8F /* SAILoginMainController.m in Sources */,
 				B230D7861CE0DF7600BFA70D /* AlbumListController.swift in Sources */,
-				B2786A971D12584200C73E8F /* SAIRegisterController.m in Sources */,
 				B297A52B1CB3F2EC005DCB1D /* BDMusicDayController.swift in Sources */,
 				B25E856D1CFBE09F00A7C61D /* AlbumCommentController.swift in Sources */,
 				B24311261CB2A59E000697B2 /* AppDelegate.swift in Sources */,
@@ -689,6 +676,7 @@
 				B2786A9B1D125AED00C73E8F /* SAIUtil.m in Sources */,
 				B2CAD22C1CB7A14E00A1030E /* Track+Provider.m in Sources */,
 				B2CAD21F1CB79B8400A1030E /* BDTrack.swift in Sources */,
+				B2786A9D1D1398C900C73E8F /* LoginMainController.swift in Sources */,
 				B230D78C1CE0E1C200BFA70D /* LeftMenuController.swift in Sources */,
 				B2C264401CED5FD200971A91 /* AlbumCollectionNormalCell.swift in Sources */,
 			);

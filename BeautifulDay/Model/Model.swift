@@ -28,14 +28,19 @@ struct Comment: Mappable {
 }
 
 struct Zan: Mappable {
+    var zanId : String?
+    var zanStatus: Bool?
+    var albumId: String?
     var userName: String?
-    
+    var userId: String?
     init?(_ map: Map) {
         
     }
-    
     mutating func mapping(map: Map) {
-        userName <- map["user_name"]
+        zanId <- map["zan_id"]
+        zanStatus <- map["zan_status"]
+        albumId <- map["album_id"]
+        userId <- map["user_id"]
     }
 }
 
@@ -80,3 +85,43 @@ struct AlbumDetail: Mappable {
 }
 
 var albumList = [Album]()
+
+struct User {
+    var userid: String?
+    var username: String?
+    var tel: String?
+    var token: String?
+    var isLogin: Bool {
+        get {
+            if userid != nil {
+                return true
+            }else {
+                let lc = LoginMainController()
+                let nc = BDNavigationController(rootViewController: lc)
+                UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(nc, animated: true, completion: { 
+                    
+                })
+                return false
+            }
+        }
+    }
+
+    init() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        userid = defaults.objectForKey("userid") as? String
+        username = defaults.objectForKey("username") as? String
+        tel = defaults.objectForKey("tel") as? String
+        token = defaults.objectForKey("token") as? String
+    }
+    
+    func save() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(userid, forKey: "userid")
+        defaults.setObject(username, forKey: "username")
+        defaults.setObject(tel, forKey: "tel")
+        defaults.setObject(token, forKey: "token")
+        defaults.synchronize()
+    }
+}
+
+var currentUser = User()

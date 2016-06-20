@@ -107,19 +107,20 @@ func fetchAlbumDetailInfo(albumId:String, userId:String, failure: NSError -> Voi
     }
 }
 
-enum ZanType: Int {
-    case Zan = 0
-    case Unzan
-}
-
-func postZan(albumId:String, userId:String, zan:ZanType, failure: NSError -> Void, success:((Bool, Zan) -> Void)) {
-    let param = ["album_id" : albumId, "user_id" : userId, "zan" : "\(zan.rawValue)"]
+func postZan(albumId:String, failure: NSError -> Void, success:((Bool, Zan) -> Void)) {
+    guard currentUser.isLogin else {
+        return
+    }
+    
+//    let zanInt = zanStatus ?1 : 0
+    let zanInt = 1
+    let param = ["album_id" : albumId, "user_id" : currentUser.userid!, "zan" : "\(zanInt)"]
     Alamofire.request(.POST, "http://www.dev4love.com/api/zan", parameters: param, encoding: .JSON, headers: nil).responseObject{ (response: Response<Zan, NSError>) in
-        let c = response.result.value
-        print(c)
+        let z = response.result.value
+        print(z)
         
-        if let c = c {
-            success(true, c)
+        if let z = z {
+            success(true, z)
         }else {
             let error = Error.errorWithCode(0, failureReason: "comment fail")
             failure(error)
@@ -128,6 +129,9 @@ func postZan(albumId:String, userId:String, zan:ZanType, failure: NSError -> Voi
 }
 
 func postComment(albumId:String, userId:String, content:String,failure: NSError -> Void, success:((Bool, Comment) -> Void)) {
+    guard currentUser.isLogin else {
+        return
+    }
     let param = ["album_id" : albumId, "user_id" : userId, "content" : content]
     Alamofire.request(.POST, "http://www.dev4love.com/api/comment", parameters: param, encoding: .JSON, headers: nil).responseObject(keyPath: "comment"){ (response: Response<Comment, NSError>) in
         let c = response.result.value
@@ -142,7 +146,8 @@ func postComment(albumId:String, userId:String, content:String,failure: NSError 
     }
 }
 
-func postRegister(username:String, password:String, failure: NSError -> Void, success:((Bool, String) -> Void)) {
+//@objc(postRegisterWithUsername:password:failure:success:)
+public func postRegister(username:String, password:String, failure: NSError -> Void, success:((Bool, String) -> Void)) {
     let param = ["user_name" : username, "password" : password]
     Alamofire.request(.POST, "http://www.dev4love.com/api/register", parameters: param, encoding: .JSON, headers: nil).responseJSON { (response) in
         if let result = response.result.value as? [String : String] {
