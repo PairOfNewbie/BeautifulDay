@@ -28,54 +28,6 @@ struct LoginUser: CustomStringConvertible {
     }
 }
 
-func register(username:String, userid:String, failure: Error -> Void, success:Bool -> Void) {
-    let parameters = ["username": username, "userid": userid]
-    Alamofire.request(.POST, "", parameters: parameters, encoding: .JSON, headers: nil).responseJSON { (response: Response<AnyObject, NSError>) in
-        print("response")
-    }
-    
-}
-
-func fetchOneDayInfo(date:String) {
-    let parameters = ["date": "2016-04-14"]
-    Alamofire.request(.POST, "", parameters: parameters, encoding: .JSON, headers: nil).responseJSON { (response: Response<AnyObject, NSError>) in
-        print("response")
-    }
-}
-
-//MARK:- test
-func fetchTestInfo(failure: NSError -> Void, success: ((Bool, Track) -> Void)) {
-    Alamofire.request(.POST, "http://112.74.106.192/Beautiful_Day/App/index.php", parameters: ["date" : "2016-04-14"], encoding: .JSON, headers: nil).responseJSON { (response:Response<AnyObject, NSError>)  in
-        if response.result.isSuccess {
-            if let dic = response.result.value {
-                let trk = Track()
-                if let artist = dic.objectForKey("text") as? String {
-                    trk.artist = artist
-                }
-                if let title = dic.objectForKey("text") as? String {
-                    trk.title = title
-                }
-                if let audioFileURLString = dic.objectForKey("music") as? String {
-                    trk.audioFileURL = NSURL(string: audioFileURLString)
-                }
-                if let imageURLString = dic.objectForKey("img") as? String {
-                    //                    self.bgView.sd_setImageWithURL(NSURL(string: imageURLString))
-                }
-                if let date = dic.objectForKey("date") as? String {
-                    //                    self.dateLabel.text = date
-                }
-                if let location = dic.objectForKey("text") as? String {
-                    //                    self.locationLabel.text = location
-                }
-                if let des = dic.objectForKey("text") as? String {
-                    //                    self.descriptionLabel.text = des
-                }
-                success(true, trk)
-            }
-        }
-    }
-}
-
 func fetchAlbumList(failure: NSError -> Void, success:((Bool, [Album]) -> Void)) {
     let param = ["startdate" : "2016-05-18", "count" : 2]
     Alamofire.request(.POST, "http://www.dev4love.com/api/daylist", parameters: param, encoding: .JSON, headers: nil).responseArray(keyPath: "album_datas") { (response: Response<[Album], NSError>) in
