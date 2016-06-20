@@ -159,6 +159,9 @@ class AlbumDetailController: UITableViewController {
                     }
                 }
             }
+            if zlist.isEmpty {
+                zlist = "还没人点赞，赶紧点赞吧！"
+            }
             c.zanList.text = zlist
             break;
         case 1:
