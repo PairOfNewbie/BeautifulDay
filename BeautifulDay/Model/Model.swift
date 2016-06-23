@@ -12,9 +12,9 @@ import Foundation
 import ObjectMapper
 
 struct Comment: Mappable {
-    var albumId: String?
+    var albumId: Int?
     var content: String?
-    var userId: String?
+    var userId: Int?
     
     init?(_ map: Map) {
         
@@ -30,9 +30,9 @@ struct Comment: Mappable {
 struct Zan: Mappable {
     var zanId : String?
     var zanStatus: Bool?
-    var albumId: String?
+    var albumId: Int?
     var userName: String?
-    var userId: String?
+    var userId: Int?
     init?(_ map: Map) {
         
     }
@@ -45,7 +45,7 @@ struct Zan: Mappable {
 }
 
 struct Album: Mappable {
-    var albumId: String?
+    var albumId: Int?
     var date: String?
     var text: String?
     var imgUrl: String?
@@ -87,13 +87,13 @@ struct AlbumDetail: Mappable {
 var albumList = [Album]()
 
 struct User {
-    var userid: String?
+    var userId: Int?
     var username: String?
     var tel: String?
     var token: String?
     var isLogin: Bool {
         get {
-            if userid != nil {
+            if userId != nil {
                 return true
             }else {
                 let sb = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
@@ -109,7 +109,7 @@ struct User {
 
     init() {
         let defaults = NSUserDefaults.standardUserDefaults()
-        userid = defaults.objectForKey("userid") as? String
+        userId = defaults.objectForKey("userid") as? Int
         username = defaults.objectForKey("username") as? String
         tel = defaults.objectForKey("tel") as? String
         token = defaults.objectForKey("token") as? String
@@ -117,7 +117,7 @@ struct User {
     
     func save() {
         let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject(userid, forKey: "userid")
+        defaults.setObject(userId, forKey: "userid")
         defaults.setObject(username, forKey: "username")
         defaults.setObject(tel, forKey: "tel")
         defaults.setObject(token, forKey: "token")

@@ -28,14 +28,14 @@ struct LoginUser: CustomStringConvertible {
     }
 }
 
-func fetchAlbumList(failure: NSError -> Void, success:((Bool, [Album]) -> Void)) {
+func fetchAlbumList(failure: NSError -> Void, success:([Album] -> Void)) {
     let param = ["startdate" : "2016-05-18", "count" : 2]
     Alamofire.request(.POST, "http://www.dev4love.com/api/daylist", parameters: param, encoding: .JSON, headers: nil).responseArray(keyPath: "album_datas") { (response: Response<[Album], NSError>) in
         let albumlist = response.result.value
         print(albumlist)
         
         if let al = albumlist {
-            success(true, al)
+            success(al)
         }else {
             let error = Error.errorWithCode(0, failureReason: "album is nil")
             failure(error)
@@ -43,15 +43,18 @@ func fetchAlbumList(failure: NSError -> Void, success:((Bool, [Album]) -> Void))
     }
 }
 
-
-func fetchAlbumDetailInfo(albumId:String, userId:String, failure: NSError -> Void, success:((Bool, AlbumDetail) -> Void)) {
+func fetchAlbumDetailInfo(albumId:Int, failure: NSError -> Void, success:(AlbumDetail -> Void)) {
+    var userId = 0
+    if let u = currentUser.userId {
+        userId = u
+    }
     let param = ["album_id" : albumId, "user_id" : userId]
     Alamofire.request(.POST, "http://www.dev4love.com/api/albumdetail", parameters: param, encoding: .JSON, headers: nil).responseObject{ (response: Response<AlbumDetail, NSError>) in
         let albumDetail = response.result.value
         print(albumDetail)
         
         if let ad = albumDetail {
-            success(true, ad)
+            success(ad)
         }else {
             let error = Error.errorWithCode(0, failureReason: "album is nil")
             failure(error)
@@ -59,20 +62,19 @@ func fetchAlbumDetailInfo(albumId:String, userId:String, failure: NSError -> Voi
     }
 }
 
-func postZan(albumId:String, failure: NSError -> Void, success:((Bool, Zan) -> Void)) {
+func postZan(albumId:Int, zanStatus:Bool, failure: NSError -> Void, success:(Zan -> Void)) {
     guard currentUser.isLogin else {
         return
     }
     
-//    let zanInt = zanStatus ?1 : 0
-    let zanInt = 1
-    let param = ["album_id" : albumId, "user_id" : currentUser.userid!, "zan" : "\(zanInt)"]
+    let zanInt = zanStatus ? 1 : 0
+    let param = ["album_id" : albumId, "user_id" : currentUser.userId!, "zan" : zanInt]
     Alamofire.request(.POST, "http://www.dev4love.com/api/zan", parameters: param, encoding: .JSON, headers: nil).responseObject{ (response: Response<Zan, NSError>) in
         let z = response.result.value
         print(z)
         
         if let z = z {
-            success(true, z)
+            success(z)
         }else {
             let error = Error.errorWithCode(0, failureReason: "comment fail")
             failure(error)
@@ -80,17 +82,17 @@ func postZan(albumId:String, failure: NSError -> Void, success:((Bool, Zan) -> V
     }
 }
 
-func postComment(albumId:String, userId:String, content:String,failure: NSError -> Void, success:((Bool, Comment) -> Void)) {
+func postComment(albumId:Int, content:String,failure: NSError -> Void, success:(Comment -> Void)) {
     guard currentUser.isLogin else {
         return
     }
-    let param = ["album_id" : albumId, "user_id" : userId, "content" : content]
+    let param = ["album_id" : albumId, "user_id" : currentUser.userId!, "content" : content] as [String : AnyObject]
     Alamofire.request(.POST, "http://www.dev4love.com/api/comment", parameters: param, encoding: .JSON, headers: nil).responseObject(keyPath: "comment"){ (response: Response<Comment, NSError>) in
         let c = response.result.value
         print(c)
         
         if let c = c {
-            success(true, c)
+            success(c)
         }else {
             let error = Error.errorWithCode(0, failureReason: "comment fail")
             failure(error)
@@ -98,7 +100,7 @@ func postComment(albumId:String, userId:String, content:String,failure: NSError 
     }
 }
 
-func postRegister(uid:String, username:String, password:String, failure: NSError -> Void, success:((String, String) -> Void)) {
+func postRegister(uid:String, username:String, password:String, failure: NSError -> Void, success:((Int, String) -> Void)) {
     let param = ["uid" : uid, "user_name" : username, "password" : password]
     Alamofire.request(.POST, "http://www.dev4love.com/api/register", parameters: param, encoding: .JSON, headers: nil).responseJSON { (response) in
         if let result = response.result.value {
@@ -108,7 +110,7 @@ func postRegister(uid:String, username:String, password:String, failure: NSError
                 failure(NSError(domain: "http://www.dev4love.com/api/register", code: 1, userInfo: ["reason" : "occupied"]))
             case "success":
                 print(result["token"])
-                success("\(result["user_id"] as? Int)", result["token"] as! String)
+                success(result["user_id"] as! Int, result["token"] as! String)
             default:
                 break
             }
@@ -116,7 +118,7 @@ func postRegister(uid:String, username:String, password:String, failure: NSError
     }
 }
 
-func postLogin(uid:String, password:String, failure: NSError -> Void, success:((String, String, String) -> Void)) {
+func postLogin(uid:String, password:String, failure: NSError -> Void, success:((Int, String, String) -> Void)) {
     let param = ["uid" : uid, "password" : password]
     Alamofire.request(.POST, "http://www.dev4love.com/api/login", parameters: param, encoding: .JSON, headers: nil).responseJSON { (response) in
         if let result = response.result.value {
@@ -129,7 +131,7 @@ func postLogin(uid:String, password:String, failure: NSError -> Void, success:((
                 failure(NSError(domain: "http://www.dev4love.com/api/login", code: 2, userInfo: ["reason" : "unregister"]))
             case "success":
                 print(result["token"])
-                success("\(result["user_id"] as? Int)", result["user_name"] as! String, result["token"] as! String)
+                success(result["user_id"] as! Int, result["user_name"] as! String, result["token"] as! String)
             default:
                 break
             }

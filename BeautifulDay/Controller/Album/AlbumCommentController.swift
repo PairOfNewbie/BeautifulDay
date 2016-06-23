@@ -85,12 +85,18 @@ class AlbumCommentController: SLKTextViewController {
         keyframeAni.keyTimes = [0, 0.8, 1];
         keyframeAni.calculationMode = kCAAnimationLinear;
         sender.layer.addAnimation(keyframeAni, forKey: "zan")
-        postZan(sender.selected)
+        zanAction(sender.selected)
     }
     
-    private func postZan(status: Bool) {
+    private func zanAction(status: Bool) {
         // todo
-        
+        postZan(albumDetail!.albuminfo!.albumId!, zanStatus: status, failure: { (error) in
+            print("zan failure")
+            SAIUtil.showMsg("点赞失败")
+            }, success:{ (z) in
+                print("zan success")
+                
+        })
     }
     
     func textInputbarDidMove(note: NSNotification) {
@@ -116,22 +122,25 @@ class AlbumCommentController: SLKTextViewController {
     override func didPressRightButton(sender: AnyObject!) {
         
         // This little trick validates any pending auto-correction or auto-spelling just after hitting the 'Send' button
-        self.textView.refreshFirstResponder()
-        postComment((albumDetail?.albuminfo?.albumId)!, userId: "1", content: textView.text, failure: { (error) in
+        self.textView.resignFirstResponder()
+        postComment((albumDetail?.albuminfo?.albumId)!, content: textView.text, failure: { (error) in
             print("comment fail: \(error.description)")
-        }) { [unowned self](success, comment) in
+        }) { [weak self](comment) in
+            guard let weakSelf = self else {
+                return
+            }
             let indexPath = NSIndexPath(forRow: 0, inSection: 1)
-            let rowAnimation: UITableViewRowAnimation = self.inverted ? .Bottom : .Top
-            let scrollPosition: UITableViewScrollPosition = self.inverted ? .Bottom : .Top
+            let rowAnimation: UITableViewRowAnimation = weakSelf.inverted ? .Bottom : .Top
+            let scrollPosition: UITableViewScrollPosition = weakSelf.inverted ? .Bottom : .Top
             dispatch_async(dispatch_get_main_queue(), {
-                self.tableView!.beginUpdates()
-                self.albumDetail?.commentList?.insert(comment, atIndex: 0)
-                self.tableView!.insertRowsAtIndexPaths([indexPath], withRowAnimation: rowAnimation)
-                self.tableView!.endUpdates()
+                weakSelf.tableView!.beginUpdates()
+                weakSelf.albumDetail?.commentList?.insert(comment, atIndex: 0)
+                weakSelf.tableView!.insertRowsAtIndexPaths([indexPath], withRowAnimation: rowAnimation)
+                weakSelf.tableView!.endUpdates()
                 
-                self.tableView!.scrollToRowAtIndexPath(indexPath, atScrollPosition: scrollPosition, animated: true)
+                weakSelf.tableView!.scrollToRowAtIndexPath(indexPath, atScrollPosition: scrollPosition, animated: true)
                 
-                self.tableView!.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+                weakSelf.tableView!.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             })
         }
         super.didPressRightButton(sender)
@@ -220,7 +229,8 @@ class AlbumCommentController: SLKTextViewController {
         case 1:
             let c = cell as! AlbumCommentCell
             if let comment = albumDetail?.commentList![indexPath.row] {
-                c.name.text = comment.userId
+                // todo
+//                c.name.text = comment.
                 c.content.text = comment.content
             }
         default:

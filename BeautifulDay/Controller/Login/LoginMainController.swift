@@ -51,9 +51,9 @@ class LoginMainController: UIViewController {
             }else {
                 SAIUtil.hideHUD()
             }
-            }) { (userid, username,token) in
+            }) { (userId, username,token) in
                 print("userid,username,token")
-                currentUser.userid = userid
+                currentUser.userId = userId
                 currentUser.username = username
                 currentUser.token = token
                 self.dismissSelf()

@@ -90,7 +90,7 @@ class MainListController: UITableViewController {
         // todo 根据updateMode的区别来做不同的事情
         fetchAlbumList({ (error) in
             print(error.description)
-        }) { (success, al) in
+        }) { (al) in
             dispatch_async(dispatch_get_main_queue(), {[weak self] in
                 albumList = al
                 self?.tableView.reloadData()

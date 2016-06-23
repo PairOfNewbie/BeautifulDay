@@ -47,9 +47,9 @@ class RegisterController: UIViewController {
         SAIUtil.showLoading()
         
         postRegister(phone!, username: usernameTextField.text!, password: "888888", failure: { (error: NSError) in
-            SAIUtil.showMsg("已注册")
-            }) { [weak self] (userid, token) in
-                currentUser.userid = userid
+            SAIUtil.showMsg(error.description)
+            }) { [weak self] (userId, token) in
+                currentUser.userId = userId
                 currentUser.token = token
                 currentUser.username = self!.usernameTextField.text!
                 SAIUtil.showMsg("注册成功")

@@ -13,11 +13,11 @@ private let albumCommentCellIdentifier = "AlbumCommentCell"
 
 class AlbumDetailController: UITableViewController {
     @IBOutlet weak var webHeader: UIWebView!
-    var albumId = "" {
+    var albumId = 0 {
         didSet {
-            fetchAlbumDetailInfo(albumId, userId: "3", failure: { (error) in
+            fetchAlbumDetailInfo(albumId, failure: { (error) in
                 print(error.description)
-                }, success: { [unowned self](success, albumDetail) in
+                }, success: { [unowned self](albumDetail) in
                     self.albumDetail = albumDetail
                     
                     // webHeader
@@ -63,6 +63,7 @@ class AlbumDetailController: UITableViewController {
         guard currentUser.isLogin else {
             return
         }
+        // todo 对数据的处理
         sender.selected = !sender.selected
         let keyframeAni = CAKeyframeAnimation(keyPath: "transform.scale")
         keyframeAni.duration = 0.5;
@@ -70,18 +71,17 @@ class AlbumDetailController: UITableViewController {
         keyframeAni.keyTimes = [0, 0.8, 1];
         keyframeAni.calculationMode = kCAAnimationLinear;
         sender.layer.addAnimation(keyframeAni, forKey: "zan")
-        postZan(sender.selected)
+        zanAction(sender.selected)
     }
     
-    private func postZan(status: Bool) {
-        // todo
-        
-//        postZan(albumId, userId: currentUser.userid, zan: ZanType(status), failure: { (error) in
-//            print("zan failure")
-//            SAIUtil.showMsg("点赞失败")
-//            }, success:{ (success, status) in
-//                print("zan success")
-//        })
+    private func zanAction(status: Bool) {
+        postZan(albumId, zanStatus: status, failure: { (error) in
+            print("zan failure")
+            SAIUtil.showMsg("点赞失败")
+            }, success:{ (z) in
+                print("zan success")
+                
+        })
         
     }
     // MARK: - Table view data source
@@ -167,7 +167,8 @@ class AlbumDetailController: UITableViewController {
         case 1:
             let c = cell as! AlbumCommentCell
             if let comment = albumDetail?.commentList![indexPath.row] {
-                c.name.text = comment.userId
+                // todo
+//                c.name.text = comment.userId
                 c.content.text = comment.content
             }
         default:
