@@ -10,27 +10,60 @@
 
 import Foundation
 import ObjectMapper
-
+/*
+ "comment_id": 33,
+ "album_id": 2,
+ "content": "这个世界还好吗",
+ "user_id": 3,
+ "user_name": "David",
+ "created_at": "2016-06-23 22:25:32",
+ "updated_at": "2016-06-23 22:25:32"
+ */
 struct Comment: Mappable {
+    var commentId: Int?
     var albumId: Int?
     var content: String?
     var userId: Int?
+    var userName: String?
+    var createdAt: String?
+    var updatedAt: String?
+    
     
     init?(_ map: Map) {
         
     }
     
     mutating func mapping(map: Map) {
+        commentId <- map["comment_id"]
         albumId <- map["album_id"]
         content <- map["content"]
         userId <- map["user_id"]
+        userName <- map["user_name"]
+        createdAt <- map["created_at"]
+        updatedAt <- map["updated_at"]
     }
 }
 
 struct Zan: Mappable {
-    var zanId : String?
-    var zanStatus: Bool?
+    var zanId : Int?
     var albumId: Int?
+    var zanStatus: Bool? {
+        get {
+            if zanStatusInt == 1 {
+                return true
+            }else {
+                return false
+            }
+        }
+        set {
+            if newValue == true {
+                zanStatusInt = 1
+            }else {
+                zanStatusInt = 0
+            }
+        }
+    }
+    var zanStatusInt: Int?
     var userName: String?
     var userId: Int?
     init?(_ map: Map) {
@@ -38,8 +71,9 @@ struct Zan: Mappable {
     }
     mutating func mapping(map: Map) {
         zanId <- map["zan_id"]
-        zanStatus <- map["zan_status"]
+        zanStatusInt <- map["zan"]
         albumId <- map["album_id"]
+        userName <- map["user_name"]
         userId <- map["user_id"]
     }
 }

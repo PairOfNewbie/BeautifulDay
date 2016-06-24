@@ -52,6 +52,7 @@ class RegisterController: UIViewController {
                 currentUser.userId = userId
                 currentUser.token = token
                 currentUser.username = self!.usernameTextField.text!
+                currentUser.save()
                 SAIUtil.showMsg("注册成功")
                 self!.dismissSelf()
         }

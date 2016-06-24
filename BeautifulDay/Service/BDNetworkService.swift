@@ -69,7 +69,7 @@ func postZan(albumId:Int, zanStatus:Bool, failure: NSError -> Void, success:(Zan
     
     let zanInt = zanStatus ? 1 : 0
     let param = ["album_id" : albumId, "user_id" : currentUser.userId!, "zan" : zanInt]
-    Alamofire.request(.POST, "http://www.dev4love.com/api/zan", parameters: param, encoding: .JSON, headers: nil).responseObject{ (response: Response<Zan, NSError>) in
+    Alamofire.request(.POST, "http://www.dev4love.com/api/zan", parameters: param, encoding: .JSON, headers: nil).responseObject(keyPath: "zaninfo") { (response: Response<Zan, NSError>) in
         let z = response.result.value
         print(z)
         

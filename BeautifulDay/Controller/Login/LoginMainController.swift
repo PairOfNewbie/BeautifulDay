@@ -56,6 +56,7 @@ class LoginMainController: UIViewController {
                 currentUser.userId = userId
                 currentUser.username = username
                 currentUser.token = token
+                currentUser.save()
                 self.dismissSelf()
                 SAIUtil.hideHUD()
         }

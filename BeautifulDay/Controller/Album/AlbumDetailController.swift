@@ -63,7 +63,7 @@ class AlbumDetailController: UITableViewController {
         guard currentUser.isLogin else {
             return
         }
-        // todo 对数据的处理
+        // todo 对数据的处理，判断是否有
         sender.selected = !sender.selected
         let keyframeAni = CAKeyframeAnimation(keyPath: "transform.scale")
         keyframeAni.duration = 0.5;
@@ -84,6 +84,7 @@ class AlbumDetailController: UITableViewController {
         })
         
     }
+
     // MARK: - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
