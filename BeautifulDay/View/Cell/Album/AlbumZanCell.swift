@@ -9,8 +9,9 @@
 import UIKit
 
 class AlbumZanCell: UITableViewCell {
-    @IBOutlet weak var zanList: UILabel!
-
+//    @IBOutlet weak var zanList: UILabel!
+    var zanList: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +20,8 @@ class AlbumZanCell: UITableViewCell {
         button.setImage(UIImage(named: "like_selected"), forState: .Highlighted)
         button.setImage(UIImage(named: "like_selected"), forState: .Selected)
         accessoryView = button
+        
+        zanList = UILabel()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

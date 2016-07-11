@@ -211,16 +211,17 @@ class MainListController: UITableViewController {
             if let cell = cell as? MainListCell {
                 cell.album = albumList[indexPath.row]
             }
-        case Section.LoadMore.rawValue:
-            if let cell = cell as? LoadMoreTableCell {
-                print("load more data")
-                if !cell.loadingActivityIndicator.isAnimating() {
-                    cell.loadingActivityIndicator.startAnimating()
-                }
-                updateDiscoverUsers(mode: .LoadMore, finish: {[weak cell] in
-                    cell?.loadingActivityIndicator.stopAnimating()
-                    })
-            }
+            // 暂时注释掉loadMore
+//        case Section.LoadMore.rawValue:
+//            if let cell = cell as? LoadMoreTableCell {
+//                print("load more data")
+//                if !cell.loadingActivityIndicator.isAnimating() {
+//                    cell.loadingActivityIndicator.startAnimating()
+//                }
+//                updateDiscoverUsers(mode: .LoadMore, finish: {[weak cell] in
+//                    cell?.loadingActivityIndicator.stopAnimating()
+//                    })
+//            }
         default:
             break
         }

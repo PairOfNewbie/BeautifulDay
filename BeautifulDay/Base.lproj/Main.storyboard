@@ -99,7 +99,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7C-vj-iO7">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7C-vj-iO7">
                                 <rect key="frame" x="273" y="453" width="54" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="6mF-fe-uWx"/>
@@ -122,7 +122,7 @@
                                     <action selector="wechatLogin:" destination="rxy-ju-ctZ" eventType="touchUpInside" id="1Sy-nm-J4k"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnL-eO-pFd">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnL-eO-pFd">
                                 <rect key="frame" x="121" y="519" width="30" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="eEO-Gt-fQq"/>
@@ -168,7 +168,7 @@
                                     <action selector="wechatLogin:" destination="rxy-ju-ctZ" eventType="touchUpInside" id="F7K-dH-Jat"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSx-J4-ptF">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wSx-J4-ptF">
                                 <rect key="frame" x="0.0" y="453" width="110" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -188,7 +188,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lgx-TL-rEm">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lgx-TL-rEm">
                                 <rect key="frame" x="163" y="453" width="110" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -208,7 +208,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQE-qi-cCa">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jQE-qi-cCa">
                                 <rect key="frame" x="327" y="453" width="110" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -228,7 +228,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkj-xf-F2O">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkj-xf-F2O">
                                 <rect key="frame" x="436" y="453" width="54" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="52" id="4B7-Ke-XMh"/>
@@ -251,7 +251,7 @@
                                     <action selector="QQLogin:" destination="rxy-ju-ctZ" eventType="touchUpInside" id="6L6-YH-bJS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgQ-Ew-ri2">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgQ-Ew-ri2">
                                 <rect key="frame" x="448" y="519" width="30" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="gpr-Qo-e9v"/>
@@ -274,7 +274,7 @@
                                     <action selector="QQLogin:" destination="rxy-ju-ctZ" eventType="touchUpInside" id="BvL-hS-TLd"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ab-vT-19I">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ab-vT-19I">
                                 <rect key="frame" x="490" y="453" width="110" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -294,7 +294,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTI-M5-6DY">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTI-M5-6DY">
                                 <rect key="frame" x="109" y="453" width="54" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="52" id="53e-f6-3Zd"/>
@@ -317,13 +317,13 @@
                                     <action selector="WeiboLogin:" destination="rxy-ju-ctZ" eventType="touchUpInside" id="YKi-ZE-jea"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第三方账号快速登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5i-jV-a7S">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="第三方账号快速登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5i-jV-a7S">
                                 <rect key="frame" x="246" y="398" width="108" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dotline" translatesAutoresizingMaskIntoConstraints="NO" id="boa-oR-gRM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dotline" translatesAutoresizingMaskIntoConstraints="NO" id="boa-oR-gRM">
                                 <rect key="frame" x="141" y="412" width="100" height="1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="SzX-Ij-OZ8"/>
@@ -344,7 +344,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dotline" translatesAutoresizingMaskIntoConstraints="NO" id="ebk-ke-5TE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dotline" translatesAutoresizingMaskIntoConstraints="NO" id="ebk-ke-5TE">
                                 <rect key="frame" x="359" y="412" width="100" height="1"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="IKC-rt-zfC"/>
@@ -724,7 +724,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yVV-Sf-He6">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="主页" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yVV-Sf-He6">
                                                     <rect key="frame" x="59" y="0.0" width="526" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>

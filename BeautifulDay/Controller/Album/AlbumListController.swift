@@ -44,6 +44,7 @@ class AlbumListController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         if let vc = self.navigationController?.viewControllers[0] as? MainListController {
             vc.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: .Top, animated: true)
             self.navigationController?.popViewControllerAnimated(true)

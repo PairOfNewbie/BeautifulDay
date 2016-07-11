@@ -27,7 +27,7 @@ class MainListCell: UITableViewCell {
 //                shadow.shadowColor = UIColor.grayColor()
 //                shadow.shadowOffset = CGSizeMake(1, 1)
                 
-                let at = NSAttributedString(string: album.date!, attributes: [NSFontAttributeName : UIFont(name: "HelveticaNeue-UltraLight", size: 100)!])
+                let at = NSAttributedString(string: album.date!, attributes: [NSFontAttributeName : UIFont(name: "HelveticaNeue-UltraLight", size: 60)!])
                 dateLabel.attributedText = at
                 descriptionLabel.text = album.text
                 let trk = Track()
