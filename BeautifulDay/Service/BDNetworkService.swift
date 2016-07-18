@@ -29,8 +29,12 @@ struct LoginUser: CustomStringConvertible {
 }
 
 func fetchAlbumList(failure: NSError -> Void, success:([Album] -> Void)) {
-    let param = ["startdate" : "2016-05-18", "count" : 2]
-    Alamofire.request(.POST, "http://www.dev4love.com/api/daylist", parameters: param, encoding: .JSON, headers: nil).responseArray(keyPath: "album_datas") { (response: Response<[Album], NSError>) in
+    let date = NSDate()
+    let formatter = NSDateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd"
+    let startDate = formatter.stringFromDate(date)
+    let param = ["startdate" : startDate, "count" : 10]
+    Alamofire.request(.POST, "http://www.dev4love.com/api/daylist", parameters: param as? [String : AnyObject], encoding: .JSON, headers: nil).responseArray(keyPath: "album_datas") { (response: Response<[Album], NSError>) in
         let albumlist = response.result.value
         print(albumlist)
         
