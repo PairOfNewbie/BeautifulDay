@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="38" id="KGk-i7-Jjw" customClass="AlbumZanCell" customModule="BeautifulDay" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like_selected" translatesAutoresizingMaskIntoConstraints="NO" id="Gik-sl-3oD">
+                        <rect key="frame" x="8" y="8" width="17" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="3rF-0q-cbU"/>
+                            <constraint firstAttribute="width" constant="17" id="hcK-vt-f8c"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="喜欢就点个赞吧！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gv3-8g-30z">
+                        <rect key="frame" x="33" y="8" width="279" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="gv3-8g-30z" secondAttribute="bottom" constant="8" id="6ET-9x-cVH"/>
+                    <constraint firstItem="gv3-8g-30z" firstAttribute="leading" secondItem="Gik-sl-3oD" secondAttribute="trailing" constant="8" id="Kp3-GE-iVi"/>
+                    <constraint firstItem="Gik-sl-3oD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="avn-gq-7Vc"/>
+                    <constraint firstItem="Gik-sl-3oD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="gfN-f1-VV0"/>
+                    <constraint firstAttribute="trailing" secondItem="gv3-8g-30z" secondAttribute="trailing" constant="8" id="j8B-Jt-I4f"/>
+                    <constraint firstItem="gv3-8g-30z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="jBo-5N-63K"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="305" y="297"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="like_selected" width="14" height="12"/>
+    </resources>
+</document>

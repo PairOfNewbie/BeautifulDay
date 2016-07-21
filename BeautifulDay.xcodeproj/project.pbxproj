@@ -7,14 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48E9CDA65E1350F7783D0D17 /* Pods_BeautifulDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E77A58C18A95A953FC1F20FF /* Pods_BeautifulDay.framework */; };
+		B20F07661CD0C0BA008398ED /* BDNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F07651CD0C0BA008398ED /* BDNetworkService.swift */; };
+		B20F07691CD0C3B6008398ED /* BDUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F07681CD0C3B6008398ED /* BDUserDefaults.swift */; };
+		B2133EB51CD8C8E600FD7DB6 /* MusicPlayBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2133EB41CD8C8E600FD7DB6 /* MusicPlayBar.swift */; };
+		B2133EB71CD8C90E00FD7DB6 /* MusicPlayBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2133EB61CD8C90E00FD7DB6 /* MusicPlayBar.xib */; };
+		B230D7861CE0DF7600BFA70D /* AlbumListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230D7851CE0DF7600BFA70D /* AlbumListController.swift */; };
+		B230D7891CE0DFC900BFA70D /* AlbumListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230D7871CE0DFC900BFA70D /* AlbumListCell.swift */; };
+		B230D78A1CE0DFC900BFA70D /* AlbumListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B230D7881CE0DFC900BFA70D /* AlbumListCell.xib */; };
+		B230D78C1CE0E1C200BFA70D /* LeftMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230D78B1CE0E1C200BFA70D /* LeftMenuController.swift */; };
 		B24311261CB2A59E000697B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24311251CB2A59E000697B2 /* AppDelegate.swift */; };
-		B24311281CB2A59E000697B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24311271CB2A59E000697B2 /* ViewController.swift */; };
 		B243112B1CB2A59E000697B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24311291CB2A59E000697B2 /* Main.storyboard */; };
 		B243112E1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B243112C1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld */; };
 		B24311301CB2A59E000697B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B243112F1CB2A59E000697B2 /* Assets.xcassets */; };
 		B24311331CB2A59E000697B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24311311CB2A59E000697B2 /* LaunchScreen.storyboard */; };
 		B243113E1CB2A59E000697B2 /* BeautifulDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B243113D1CB2A59E000697B2 /* BeautifulDayTests.swift */; };
 		B24311491CB2A59E000697B2 /* BeautifulDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24311481CB2A59E000697B2 /* BeautifulDayUITests.swift */; };
+		B25E856D1CFBE09F00A7C61D /* AlbumCommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25E856C1CFBE09F00A7C61D /* AlbumCommentController.swift */; };
+		B260514B1CEC409A00F81E8D /* LoadMoreTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26051491CEC409A00F81E8D /* LoadMoreTableCell.swift */; };
+		B260514C1CEC409A00F81E8D /* LoadMoreTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B260514A1CEC409A00F81E8D /* LoadMoreTableCell.xib */; };
+		B260514E1CEC793400F81E8D /* AlbumCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B260514D1CEC793400F81E8D /* AlbumCollectionController.swift */; };
+		B26645C21CDDE09A00E5B274 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26645C11CDDE09A00E5B274 /* Model.swift */; };
+		B26A87D11CBC97F10058F7B4 /* MusicResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26A87D01CBC97F10058F7B4 /* MusicResource.swift */; };
+		B26BBD861CE5AEB80009BD2F /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = B26BBD851CE5AEB80009BD2F /* ReadMe.txt */; };
+		B2786A9B1D125AED00C73E8F /* SAIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B2786A9A1D125AED00C73E8F /* SAIUtil.m */; };
+		B2786A9D1D1398C900C73E8F /* LoginMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2786A9C1D1398C900C73E8F /* LoginMainController.swift */; };
+		B2786A9F1D13DEC100C73E8F /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2786A9E1D13DEC100C73E8F /* RegisterController.swift */; };
+		B283EC521CFB3458002C08E9 /* InputBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = B283EC511CFB3458002C08E9 /* InputBar.xib */; };
+		B283EC561CFB37FE002C08E9 /* InputBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283EC551CFB37FE002C08E9 /* InputBar.swift */; };
+		B297A52B1CB3F2EC005DCB1D /* BDMusicDayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B297A52A1CB3F2EC005DCB1D /* BDMusicDayController.swift */; };
+		B2C264401CED5FD200971A91 /* AlbumCollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C2643E1CED5FD200971A91 /* AlbumCollectionNormalCell.swift */; };
+		B2C264411CED5FD200971A91 /* AlbumCollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C2643F1CED5FD200971A91 /* AlbumCollectionNormalCell.xib */; };
+		B2C264441CED5FE700971A91 /* AlbumCollectionCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C264421CED5FE700971A91 /* AlbumCollectionCardCell.swift */; };
+		B2C264451CED5FE700971A91 /* AlbumCollectionCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C264431CED5FE700971A91 /* AlbumCollectionCardCell.xib */; };
+		B2C264481CED66F900971A91 /* LoadMoreCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C264461CED66F900971A91 /* LoadMoreCollectionCell.swift */; };
+		B2C264491CED66F900971A91 /* LoadMoreCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C264471CED66F900971A91 /* LoadMoreCollectionCell.xib */; };
+		B2C2644E1CEDB06F00971A91 /* MediaPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C2644D1CEDB06F00971A91 /* MediaPreviewController.swift */; };
+		B2C264521CEDB15200971A91 /* MediaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C264501CEDB15200971A91 /* MediaViewCell.swift */; };
+		B2C264531CEDB15200971A91 /* MediaViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C264511CEDB15200971A91 /* MediaViewCell.xib */; };
+		B2C8A37E1CD9D54F00E61B69 /* BDAudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8A37D1CD9D54F00E61B69 /* BDAudioService.swift */; };
+		B2C8A3811CDA29D600E61B69 /* AlbumDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8A3801CDA29D600E61B69 /* AlbumDetailController.swift */; };
+		B2C8A3861CDA2A1D00E61B69 /* MainListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8A3841CDA2A1D00E61B69 /* MainListCell.swift */; };
+		B2C8A3871CDA2A1D00E61B69 /* MainListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C8A3851CDA2A1D00E61B69 /* MainListCell.xib */; };
+		B2C8A38A1CDA2B0B00E61B69 /* AlbumZanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8A3881CDA2B0B00E61B69 /* AlbumZanCell.swift */; };
+		B2C8A38B1CDA2B0B00E61B69 /* AlbumZanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C8A3891CDA2B0B00E61B69 /* AlbumZanCell.xib */; };
+		B2C8A38E1CDA2B1E00E61B69 /* AlbumCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8A38C1CDA2B1E00E61B69 /* AlbumCommentCell.swift */; };
+		B2C8A38F1CDA2B1E00E61B69 /* AlbumCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C8A38D1CDA2B1E00E61B69 /* AlbumCommentCell.xib */; };
+		B2CAD21F1CB79B8400A1030E /* BDTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CAD21E1CB79B8400A1030E /* BDTrack.swift */; };
+		B2CAD2251CB79F8900A1030E /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CAD2241CB79F8900A1030E /* Track.m */; };
+		B2CAD22B1CB7A14E00A1030E /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CAD2281CB7A14E00A1030E /* PlayerViewController.m */; };
+		B2CAD22C1CB7A14E00A1030E /* Track+Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CAD22A1CB7A14E00A1030E /* Track+Provider.m */; };
+		B2E0CC9D1CD8A14700A2AA3F /* BDMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0CC9C1CD8A14700A2AA3F /* BDMainViewController.swift */; };
+		B2E0CC9F1CD8A19200A2AA3F /* MainListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0CC9E1CD8A19200A2AA3F /* MainListController.swift */; };
+		B2E0CCA71CD8A28500A2AA3F /* BDNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0CCA61CD8A28500A2AA3F /* BDNavigationController.swift */; };
+		B2E0CCAC1CD8B1AF00A2AA3F /* UINavigationBar+Translucent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0CCAB1CD8B1AF00A2AA3F /* UINavigationBar+Translucent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +81,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11C0F77255B8EB2D78C25D8C /* Pods-BeautifulDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeautifulDay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeautifulDay/Pods-BeautifulDay.debug.xcconfig"; sourceTree = "<group>"; };
+		2C37A92269C2EEF4692CB37A /* Pods-BeautifulDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeautifulDay.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeautifulDay/Pods-BeautifulDay.release.xcconfig"; sourceTree = "<group>"; };
+		B20F07651CD0C0BA008398ED /* BDNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDNetworkService.swift; sourceTree = "<group>"; };
+		B20F07681CD0C3B6008398ED /* BDUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDUserDefaults.swift; sourceTree = "<group>"; };
+		B2133EB41CD8C8E600FD7DB6 /* MusicPlayBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayBar.swift; sourceTree = "<group>"; };
+		B2133EB61CD8C90E00FD7DB6 /* MusicPlayBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicPlayBar.xib; sourceTree = "<group>"; };
+		B230D7851CE0DF7600BFA70D /* AlbumListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumListController.swift; sourceTree = "<group>"; };
+		B230D7871CE0DFC900BFA70D /* AlbumListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumListCell.swift; sourceTree = "<group>"; };
+		B230D7881CE0DFC900BFA70D /* AlbumListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumListCell.xib; sourceTree = "<group>"; };
+		B230D78B1CE0E1C200BFA70D /* LeftMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuController.swift; sourceTree = "<group>"; };
 		B24311221CB2A59E000697B2 /* BeautifulDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautifulDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24311251CB2A59E000697B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B24311271CB2A59E000697B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B243112A1CB2A59E000697B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B243112D1CB2A59E000697B2 /* BeautifulDay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeautifulDay.xcdatamodel; sourceTree = "<group>"; };
 		B243112F1CB2A59E000697B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +104,50 @@
 		B24311441CB2A59E000697B2 /* BeautifulDayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeautifulDayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24311481CB2A59E000697B2 /* BeautifulDayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautifulDayUITests.swift; sourceTree = "<group>"; };
 		B243114A1CB2A59E000697B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B25E856C1CFBE09F00A7C61D /* AlbumCommentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCommentController.swift; sourceTree = "<group>"; };
+		B26051491CEC409A00F81E8D /* LoadMoreTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = LoadMoreTableCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B260514A1CEC409A00F81E8D /* LoadMoreTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadMoreTableCell.xib; sourceTree = "<group>"; };
+		B260514D1CEC793400F81E8D /* AlbumCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCollectionController.swift; sourceTree = "<group>"; };
+		B26645C11CDDE09A00E5B274 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B26A87D01CBC97F10058F7B4 /* MusicResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicResource.swift; sourceTree = "<group>"; };
+		B26BBD851CE5AEB80009BD2F /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		B2786A991D125AED00C73E8F /* SAIUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAIUtil.h; sourceTree = "<group>"; };
+		B2786A9A1D125AED00C73E8F /* SAIUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAIUtil.m; sourceTree = "<group>"; };
+		B2786A9C1D1398C900C73E8F /* LoginMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginMainController.swift; sourceTree = "<group>"; };
+		B2786A9E1D13DEC100C73E8F /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		B283EC511CFB3458002C08E9 /* InputBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputBar.xib; sourceTree = "<group>"; };
+		B283EC551CFB37FE002C08E9 /* InputBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputBar.swift; sourceTree = "<group>"; };
+		B297A52A1CB3F2EC005DCB1D /* BDMusicDayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDMusicDayController.swift; sourceTree = "<group>"; };
+		B2C2643E1CED5FD200971A91 /* AlbumCollectionNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCollectionNormalCell.swift; sourceTree = "<group>"; };
+		B2C2643F1CED5FD200971A91 /* AlbumCollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumCollectionNormalCell.xib; sourceTree = "<group>"; };
+		B2C264421CED5FE700971A91 /* AlbumCollectionCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCollectionCardCell.swift; sourceTree = "<group>"; };
+		B2C264431CED5FE700971A91 /* AlbumCollectionCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumCollectionCardCell.xib; sourceTree = "<group>"; };
+		B2C264461CED66F900971A91 /* LoadMoreCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMoreCollectionCell.swift; sourceTree = "<group>"; };
+		B2C264471CED66F900971A91 /* LoadMoreCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadMoreCollectionCell.xib; sourceTree = "<group>"; };
+		B2C2644D1CEDB06F00971A91 /* MediaPreviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPreviewController.swift; sourceTree = "<group>"; };
+		B2C264501CEDB15200971A91 /* MediaViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaViewCell.swift; sourceTree = "<group>"; };
+		B2C264511CEDB15200971A91 /* MediaViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaViewCell.xib; sourceTree = "<group>"; };
+		B2C8A37D1CD9D54F00E61B69 /* BDAudioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDAudioService.swift; sourceTree = "<group>"; };
+		B2C8A3801CDA29D600E61B69 /* AlbumDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailController.swift; sourceTree = "<group>"; };
+		B2C8A3841CDA2A1D00E61B69 /* MainListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainListCell.swift; sourceTree = "<group>"; };
+		B2C8A3851CDA2A1D00E61B69 /* MainListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainListCell.xib; sourceTree = "<group>"; };
+		B2C8A3881CDA2B0B00E61B69 /* AlbumZanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumZanCell.swift; sourceTree = "<group>"; };
+		B2C8A3891CDA2B0B00E61B69 /* AlbumZanCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumZanCell.xib; sourceTree = "<group>"; };
+		B2C8A38C1CDA2B1E00E61B69 /* AlbumCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCommentCell.swift; sourceTree = "<group>"; };
+		B2C8A38D1CDA2B1E00E61B69 /* AlbumCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumCommentCell.xib; sourceTree = "<group>"; };
+		B2CAD21E1CB79B8400A1030E /* BDTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDTrack.swift; sourceTree = "<group>"; };
+		B2CAD2231CB79F8900A1030E /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
+		B2CAD2241CB79F8900A1030E /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
+		B2CAD2261CB79FA600A1030E /* BeautifulDay-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BeautifulDay-Bridging-Header.h"; sourceTree = "<group>"; };
+		B2CAD2271CB7A14E00A1030E /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		B2CAD2281CB7A14E00A1030E /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		B2CAD2291CB7A14E00A1030E /* Track+Provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Track+Provider.h"; sourceTree = "<group>"; };
+		B2CAD22A1CB7A14E00A1030E /* Track+Provider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Track+Provider.m"; sourceTree = "<group>"; };
+		B2E0CC9C1CD8A14700A2AA3F /* BDMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDMainViewController.swift; sourceTree = "<group>"; };
+		B2E0CC9E1CD8A19200A2AA3F /* MainListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MainListController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B2E0CCA61CD8A28500A2AA3F /* BDNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDNavigationController.swift; sourceTree = "<group>"; };
+		B2E0CCAB1CD8B1AF00A2AA3F /* UINavigationBar+Translucent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Translucent.swift"; sourceTree = "<group>"; };
+		E77A58C18A95A953FC1F20FF /* Pods_BeautifulDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeautifulDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48E9CDA65E1350F7783D0D17 /* Pods_BeautifulDay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +176,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BD8F615C2A156FB06472625 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E77A58C18A95A953FC1F20FF /* Pods_BeautifulDay.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E57975198BCCB1C20E431DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11C0F77255B8EB2D78C25D8C /* Pods-BeautifulDay.debug.xcconfig */,
+				2C37A92269C2EEF4692CB37A /* Pods-BeautifulDay.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B20F07641CD0C09B008398ED /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B2786A991D125AED00C73E8F /* SAIUtil.h */,
+				B2786A9A1D125AED00C73E8F /* SAIUtil.m */,
+				B20F07651CD0C0BA008398ED /* BDNetworkService.swift */,
+				B2C8A37D1CD9D54F00E61B69 /* BDAudioService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B20F07671CD0C36D008398ED /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B20F07681CD0C3B6008398ED /* BDUserDefaults.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		B20F076A1CD0E94D008398ED /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B2786A7F1D12499F00C73E8F /* Login */,
+				B2C2644A1CEDAF8300971A91 /* MediaPreview */,
+				B2C8A37F1CD9F29500E61B69 /* Album */,
+				B2E0CCA51CD8A25100A2AA3F /* Nav */,
+				B2E0CC9B1CD8A14700A2AA3F /* Main */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B20F076B1CD0E94D008398ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B283EC4C1CFB2FC0002C08E9 /* InputBar */,
+				B260514F1CEC797B00F81E8D /* ReusableView */,
+				B2133EB31CD8C8C000FD7DB6 /* MusicBar */,
+				B2E0CCA01CD8A1BB00A2AA3F /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B2133EB31CD8C8C000FD7DB6 /* MusicBar */ = {
+			isa = PBXGroup;
+			children = (
+				B2133EB41CD8C8E600FD7DB6 /* MusicPlayBar.swift */,
+				B2133EB61CD8C90E00FD7DB6 /* MusicPlayBar.xib */,
+			);
+			path = MusicBar;
+			sourceTree = "<group>";
+		};
 		B24311191CB2A59E000697B2 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +251,8 @@
 				B243113C1CB2A59E000697B2 /* BeautifulDayTests */,
 				B24311471CB2A59E000697B2 /* BeautifulDayUITests */,
 				B24311231CB2A59E000697B2 /* Products */,
+				4E57975198BCCB1C20E431DA /* Pods */,
+				1BD8F615C2A156FB06472625 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +269,19 @@
 		B24311241CB2A59E000697B2 /* BeautifulDay */ = {
 			isa = PBXGroup;
 			children = (
+				B26645C01CDDE08400E5B274 /* Model */,
+				B20F076A1CD0E94D008398ED /* Controller */,
+				B20F076B1CD0E94D008398ED /* View */,
+				B20F07671CD0C36D008398ED /* Helper */,
+				B20F07641CD0C09B008398ED /* Service */,
+				B297A5241CB3EF35005DCB1D /* Module */,
 				B24311251CB2A59E000697B2 /* AppDelegate.swift */,
-				B24311271CB2A59E000697B2 /* ViewController.swift */,
+				B26BBD851CE5AEB80009BD2F /* ReadMe.txt */,
 				B24311291CB2A59E000697B2 /* Main.storyboard */,
 				B243112F1CB2A59E000697B2 /* Assets.xcassets */,
 				B24311311CB2A59E000697B2 /* LaunchScreen.storyboard */,
 				B24311341CB2A59E000697B2 /* Info.plist */,
+				B2CAD2261CB79FA600A1030E /* BeautifulDay-Bridging-Header.h */,
 				B243112C1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld */,
 			);
 			path = BeautifulDay;
@@ -128,6 +305,150 @@
 			path = BeautifulDayUITests;
 			sourceTree = "<group>";
 		};
+		B26051481CEC408600F81E8D /* LoadMore */ = {
+			isa = PBXGroup;
+			children = (
+				B26051491CEC409A00F81E8D /* LoadMoreTableCell.swift */,
+				B260514A1CEC409A00F81E8D /* LoadMoreTableCell.xib */,
+				B2C264461CED66F900971A91 /* LoadMoreCollectionCell.swift */,
+				B2C264471CED66F900971A91 /* LoadMoreCollectionCell.xib */,
+			);
+			path = LoadMore;
+			sourceTree = "<group>";
+		};
+		B260514F1CEC797B00F81E8D /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReusableView;
+			sourceTree = "<group>";
+		};
+		B26645C01CDDE08400E5B274 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B26645C11CDDE09A00E5B274 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B2786A7F1D12499F00C73E8F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B2786A9C1D1398C900C73E8F /* LoginMainController.swift */,
+				B2786A9E1D13DEC100C73E8F /* RegisterController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B283EC4C1CFB2FC0002C08E9 /* InputBar */ = {
+			isa = PBXGroup;
+			children = (
+				B283EC511CFB3458002C08E9 /* InputBar.xib */,
+				B283EC551CFB37FE002C08E9 /* InputBar.swift */,
+			);
+			path = InputBar;
+			sourceTree = "<group>";
+		};
+		B297A5241CB3EF35005DCB1D /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				B297A52A1CB3F2EC005DCB1D /* BDMusicDayController.swift */,
+				B2CAD21E1CB79B8400A1030E /* BDTrack.swift */,
+				B2CAD2231CB79F8900A1030E /* Track.h */,
+				B2CAD2241CB79F8900A1030E /* Track.m */,
+				B2CAD2271CB7A14E00A1030E /* PlayerViewController.h */,
+				B2CAD2281CB7A14E00A1030E /* PlayerViewController.m */,
+				B2CAD2291CB7A14E00A1030E /* Track+Provider.h */,
+				B2CAD22A1CB7A14E00A1030E /* Track+Provider.m */,
+				B26A87D01CBC97F10058F7B4 /* MusicResource.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		B2C2644A1CEDAF8300971A91 /* MediaPreview */ = {
+			isa = PBXGroup;
+			children = (
+				B2C2644D1CEDB06F00971A91 /* MediaPreviewController.swift */,
+			);
+			path = MediaPreview;
+			sourceTree = "<group>";
+		};
+		B2C2644F1CEDB10400971A91 /* MediaPreview */ = {
+			isa = PBXGroup;
+			children = (
+				B2C264501CEDB15200971A91 /* MediaViewCell.swift */,
+				B2C264511CEDB15200971A91 /* MediaViewCell.xib */,
+			);
+			path = MediaPreview;
+			sourceTree = "<group>";
+		};
+		B2C8A37F1CD9F29500E61B69 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				B2C8A3801CDA29D600E61B69 /* AlbumDetailController.swift */,
+				B230D7851CE0DF7600BFA70D /* AlbumListController.swift */,
+				B260514D1CEC793400F81E8D /* AlbumCollectionController.swift */,
+				B25E856C1CFBE09F00A7C61D /* AlbumCommentController.swift */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		B2C8A3821CDA2A1D00E61B69 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				B2C8A3881CDA2B0B00E61B69 /* AlbumZanCell.swift */,
+				B2C8A3891CDA2B0B00E61B69 /* AlbumZanCell.xib */,
+				B2C8A38C1CDA2B1E00E61B69 /* AlbumCommentCell.swift */,
+				B2C8A38D1CDA2B1E00E61B69 /* AlbumCommentCell.xib */,
+				B230D7871CE0DFC900BFA70D /* AlbumListCell.swift */,
+				B230D7881CE0DFC900BFA70D /* AlbumListCell.xib */,
+				B2C2643E1CED5FD200971A91 /* AlbumCollectionNormalCell.swift */,
+				B2C2643F1CED5FD200971A91 /* AlbumCollectionNormalCell.xib */,
+				B2C264421CED5FE700971A91 /* AlbumCollectionCardCell.swift */,
+				B2C264431CED5FE700971A91 /* AlbumCollectionCardCell.xib */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		B2C8A3831CDA2A1D00E61B69 /* MainList */ = {
+			isa = PBXGroup;
+			children = (
+				B2C8A3841CDA2A1D00E61B69 /* MainListCell.swift */,
+				B2C8A3851CDA2A1D00E61B69 /* MainListCell.xib */,
+			);
+			path = MainList;
+			sourceTree = "<group>";
+		};
+		B2E0CC9B1CD8A14700A2AA3F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B2E0CC9C1CD8A14700A2AA3F /* BDMainViewController.swift */,
+				B2E0CC9E1CD8A19200A2AA3F /* MainListController.swift */,
+				B230D78B1CE0E1C200BFA70D /* LeftMenuController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B2E0CCA01CD8A1BB00A2AA3F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B2C2644F1CEDB10400971A91 /* MediaPreview */,
+				B26051481CEC408600F81E8D /* LoadMore */,
+				B2C8A3821CDA2A1D00E61B69 /* Album */,
+				B2C8A3831CDA2A1D00E61B69 /* MainList */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B2E0CCA51CD8A25100A2AA3F /* Nav */ = {
+			isa = PBXGroup;
+			children = (
+				B2E0CCA61CD8A28500A2AA3F /* BDNavigationController.swift */,
+				B2E0CCAB1CD8B1AF00A2AA3F /* UINavigationBar+Translucent.swift */,
+			);
+			path = Nav;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +456,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B243114D1CB2A59E000697B2 /* Build configuration list for PBXNativeTarget "BeautifulDay" */;
 			buildPhases = (
+				7DE7CB99BD2D526DFF20AF9B /* Check Pods Manifest.lock */,
 				B243111E1CB2A59E000697B2 /* Sources */,
 				B243111F1CB2A59E000697B2 /* Frameworks */,
 				B24311201CB2A59E000697B2 /* Resources */,
+				A95288947E70B88809A48FFE /* Embed Pods Frameworks */,
+				3EF040B782DF9391071F1034 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,8 +557,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				B24311331CB2A59E000697B2 /* LaunchScreen.storyboard in Resources */,
+				B2C264491CED66F900971A91 /* LoadMoreCollectionCell.xib in Resources */,
+				B2133EB71CD8C90E00FD7DB6 /* MusicPlayBar.xib in Resources */,
+				B2C264451CED5FE700971A91 /* AlbumCollectionCardCell.xib in Resources */,
 				B24311301CB2A59E000697B2 /* Assets.xcassets in Resources */,
+				B2C8A38B1CDA2B0B00E61B69 /* AlbumZanCell.xib in Resources */,
+				B2C8A3871CDA2A1D00E61B69 /* MainListCell.xib in Resources */,
+				B283EC521CFB3458002C08E9 /* InputBar.xib in Resources */,
+				B2C8A38F1CDA2B1E00E61B69 /* AlbumCommentCell.xib in Resources */,
+				B260514C1CEC409A00F81E8D /* LoadMoreTableCell.xib in Resources */,
+				B2C264531CEDB15200971A91 /* MediaViewCell.xib in Resources */,
 				B243112B1CB2A59E000697B2 /* Main.storyboard in Resources */,
+				B26BBD861CE5AEB80009BD2F /* ReadMe.txt in Resources */,
+				B230D78A1CE0DFC900BFA70D /* AlbumListCell.xib in Resources */,
+				B2C264411CED5FD200971A91 /* AlbumCollectionNormalCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,14 +590,95 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3EF040B782DF9391071F1034 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeautifulDay/Pods-BeautifulDay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DE7CB99BD2D526DFF20AF9B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A95288947E70B88809A48FFE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeautifulDay/Pods-BeautifulDay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B243111E1CB2A59E000697B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B24311281CB2A59E000697B2 /* ViewController.swift in Sources */,
+				B26645C21CDDE09A00E5B274 /* Model.swift in Sources */,
+				B2C8A38A1CDA2B0B00E61B69 /* AlbumZanCell.swift in Sources */,
+				B2CAD22B1CB7A14E00A1030E /* PlayerViewController.m in Sources */,
+				B2C264481CED66F900971A91 /* LoadMoreCollectionCell.swift in Sources */,
+				B260514B1CEC409A00F81E8D /* LoadMoreTableCell.swift in Sources */,
+				B20F07661CD0C0BA008398ED /* BDNetworkService.swift in Sources */,
+				B26A87D11CBC97F10058F7B4 /* MusicResource.swift in Sources */,
+				B2C8A37E1CD9D54F00E61B69 /* BDAudioService.swift in Sources */,
+				B230D7891CE0DFC900BFA70D /* AlbumListCell.swift in Sources */,
+				B20F07691CD0C3B6008398ED /* BDUserDefaults.swift in Sources */,
+				B2786A9F1D13DEC100C73E8F /* RegisterController.swift in Sources */,
+				B2E0CCA71CD8A28500A2AA3F /* BDNavigationController.swift in Sources */,
+				B2C264521CEDB15200971A91 /* MediaViewCell.swift in Sources */,
 				B243112E1CB2A59E000697B2 /* BeautifulDay.xcdatamodeld in Sources */,
+				B2E0CCAC1CD8B1AF00A2AA3F /* UINavigationBar+Translucent.swift in Sources */,
+				B283EC561CFB37FE002C08E9 /* InputBar.swift in Sources */,
+				B2C8A38E1CDA2B1E00E61B69 /* AlbumCommentCell.swift in Sources */,
+				B260514E1CEC793400F81E8D /* AlbumCollectionController.swift in Sources */,
+				B2E0CC9F1CD8A19200A2AA3F /* MainListController.swift in Sources */,
+				B2C264441CED5FE700971A91 /* AlbumCollectionCardCell.swift in Sources */,
+				B2133EB51CD8C8E600FD7DB6 /* MusicPlayBar.swift in Sources */,
+				B230D7861CE0DF7600BFA70D /* AlbumListController.swift in Sources */,
+				B297A52B1CB3F2EC005DCB1D /* BDMusicDayController.swift in Sources */,
+				B25E856D1CFBE09F00A7C61D /* AlbumCommentController.swift in Sources */,
 				B24311261CB2A59E000697B2 /* AppDelegate.swift in Sources */,
+				B2C2644E1CEDB06F00971A91 /* MediaPreviewController.swift in Sources */,
+				B2C8A3861CDA2A1D00E61B69 /* MainListCell.swift in Sources */,
+				B2E0CC9D1CD8A14700A2AA3F /* BDMainViewController.swift in Sources */,
+				B2C8A3811CDA29D600E61B69 /* AlbumDetailController.swift in Sources */,
+				B2CAD2251CB79F8900A1030E /* Track.m in Sources */,
+				B2786A9B1D125AED00C73E8F /* SAIUtil.m in Sources */,
+				B2CAD22C1CB7A14E00A1030E /* Track+Provider.m in Sources */,
+				B2CAD21F1CB79B8400A1030E /* BDTrack.swift in Sources */,
+				B2786A9D1D1398C900C73E8F /* LoginMainController.swift in Sources */,
+				B230D78C1CE0E1C200BFA70D /* LeftMenuController.swift in Sources */,
+				B2C264401CED5FD200971A91 /* AlbumCollectionNormalCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,23 +820,32 @@
 		};
 		B243114E1CB2A59E000697B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11C0F77255B8EB2D78C25D8C /* Pods-BeautifulDay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BeautifulDay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = PairOfNewbie.github.BeautifulDay;
+				PRODUCT_BUNDLE_IDENTIFIER = PairOfNewbie.BeautifulDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeautifulDay/BeautifulDay-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		B243114F1CB2A59E000697B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C37A92269C2EEF4692CB37A /* Pods-BeautifulDay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BeautifulDay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = PairOfNewbie.github.BeautifulDay;
+				PRODUCT_BUNDLE_IDENTIFIER = PairOfNewbie.BeautifulDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeautifulDay/BeautifulDay-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -488,6 +914,7 @@
 				B243114F1CB2A59E000697B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B24311501CB2A59E000697B2 /* Build configuration list for PBXNativeTarget "BeautifulDayTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +923,7 @@
 				B24311521CB2A59E000697B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B24311531CB2A59E000697B2 /* Build configuration list for PBXNativeTarget "BeautifulDayUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +932,7 @@
 				B24311551CB2A59E000697B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
